@@ -22,3 +22,5 @@ Route::get('/', function () {
     $data = ['message' => 'welcome', 'status' => '200'];
    return response()->json($data, 200);
 });
+
+Route::get('polls/{poll}', 'PollController@show');
