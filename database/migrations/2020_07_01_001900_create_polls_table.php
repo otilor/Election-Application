@@ -19,8 +19,8 @@ class CreatePollsTable extends Migration
             $table->unsignedBigInteger('session_id', false);
             $table->timestamps();
 
-            $table->foreign('position_id')->references('id')->on('positions');
-            $table->foreign('session_id')->references('id')->on('sessions');
+            $table->foreign('position_id')->references('id')->on('positions')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('session_id')->references('id')->on('sessions')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
