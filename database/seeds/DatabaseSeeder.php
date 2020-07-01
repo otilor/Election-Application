@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 use App\User;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +14,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UserSeeder::class);
+        $faker = \Faker\Factory::create();
         for ($i = 0; $i < 10; $i++) {
             User::create([
-                'name' => Str::random(10),
-                'email'=>Str::random(10).'@gmail.com',
+                'name' => $faker->name,
+                'email'=>$faker->email,
                 'password' => Hash::make('password'),
             ]);
         }
