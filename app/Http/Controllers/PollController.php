@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Poll;
 
@@ -42,11 +43,11 @@ class PollController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function show(Poll $poll)
+    public function show($id)
     {
-        return response()->json($poll, 200);
+        return Poll::find($id);
     }
 
     /**
