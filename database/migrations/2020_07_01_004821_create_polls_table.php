@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePollsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('polls', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('position_id', false);
+            $table->unsignedBigInteger('session_id', false);
+            $table->timestamps();
+
+            $table->foreign('position_id')->references('id')->on('positions');
+            $table->foreign('session_id')->references('id')->on('sessions');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('polls');
+    }
+}
