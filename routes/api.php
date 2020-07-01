@@ -23,6 +23,9 @@ Route::get('/', function () {
    return response()->json($data, 200);
 });
 
+Route::get('/polls', 'PollController@index');
 Route::get('polls/{poll}', 'PollController@show');
+
+
 Route::get('positions/{position}', 'PositionController@show');
 Route::get('positions', 'PositionController@index');
