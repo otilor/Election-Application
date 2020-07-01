@@ -47,7 +47,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        return Poll::find($id);
+        return Poll::findOrFail($id);
     }
 
     /**
