@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Poll;
 
 class PollController extends Controller
 {
@@ -41,11 +42,11 @@ class PollController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function show($id)
+    public function show(Poll $poll)
     {
-        //
+        return response()->json($poll, 200);
     }
 
     /**
