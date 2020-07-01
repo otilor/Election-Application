@@ -24,3 +24,4 @@ Route::get('/', function () {
 });
 
 Route::get('polls/{poll}', 'PollController@show');
+Route::get('positions/{postion}', 'PositionController@show');
