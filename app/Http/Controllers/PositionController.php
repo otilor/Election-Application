@@ -46,7 +46,7 @@ class PositionController extends Controller
      */
     public function show($id)
     {
-        return Position::find($id);
+        return Position::findOrFail($id);
     }
 
     /**
