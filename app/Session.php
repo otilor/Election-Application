@@ -10,4 +10,8 @@ class Session extends Model
         'title',
         'description',
     ];
+
+    public function polls() {
+    	$this->hasMany('\App\Poll');
+    }
 }

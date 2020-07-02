@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use App\Poll;
 
-class PollController extends Controller
+class SessionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        $allPolls = Poll::paginate(5);
-
-        return $allPolls;
-        
+        //
     }
 
     /**
@@ -46,11 +41,11 @@ class PollController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return Poll::findOrFail($id);
+        //
     }
 
     /**

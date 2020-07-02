@@ -1957,12 +1957,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       polls: [],
       poll: {
         id: '',
+        title: '',
+        description: '',
+        poll_link: '',
         session: '',
         position: ''
       },
@@ -37734,22 +37739,35 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col-md-8" },
-        _vm._l(_vm.polls, function(poll) {
-          return _c("div", { key: poll.id, staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v(_vm._s(poll.id))
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(poll.session_id) +
-                  "\n                    "
-              )
+        [
+          _c("h3", { staticClass: "text-center" }, [_vm._v("New polls")]),
+          _vm._v(" "),
+          _vm._l(_vm.polls, function(poll) {
+            return _c("div", { key: poll.id, staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-black text-center" }, [
+                _vm._v(_vm._s(poll.title))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("strong", [
+                  _c("p", { staticClass: "alert alert-info" }, [
+                    _vm._v(_vm._s(poll.description))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-success",
+                    attrs: { href: poll.poll_link }
+                  },
+                  [_vm._v("Continue")]
+                )
+              ])
             ])
-          ])
-        }),
-        0
+          })
+        ],
+        2
       )
     ])
   ])
