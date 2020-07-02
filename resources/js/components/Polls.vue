@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card" v-for="poll in polls" v-bind:key="poll.id">
-                    <div class="card-header">{{ poll.id }}</div>
+                    <div class="card-header">{{ poll.title }}</div>
 
                     <div class="card-body">
-                        {{ poll.session_id }}
+                        <strong></strong><span class="alert alert-info">{{ poll.description }}</span></strong>
                     </div>
                 </div>
             </div>
@@ -21,6 +21,8 @@
 				polls: [],
 				poll: {
 					id: '',
+					title: '',
+					description: '',
 					session: '',
 					position: ''
 

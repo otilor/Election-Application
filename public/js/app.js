@@ -1963,6 +1963,8 @@ __webpack_require__.r(__webpack_exports__);
       polls: [],
       poll: {
         id: '',
+        title: '',
+        description: '',
         session: '',
         position: ''
       },
@@ -37737,15 +37739,14 @@ var render = function() {
         _vm._l(_vm.polls, function(poll) {
           return _c("div", { key: poll.id, staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v(_vm._s(poll.id))
+              _vm._v(_vm._s(poll.title))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(poll.session_id) +
-                  "\n                    "
-              )
+              _c("strong"),
+              _c("span", { staticClass: "alert alert-info" }, [
+                _vm._v(_vm._s(poll.description))
+              ])
             ])
           ])
         }),
