@@ -1957,6 +1957,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37736,21 +37738,30 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col-md-8" },
-        _vm._l(_vm.polls, function(poll) {
-          return _c("div", { key: poll.id, staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v(_vm._s(poll.title))
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("strong"),
-              _c("span", { staticClass: "alert alert-info" }, [
-                _vm._v(_vm._s(poll.description))
+        [
+          _c("h1", { staticClass: "text-center" }, [_vm._v("New polls")]),
+          _vm._v(" "),
+          _vm._l(_vm.polls, function(poll) {
+            return _c("div", { key: poll.id, staticClass: "card" }, [
+              _c("div", { staticClass: "card-header" }, [
+                _vm._v(_vm._s(poll.title))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("strong", [
+                  _c("p", { staticClass: "alert alert-info" }, [
+                    _vm._v(_vm._s(poll.description))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-success" }, [
+                  _vm._v("Continue")
+                ])
               ])
             ])
-          ])
-        }),
-        0
+          })
+        ],
+        2
       )
     ])
   ])
