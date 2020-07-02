@@ -67,7 +67,9 @@ nav,
 section {
   display: block;
 }
-
+nav {
+  font-family: Confetti Stream;
+}
 body {
   margin: 0;
   font-size: 0.9rem;
