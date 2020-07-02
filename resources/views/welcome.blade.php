@@ -7,14 +7,12 @@
         
     </head>
     <body>
-       <div class="container">
-            femi adesina
-       </div>
+        
+           <div id = "app" class="container">
+                <navbar></navbar>
+        <example-component></example-component>
+           </div>
 
-
-
-
-
-      
+           <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
