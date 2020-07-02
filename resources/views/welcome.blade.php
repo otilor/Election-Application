@@ -11,7 +11,6 @@
            <div id = "app" class="container">
                 <navbar></navbar>
                 <polls></polls>
-        <example-component></example-component>
            </div>
 
            <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

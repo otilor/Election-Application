@@ -6,7 +6,7 @@
                     <div class="card-header">{{ poll.id }}</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        {{ poll.session_id }}
                     </div>
                 </div>
             </div>
