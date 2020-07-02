@@ -37584,131 +37584,150 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
+    _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+      _vm._v("Election App")
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "collapse navbar-collapse",
+        attrs: { id: "navbarSupportedContent" }
+      },
+      [
+        _c("ul", { staticClass: "navbar-nav mr-auto" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: { name: "hello" } } },
+                [_vm._v("Polls")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3)
+        ]),
+        _vm._v(" "),
+        _vm._m(4)
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
-      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-        _vm._v("Election App")
-      ]),
-      _vm._v(" "),
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarSupportedContent",
+          "aria-controls": "navbarSupportedContent",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item active" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+        _vm._v("Home "),
+        _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item dropdown" }, [
       _c(
-        "button",
+        "a",
         {
-          staticClass: "navbar-toggler",
+          staticClass: "nav-link dropdown-toggle",
           attrs: {
-            type: "button",
-            "data-toggle": "collapse",
-            "data-target": "#navbarSupportedContent",
-            "aria-controls": "navbarSupportedContent",
-            "aria-expanded": "false",
-            "aria-label": "Toggle navigation"
+            href: "#",
+            id: "navbarDropdown",
+            role: "button",
+            "data-toggle": "dropdown",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
           }
         },
-        [_c("span", { staticClass: "navbar-toggler-icon" })]
+        [_vm._v("\n          Dropdown\n        ")]
       ),
       _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "collapse navbar-collapse",
-          attrs: { id: "navbarSupportedContent" }
+          staticClass: "dropdown-menu",
+          attrs: { "aria-labelledby": "navbarDropdown" }
         },
         [
-          _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-            _c("li", { staticClass: "nav-item active" }, [
-              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                _vm._v("Home "),
-                _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-item" }, [
-              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                _vm._v("Polls")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-item dropdown" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link dropdown-toggle",
-                  attrs: {
-                    href: "#",
-                    id: "navbarDropdown",
-                    role: "button",
-                    "data-toggle": "dropdown",
-                    "aria-haspopup": "true",
-                    "aria-expanded": "false"
-                  }
-                },
-                [_vm._v("\n          Dropdown\n        ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "dropdown-menu",
-                  attrs: { "aria-labelledby": "navbarDropdown" }
-                },
-                [
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Action")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Another action")]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider" }),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Something else here")]
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-item" }, [
-              _c(
-                "a",
-                { staticClass: "nav-link disabled", attrs: { href: "#" } },
-                [_vm._v("Disabled")]
-              )
-            ])
+          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+            _vm._v("Action")
           ]),
           _vm._v(" "),
-          _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
-            _c("input", {
-              staticClass: "form-control mr-sm-2",
-              attrs: {
-                type: "search",
-                placeholder: "Search",
-                "aria-label": "Search"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-outline-success my-2 my-sm-0",
-                attrs: { type: "submit" }
-              },
-              [_vm._v("Search")]
-            )
+          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+            _vm._v("Another action")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown-divider" }),
+          _vm._v(" "),
+          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+            _vm._v("Something else here")
           ])
         ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link disabled", attrs: { href: "#" } }, [
+        _vm._v("Disabled")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
+      _c("input", {
+        staticClass: "form-control mr-sm-2",
+        attrs: { type: "search", placeholder: "Search", "aria-label": "Search" }
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-outline-success my-2 my-sm-0",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("Search")]
       )
     ])
   }
