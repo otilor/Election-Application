@@ -37570,7 +37570,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
                 _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Link")
+                  _vm._v("Polls")
                 ])
               ]),
               _vm._v(" "),

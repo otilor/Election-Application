@@ -1,9 +1,15 @@
+/* @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";*/
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@font-face {
+  font-family: Confetti Stream;
+  src : url('../fonts/Confetti Stream.ttf');
+}
 
 :root {
   --blue: #3490dc;
@@ -32,7 +38,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  /*--font-family-sans-serif: "Nunito", sans-serif;*/
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
