@@ -17,6 +17,7 @@ class CreatePollsTable extends Migration
             $table->id();
             $table->string('title');
             $table->mediumText('description');
+            $table->string('poll_link');
             $table->unsignedBigInteger('position_id', false);
             $table->unsignedBigInteger('session_id', false);
             $table->timestamps();
