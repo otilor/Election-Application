@@ -3,6 +3,30 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+import Example from './components/ExampleComponent'
+import Polls from './components/Polls'
+
+const router = new VueRouter ({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Polls,
+        },
+        {
+            path: '/hello',
+            name: 'hello',
+            component: Example,
+        }
+    ],
+});
+
+
 
 require('./bootstrap');
 
@@ -30,4 +54,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components: { Polls },
+    router,
 });
