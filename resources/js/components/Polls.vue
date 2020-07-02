@@ -28,7 +28,7 @@
 					session: '',
 					position: ''
 
-				}, 
+				},
 				poll_id: '',
 				pagination: {},
 				edit: false
@@ -44,7 +44,8 @@
 				fetch('api/polls').then(res => res.json()).then(res => {
 					this.polls = res.data;
 				})
-			},		
+			},
+
 		}
 	}
 </script>
