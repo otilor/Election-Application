@@ -2,9 +2,9 @@
 	<div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-            	<h1 class="text-center">New polls</h1>
+            	<h3 class="text-center">New polls</h3>
                 <div class="card" v-for="poll in polls" v-bind:key="poll.id">
-                    <div class="card-header">{{ poll.title }}</div>
+                    <div class="card-header text-black text-center">{{ poll.title }}</div>
 
                     <div class="card-body">
                         <strong><p class="alert alert-info">{{ poll.description }}</p></strong>

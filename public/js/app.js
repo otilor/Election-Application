@@ -37739,11 +37739,11 @@ var render = function() {
         "div",
         { staticClass: "col-md-8" },
         [
-          _c("h1", { staticClass: "text-center" }, [_vm._v("New polls")]),
+          _c("h3", { staticClass: "text-center" }, [_vm._v("New polls")]),
           _vm._v(" "),
           _vm._l(_vm.polls, function(poll) {
             return _c("div", { key: poll.id, staticClass: "card" }, [
-              _c("div", { staticClass: "card-header" }, [
+              _c("div", { staticClass: "card-header text-black text-center" }, [
                 _vm._v(_vm._s(poll.title))
               ]),
               _vm._v(" "),
