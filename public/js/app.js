@@ -1967,6 +1967,7 @@ __webpack_require__.r(__webpack_exports__);
         id: '',
         title: '',
         description: '',
+        poll_link: '',
         session: '',
         position: ''
       },
@@ -37754,9 +37755,14 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("Continue")
-                ])
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-success",
+                    attrs: { href: poll.poll_link }
+                  },
+                  [_vm._v("Continue")]
+                )
               ])
             ])
           })

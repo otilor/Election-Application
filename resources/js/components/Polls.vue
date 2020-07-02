@@ -8,7 +8,7 @@
 
                     <div class="card-body">
                         <strong><p class="alert alert-info">{{ poll.description }}</p></strong>
-                        <button class="btn btn-success">Continue</button>
+                        <a class="btn btn-success" :href="poll.poll_link">Continue</a>
                     </div>
                 </div>
             </div>
@@ -25,6 +25,7 @@
 					id: '',
 					title: '',
 					description: '',
+                    poll_link:'',
 					session: '',
 					position: ''
 
