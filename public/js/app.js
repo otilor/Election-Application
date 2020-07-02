@@ -37534,7 +37534,7 @@ var staticRenderFns = [
       { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
       [
         _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-          _vm._v("Navbar")
+          _vm._v("Election App")
         ]),
         _vm._v(" "),
         _c(
