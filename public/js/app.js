@@ -1932,6 +1932,63 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Polls.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Polls.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      polls: [],
+      poll: {
+        id: '',
+        session: '',
+        position: ''
+      },
+      poll_id: '',
+      pagination: {},
+      edit: false
+    };
+  },
+  created: function created() {
+    this.fetchArticles();
+  },
+  methods: {
+    fetchArticles: function fetchArticles() {
+      var _this = this;
+
+      fetch('api/polls').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this.polls = res.data;
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37529,132 +37586,173 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
-      [
-        _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-          _vm._v("Election App")
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "navbar-toggler",
-            attrs: {
-              type: "button",
-              "data-toggle": "collapse",
-              "data-target": "#navbarSupportedContent",
-              "aria-controls": "navbarSupportedContent",
-              "aria-expanded": "false",
-              "aria-label": "Toggle navigation"
-            }
-          },
-          [_c("span", { staticClass: "navbar-toggler-icon" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse",
-            attrs: { id: "navbarSupportedContent" }
-          },
-          [
-            _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-              _c("li", { staticClass: "nav-item active" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Home "),
-                  _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Polls")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item dropdown" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link dropdown-toggle",
-                    attrs: {
-                      href: "#",
-                      id: "navbarDropdown",
-                      role: "button",
-                      "data-toggle": "dropdown",
-                      "aria-haspopup": "true",
-                      "aria-expanded": "false"
-                    }
-                  },
-                  [_vm._v("\n          Dropdown\n        ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "dropdown-menu",
-                    attrs: { "aria-labelledby": "navbarDropdown" }
-                  },
-                  [
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Action")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Another action")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "dropdown-divider" }),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "dropdown-item", attrs: { href: "#" } },
-                      [_vm._v("Something else here")]
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "nav-link disabled", attrs: { href: "#" } },
-                  [_vm._v("Disabled")]
-                )
+    return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
+      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+        _vm._v("Election App")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "navbar-toggler",
+          attrs: {
+            type: "button",
+            "data-toggle": "collapse",
+            "data-target": "#navbarSupportedContent",
+            "aria-controls": "navbarSupportedContent",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation"
+          }
+        },
+        [_c("span", { staticClass: "navbar-toggler-icon" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "collapse navbar-collapse",
+          attrs: { id: "navbarSupportedContent" }
+        },
+        [
+          _c("ul", { staticClass: "navbar-nav mr-auto" }, [
+            _c("li", { staticClass: "nav-item active" }, [
+              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                _vm._v("Home "),
+                _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
               ])
             ]),
             _vm._v(" "),
-            _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
-              _c("input", {
-                staticClass: "form-control mr-sm-2",
-                attrs: {
-                  type: "search",
-                  placeholder: "Search",
-                  "aria-label": "Search"
-                }
-              }),
+            _c("li", { staticClass: "nav-item" }, [
+              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                _vm._v("Polls")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item dropdown" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "nav-link dropdown-toggle",
+                  attrs: {
+                    href: "#",
+                    id: "navbarDropdown",
+                    role: "button",
+                    "data-toggle": "dropdown",
+                    "aria-haspopup": "true",
+                    "aria-expanded": "false"
+                  }
+                },
+                [_vm._v("\n          Dropdown\n        ")]
+              ),
               _vm._v(" "),
               _c(
-                "button",
+                "div",
                 {
-                  staticClass: "btn btn-outline-success my-2 my-sm-0",
-                  attrs: { type: "submit" }
+                  staticClass: "dropdown-menu",
+                  attrs: { "aria-labelledby": "navbarDropdown" }
                 },
-                [_vm._v("Search")]
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [_vm._v("Action")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [_vm._v("Another action")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dropdown-divider" }),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [_vm._v("Something else here")]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                { staticClass: "nav-link disabled", attrs: { href: "#" } },
+                [_vm._v("Disabled")]
               )
             ])
-          ]
-        )
-      ]
-    )
+          ]),
+          _vm._v(" "),
+          _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
+            _c("input", {
+              staticClass: "form-control mr-sm-2",
+              attrs: {
+                type: "search",
+                placeholder: "Search",
+                "aria-label": "Search"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-outline-success my-2 my-sm-0",
+                attrs: { type: "submit" }
+              },
+              [_vm._v("Search")]
+            )
+          ])
+        ]
+      )
+    ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-8" },
+        _vm._l(_vm.polls, function(poll) {
+          return _c("div", { key: poll.id, staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v(_vm._s(poll.id))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v(
+                "\n                        I'm an example component.\n                    "
+              )
+            ])
+          ])
+        }),
+        0
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49849,6 +49947,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('navbar', __webpack_require__(/*! ./components/Navbar.vue */ "./resources/js/components/Navbar.vue")["default"]);
+Vue.component('polls', __webpack_require__(/*! ./components/Polls.vue */ "./resources/js/components/Polls.vue")["default"]);
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50024,6 +50123,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Polls.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Polls.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Polls.vue?vue&type=template&id=6a5b218e& */ "./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e&");
+/* harmony import */ var _Polls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Polls.vue?vue&type=script&lang=js& */ "./resources/js/components/Polls.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Polls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Polls.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Polls.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Polls.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Polls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Polls.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Polls.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Polls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Polls.vue?vue&type=template&id=6a5b218e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Polls.vue?vue&type=template&id=6a5b218e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Polls_vue_vue_type_template_id_6a5b218e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -10,6 +10,7 @@
         
            <div id = "app" class="container">
                 <navbar></navbar>
+                <polls></polls>
         <example-component></example-component>
            </div>
 
