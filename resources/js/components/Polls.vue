@@ -36,12 +36,11 @@
 		},
 
 		methods: {
-			fetchArticles() {
+			fetchArticles: function() {
 				fetch('api/polls').then(res => res.json()).then(res => {
-					this.polls = res.data
-
+					this.polls = res.data;
 				})
-			}
+			},		
 		}
 	}
 </script>
