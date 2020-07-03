@@ -50106,8 +50106,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navbar', __webpack_require__(/*! ./components/Navbar.vue */ "./resources/js/components/Navbar.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('polls', __webpack_require__(/*! ./components/Polls.vue */ "./resources/js/components/Polls.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('welcome', __webpack_require__(/*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue")["default"]); // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.config.productionTip = false;
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50115,10 +50115,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
  */
 
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  render: function render(h) {
-    return h(_components_Welcome__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  el: '#app',
+  components: {
+    Welcome: _components_Welcome__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Polls: _components_Polls__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
-}).$mount("#app");
+});
 
 /***/ }),
 

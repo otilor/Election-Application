@@ -33,7 +33,7 @@ Vue.component('polls', require('./components/Polls.vue').default);
 Vue.component('welcome', require('./components/Welcome.vue').default);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.config.productionTip = false;
+//Vue.config.productionTip = false;
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -41,5 +41,6 @@ Vue.config.productionTip = false;
  */
 
 new Vue({
-    render: h => h(Welcome)
-}).$mount("#app");
+    el : '#app',
+    components: {Welcome, Polls}
+});

@@ -14,7 +14,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        return "You don't give up ni?";
+        return view('polls.index');
     }
 
     /**
