@@ -6,7 +6,7 @@
        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
       <title>All the polls go here!</title>
     </head>
-    <body>
+    <body id = "about">
 
            <div id = "app" class="container">
             <navbar></navbar>

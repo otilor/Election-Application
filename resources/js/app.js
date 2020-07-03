@@ -13,9 +13,18 @@ import Polls from './components/Polls'
 
 
 
-
 require('./bootstrap');
 
+
+$(document).ready(function() {
+    $("#home a:contains('Home')").parent().addClass('active');
+    $("#about a:contains('Polls')").parent().addClass('active');
+    $('ul.nav li.dropdown').hover(function() {
+        $('.dropdown-menu', this).fadeIn();
+    }, function() {
+        $('.dropdown-menu', this).fadeOut('fast');
+    })
+})
 window.Vue = require('vue');
 
 /**
