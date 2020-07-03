@@ -37664,7 +37664,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
-    _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+    _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
       _vm._v("Election App")
     ]),
     _vm._v(" "),
@@ -37729,7 +37729,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
         _vm._v("Home "),
         _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
       ])
