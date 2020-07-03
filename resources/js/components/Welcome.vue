@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-	<navbar></navbar>	
+	
 	
 		<div class="jumbotron">
 			<p class="lead">Welcome to Polls Application designed by Gabriel Akinyosoye</p>	

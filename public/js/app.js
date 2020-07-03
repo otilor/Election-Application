@@ -37874,25 +37874,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [_c("navbar"), _vm._v(" "), _vm._m(0)],
-    1
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "jumbotron" }, [
-      _c("p", { staticClass: "lead" }, [
-        _vm._v("Welcome to Polls Application designed by Gabriel Akinyosoye")
-      ]),
-      _vm._v(" "),
-      _c("button", { staticClass: "btn btn-primary btn-lg" }, [
-        _vm._v("Button")
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "jumbotron" }, [
+        _c("p", { staticClass: "lead" }, [
+          _vm._v("Welcome to Polls Application designed by Gabriel Akinyosoye")
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-primary btn-lg" }, [
+          _vm._v("Button")
+        ])
       ])
     ])
   }
