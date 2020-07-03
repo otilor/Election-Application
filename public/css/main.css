@@ -91,9 +91,22 @@ body {
 	margin: 0;
 }
 
-a {
+.navbar-brand {
 	color: #2b3543;
 }
+
+.nav-link {
+	color: #2b3543;
+	margin: 0;
+}
+
+
+.nav-link:hover {
+	color: #ff654a;
+	margin: 0;
+}
+
+
 
 .text-skgray {
 	color: #2b3543;
