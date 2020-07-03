@@ -37663,45 +37663,68 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
-    _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-      _vm._v("Election App")
-    ]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "collapse navbar-collapse",
-        attrs: { id: "navbarSupportedContent" }
-      },
-      [
-        _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "nav-item" },
-            [
-              _c(
-                "router-link",
-                { staticClass: "nav-link", attrs: { to: { name: "polls" } } },
-                [_vm._v("Polls")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(2),
+  return _c(
+    "nav",
+    { staticClass: "navbar navbar-expand-lg navbar-light" },
+    [
+      _c(
+        "router-link",
+        { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
+        [_vm._v("Election App")]
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "collapse navbar-collapse",
+          attrs: { id: "navbarSupportedContent" }
+        },
+        [
+          _c("ul", { staticClass: "navbar-nav mr-auto" }, [
+            _c(
+              "li",
+              { staticClass: "nav-item active" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "nav-link", attrs: { to: { name: "home" } } },
+                  [
+                    _vm._v("Home "),
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("(current)")
+                    ])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "nav-item" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "nav-link", attrs: { to: { name: "polls" } } },
+                  [_vm._v("Polls")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2)
+          ]),
           _vm._v(" "),
           _vm._m(3)
-        ]),
-        _vm._v(" "),
-        _vm._m(4)
-      ]
-    )
-  ])
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -37723,17 +37746,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item active" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
-        _vm._v("Home "),
-        _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
-      ])
-    ])
   },
   function() {
     var _vm = this
@@ -53144,7 +53156,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/',
     name: 'home',
     component: {
-      name: 'welcome'
+      name: 'welcome',
+      template: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
     }
   }, {
     path: '/polls',
