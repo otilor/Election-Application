@@ -3,6 +3,12 @@
 	src: url('../fonts/Calibre/Calibre-Regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: "Calibre-Semibold";
+	src: url('../fonts/Calibre/Calibre-Semibold.ttf') format('truetype');
+}
+
+
 body {
 	background-color: #fff;
 	font-family: "Calibre-Regular";
@@ -11,5 +17,7 @@ body {
 .navbar {
 	background-color: #fff;
 	padding: 20px; 
-	font-size: 20px;
+	font-size: 16px;
+	font-family: "Calibre-Semibold";
 }
+
