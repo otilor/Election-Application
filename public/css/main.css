@@ -21,3 +21,10 @@ body {
 	font-family: "Calibre-Semibold";
 }
 
+.story {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #2b3543;
+	color: #fff;
+	text-align: center;
+}
