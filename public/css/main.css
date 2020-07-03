@@ -1,5 +1,11 @@
+@font-face {
+	font-family: "Calibre-Regular";
+	src: url('../fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+}
+
 body {
 	background-color: #fff;
+	font-family: "Calibre-Regular";
 }
 
 .navbar {
