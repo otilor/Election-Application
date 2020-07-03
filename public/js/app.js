@@ -37701,10 +37701,9 @@ var staticRenderFns = [
         },
         [
           _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-            _c("li", { staticClass: "nav-item active" }, [
+            _c("li", { staticClass: "nav-item" }, [
               _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
-                _vm._v("Home "),
-                _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
+                _vm._v("Home")
               ])
             ]),
             _vm._v(" "),
@@ -50092,6 +50091,15 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$(document).ready(function () {
+  $("#home a:contains('Home')").parent().addClass('active');
+  $("#about a:contains('Polls')").parent().addClass('active');
+  $('ul.nav li.dropdown').hover(function () {
+    $('.dropdown-menu', this).fadeIn();
+  }, function () {
+    $('.dropdown-menu', this).fadeOut('fast');
+  });
+});
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -50106,8 +50114,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navbar', __webpack_require__(/*! ./components/Navbar.vue */ "./resources/js/components/Navbar.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('polls', __webpack_require__(/*! ./components/Polls.vue */ "./resources/js/components/Polls.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('welcome', __webpack_require__(/*! ./components/Welcome.vue */ "./resources/js/components/Welcome.vue")["default"]); // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.config.productionTip = false;
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50115,10 +50123,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
  */
 
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  render: function render(h) {
-    return h(_components_Welcome__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  el: '#app',
+  components: {
+    Welcome: _components_Welcome__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Polls: _components_Polls__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
-}).$mount("#app");
+});
 
 /***/ }),
 
