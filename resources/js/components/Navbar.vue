@@ -11,7 +11,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'hello' }">Polls</router-link>
+          <router-link class="nav-link" :to="{ name: 'polls' }">Polls</router-link>
 
       </li>
       <li class="nav-item dropdown">
