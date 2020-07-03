@@ -22,9 +22,15 @@ body {
 }
 
 .story {
-	padding-top: 12px;
-	padding-bottom: 12px;
+
 	background-color: #2b3543;
 	color: #fff;
 	text-align: center;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	margin: 0;
+	padding-bottom: 0;
 }
+
+.

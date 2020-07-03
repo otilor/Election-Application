@@ -7,7 +7,10 @@
        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
        @include('includes.navbar')
-       @include('includes.story')
+       <div>
+         @include('includes.story')
+       </div>
+       
     </head>
     <body>
 
