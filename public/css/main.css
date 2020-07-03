@@ -28,9 +28,37 @@ body {
 	text-align: center;
 	left: 0;
 	bottom: 0;
-	padding: 10px;
+	padding: 20px;
 	margin: 0;
 	padding-bottom: 0;
 }
 
-.
+.bg-skorange {
+	background-color: #ff654a;
+}
+
+.rounded-4px {
+	border-radius: 4px;
+}
+
+.px-5px {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.tracking-1h-px {
+	letter-spacing: 1.5px;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.text-18px {
+	font-size: 18px;
+}
+
+.py-5px {
+	padding-top: 5px;
+	padding-bottom: 0;
+}
