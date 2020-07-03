@@ -77,3 +77,24 @@ body {
 .text-16px {
 	font-size: 16px;
 }
+
+.nav-item {
+	display: inline-block;
+	height: 75px;
+	padding-top: 20px;
+	color: black;
+}
+
+.nav-item:hover {
+	border-bottom: 6px solid #ff654a;
+	color: #ff654a;
+	margin: 0;
+}
+
+a {
+	color: #2b3543;
+}
+
+.text-skgray {
+	color: #2b3543;
+}
