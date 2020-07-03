@@ -10,7 +10,7 @@
     <body id = "about">
 
            <div id = "app" class="container">
-            <navbar></navbar>
+          
               <polls></polls>
            </div>
 
