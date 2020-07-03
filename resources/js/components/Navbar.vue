@@ -1,6 +1,6 @@
 <template>
 	<nav class="navbar navbar-expand-lg navbar-light">
-  <router-link class="navbar-brand" :to="{ name: 'home' }">Election App</router-link>
+  <a class="navbar-brand" :to="{ name: 'home' }">Election App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,10 +8,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <router-link class="nav-link" :to="{ name: 'home' }" >Home <span class="sr-only">(current)</span></router-link>
+        <a class="nav-link" :to="{ name: 'home' }" >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'polls' }">Polls</router-link>
+          <a class="nav-link" :to="{ name: 'polls' }">Polls</a>
 
       </li>
       <li class="nav-item dropdown">
@@ -37,6 +37,8 @@
   </div>
 </nav>
 </template>
+
+
 <script>
   import Navbar from  './Navbar.vue'
     export default {
