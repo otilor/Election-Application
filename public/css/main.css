@@ -28,9 +28,8 @@ body {
 	text-align: center;
 	left: 0;
 	bottom: 0;
-	padding: 20px;
-	margin: 0;
-	padding-bottom: 0;
+	align-items: center;
+	padding: 10px
 }
 
 .bg-skorange {
@@ -60,5 +59,9 @@ body {
 
 .py-5px {
 	padding-top: 5px;
-	padding-bottom: 0;
+
+}
+
+.no-margin {
+	margin-bottom:  0;
 }
