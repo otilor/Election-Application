@@ -8,8 +8,8 @@
     </head>
     <body id = "home">
 
-           <div class="container">
-              
+           <div id = "app" class="container">
+              <welcome></welcome>
            </div>
 
            <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
