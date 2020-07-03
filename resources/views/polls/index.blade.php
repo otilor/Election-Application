@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section ('content')
-  <polls></polls>
+  <polls id = "about"></polls>
 
 @endsection

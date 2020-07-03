@@ -9,7 +9,7 @@
        @include('includes.navbar')
        
     </head>
-    <body id = "about">
+    <body>
 
            <div id = "app" class="container">
           	@yield('content')
