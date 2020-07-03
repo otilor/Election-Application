@@ -8,7 +8,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Example from './components/ExampleComponent'
-import Polls from './components/Polls'
+import Welcome from './components/Welcome'
 
 const router = new VueRouter ({
     mode: 'history',
@@ -16,11 +16,11 @@ const router = new VueRouter ({
         {
             path: '/',
             name: 'home',
-            component: Polls,
+            component: Welcome,
         },
         {
-            path: '/hello',
-            name: 'hello',
+            path: '/polls',
+            name: 'polls',
             component: Example,
         }
     ],
@@ -44,6 +44,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 Vue.component('navbar', require('./components/Navbar.vue').default);
 Vue.component('polls', require('./components/Polls.vue').default);
+Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
@@ -54,6 +55,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-    components: { Polls },
+    components: { Welcome },
     router,
 });
