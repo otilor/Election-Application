@@ -168,3 +168,13 @@ body {
 	background-color: #ff654a;
 	color: #fff;
 }
+
+.signup {
+	background-color: #ff654a;
+	color: #fff;
+	z-index: 0;
+}
+
+.signup:hover {
+	background-color: #cc503b;
+}
