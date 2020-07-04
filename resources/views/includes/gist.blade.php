@@ -7,6 +7,7 @@
 	 <div class="lg:flex lg:mx-auto lg:max-w-1024px">
 		<div class="mx-20px mt-25px lg:mt-50px pt-25px px-25px lg:pt-35 lg:px-35px bg-white">
 			<h2 class="text-sub text-dark mt-16px">Compete with family and friends</h2>
+			<h3 class="text-small text-light">Get stepping for free!</h3>
 		</div>
 	</div>
 

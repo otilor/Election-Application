@@ -241,3 +241,18 @@ body {
 	line-height: 30px;
 	font-weight: 600;
 }
+
+.text-small {
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.text-light {
+	color: #7c8693;
+}
+
+.mt-25px {
+	margin-top: 25px;
+}
