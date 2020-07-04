@@ -31,8 +31,10 @@
     </ul>
     
       {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
-      <button class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Log in</button>
+      <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Log in</a>
       
-      <button class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px " type="submit">Sign up to start voting</button>
+
+      <a href = "#" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
+      
   </div>
 </nav>

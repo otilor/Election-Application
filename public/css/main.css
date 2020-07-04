@@ -120,7 +120,7 @@ body {
 }
 
 .text-skorange {
-	color: #ff654a;
+	color: #ff654a !important;
 }
 
 .border-2 {
@@ -144,6 +144,16 @@ body {
 
 }
 
+.lg\:py-13px{
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.lg\:py-25px {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 .py-top-10px {
 	padding-top: 10px;
 }
@@ -164,15 +174,22 @@ body {
 	font-size: 20px;
 }
 
+.login {
+	border: 2px solid #ff654a;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 .login:hover {
 	background-color: #ff654a;
-	color: #fff;
+	color: #fff !important;
 }
 
 .signup {
+	border: 2px solid #ff654a;
 	background-color: #ff654a;
-	color: #fff;
-	z-index: 0;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .signup:hover {
@@ -212,4 +229,63 @@ body {
 .md\:mx-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.lg\:max-w-1024px {
+	max-width: 1024px;
+}
+
+.lg\:mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lg\:flex {
+	display: flex;
+}
+
+.lg\:px-35px {
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.mt-16px {
+	margin-top: 16px;
+}
+
+.text-sub {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 600;
+}
+
+.text-small {
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.text-light {
+	color: #7c8693;
+}
+
+.mt-25px {
+	margin-top: 25px;
+}
+
+.list-disc {
+	list-style: disc;
+}
+
+.ml-20px {
+	margin-left: 20px;
+}
+
+.mt-15px {
+	margin-top: 15px;
+}
+
+ul {
+	margin: 0;
 }
