@@ -186,9 +186,10 @@ body {
 }
 
 .signup {
+	border: 2px solid #ff654a;
 	background-color: #ff654a;
-	color: #fff;
-	z-index: 0;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .signup:hover {
