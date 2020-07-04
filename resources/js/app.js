@@ -11,8 +11,6 @@ import Welcome from './components/Welcome'
 import Polls from './components/Polls'
 
 
-
-
 require('./bootstrap');
 
 

@@ -1,0 +1,215 @@
+@font-face {
+	font-family: "Calibre-Regular";
+	src: url('../fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Calibre-Semibold";
+	src: url('../fonts/Calibre/Calibre-Semibold.ttf') format('truetype');
+}
+
+
+body {
+	background-color: #fff;
+	font-family: "Calibre-Regular";
+}
+
+.navbar {
+	background-color: #fff;
+	padding: 20px; 
+	font-size: 16px;
+	font-family: "Calibre-Semibold";
+}
+
+.story {
+
+	background-color: #2b3543;
+	color: #fff;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	align-items: center;
+	padding: 10px
+}
+
+.bg-skorange {
+	background-color: #ff654a;
+}
+
+.rounded-4px {
+	border-radius: 4px;
+}
+
+.px-5px {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.tracking-1h-px {
+	letter-spacing: 1.5px;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.text-18px {
+	font-size: 18px;
+}
+
+.py-5px {
+	padding-top: 5px;
+
+}
+
+.no-margin {
+	margin-bottom:  0;
+}
+
+.text-12px {
+	font-size: 12px;
+}
+
+.mr-8px {
+	margin-right: 8px;
+}
+
+.text-16px {
+	font-size: 16px;
+}
+
+.navbar {
+	margin-bottom: 1px;
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+
+.nav-item {
+	display: inline-block;
+	height: 75px;
+	padding-top: 20px;
+	color: black;
+}
+
+.nav-item:hover {
+	border-bottom: 6px solid #ff654a;
+	color: #ff654a;
+	margin: 0;
+}
+
+.navbar-brand {
+	color: #2b3543;
+}
+
+.nav-link {
+	color: #2b3543;
+	margin: 0;
+}
+
+
+.nav-link:hover {
+	color: #ff654a;
+	margin: 0;
+}
+
+
+
+.text-skgray {
+	color: #2b3543;
+}
+
+.text-skorange {
+	color: #ff654a;
+}
+
+.border-2 {
+	border-width: 2px;
+}
+
+.border-skorange {
+	border-color: #ff654a;
+}
+
+.py-13px {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.rounded-10px {
+	border-radius: 10px;
+}
+
+.border-skorange-outline {
+
+}
+
+.py-top-10px {
+	padding-top: 10px;
+}
+
+.text-16px {
+	font-size: 16px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.tracking-2px {
+	letter-spacing: 2px;
+}
+
+.text-20px {
+	font-size: 20px;
+}
+
+.login:hover {
+	background-color: #ff654a;
+	color: #fff;
+}
+
+.signup {
+	background-color: #ff654a;
+	color: #fff;
+	z-index: 0;
+}
+
+.signup:hover {
+	background-color: #cc503b;
+}
+
+.text-headline {
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -1px;
+	font-weight: 600;
+}
+
+.pt-8 {
+	padding-top: 2rem;
+}
+
+.max-w-780px {
+	max-width: 780px;
+}
+
+.lg\:mt-15px {
+	margin-top: 15px;
+}
+
+.text-body {
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+.md\:max-w-620px {
+	max-width: 620px;
+}
+
+.md\:mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}

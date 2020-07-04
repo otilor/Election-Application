@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -170,14 +170,13 @@ sup {
 }
 
 a {
-  color: #3490dc;
-  text-decoration: none;
+  color: #fff;
   background-color: transparent;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #1d68a7;
-  text-decoration: underline;
+  
 }
 
 a:not([href]) {
@@ -10784,10 +10783,6 @@ a.text-light:focus {
 a.text-dark:hover,
 a.text-dark:focus {
   color: #121416 !important;
-}
-
-.text-body {
-  color: #212529 !important;
 }
 
 .text-muted {
