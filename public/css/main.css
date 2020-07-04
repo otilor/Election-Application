@@ -178,3 +178,8 @@ body {
 .signup:hover {
 	background-color: #cc503b;
 }
+
+.gist {
+	margin: 0;
+	padding: 0;
+}
