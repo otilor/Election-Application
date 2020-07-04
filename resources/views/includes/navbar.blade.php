@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg text-right">
   <a class="navbar-brand" href = "/">Election App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
           <a class="nav-link" href = "/polls">Polls</a>
 
       </li>
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -27,11 +27,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      </li> --}}
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
+      <button class="bg-white text-skorange uppercase tracking-2px border-2 border-skorange py-10px rounded-10px text-16px font-semibold" type="submit">Log in</button>
+      
     </form>
   </div>
 </nav>

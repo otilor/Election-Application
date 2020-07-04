@@ -111,3 +111,45 @@ body {
 .text-skgray {
 	color: #2b3543;
 }
+
+.text-skorange {
+	color: #ff654a;
+}
+
+.border-2 {
+	border-width: 2px;
+}
+
+.border-skorange {
+	border-color: #ff654a;
+}
+
+.py-13px {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.rounded-10px {
+	border-radius: 10px;
+}
+
+.border-skorange-outline {
+
+}
+
+.py-10px {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.text-16px {
+	font-size: 16px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.tracking-2px {
+	letter-spacing: 2px;
+}
