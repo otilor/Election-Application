@@ -256,3 +256,19 @@ body {
 .mt-25px {
 	margin-top: 25px;
 }
+
+.list-disc {
+	list-style: disc;
+}
+
+.ml-20px {
+	margin-left: 20px;
+}
+
+.mt-15px {
+	margin-top: 15px;
+}
+
+ul {
+	margin: 0;
+}
