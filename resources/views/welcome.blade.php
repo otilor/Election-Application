@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <welcome></welcome>
+@include('includes.gist')
+  {{-- <welcome></welcome> --}}
 @endsection
