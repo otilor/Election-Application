@@ -179,7 +179,17 @@ body {
 	background-color: #cc503b;
 }
 
-.gist {
-	margin: 0;
-	padding: 0;
+.text-headline {
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -1px;
+	font-weight: 600;
+}
+
+.pt-8 {
+	padding-top: 2rem;
+}
+
+.max-w-780px {
+	max-width: 780px;
 }
