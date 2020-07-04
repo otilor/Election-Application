@@ -289,3 +289,21 @@ body {
 ul {
 	margin: 0;
 }
+
+.bg-skgray-300 {
+	background-color: #f3f4f8;
+}
+
+.lg\:mx-25px- {
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.lg\:mx-35px- {
+	margin-left: -35px;
+	margin-right: -35px;
+}
+
+.flex {
+	display: flex;
+}

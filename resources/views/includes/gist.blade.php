@@ -14,6 +14,7 @@
 				<li class="text-small">Challenges can last up to a month</li>
 				<li class="text-small">Compete with others in community challenge</li>
 			</ul>
+			<div class="bg-skgray-300 lg:mx-35px- lg:px-35px-">ff</div>
 		</div>
 	</div>
 
