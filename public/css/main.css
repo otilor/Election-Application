@@ -182,7 +182,7 @@ body {
 
 .login:hover {
 	background-color: #ff654a;
-	color: #fff;
+	color: #fff !important;
 }
 
 .signup {
