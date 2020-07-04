@@ -14,6 +14,11 @@
 				<li class="text-small">Challenges can last up to a month</li>
 				<li class="text-small">Compete with others in community challenge</li>
 			</ul>
+			<div class="bg-skgray-300 lg:mx-35px- py-35px">
+				<div class="w-1/2 text-dark">
+					<a href = "#" class="bg-skorange my-5 text-caps py-15px ml-25px text-white px-20px py-14px">Sign up</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
