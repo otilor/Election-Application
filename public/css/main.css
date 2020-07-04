@@ -144,6 +144,16 @@ body {
 
 }
 
+.lg\:py-13px{
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.lg\:py-25px {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
 .py-top-10px {
 	padding-top: 10px;
 }
@@ -162,6 +172,12 @@ body {
 
 .text-20px {
 	font-size: 20px;
+}
+
+.login {
+	border: 2px solid #ff654a;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .login:hover {
