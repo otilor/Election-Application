@@ -137,9 +137,8 @@ body {
 
 }
 
-.py-10px {
+.py-top-10px {
 	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 .text-16px {
@@ -152,4 +151,13 @@ body {
 
 .tracking-2px {
 	letter-spacing: 2px;
+}
+
+.text-20px {
+	font-size: 20px;
+}
+
+.login:hover {
+	background-color: #ff654a;
+	color: #fff;
 }

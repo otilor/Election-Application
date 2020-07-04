@@ -29,10 +29,10 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li> --}}
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    
       {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
-      <button class="bg-white text-skorange uppercase tracking-2px border-2 border-skorange py-10px rounded-10px text-16px font-semibold" type="submit">Log in</button>
+      <button class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px font-semibold" type="submit">Log in</button>
       
-    </form>
+    
   </div>
 </nav>
