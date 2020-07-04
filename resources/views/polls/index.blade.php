@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section ('content')
-  {{-- <polls id = "about"></polls> --}}
-  @include('includes.gist')
+  <polls id = "about"></polls>
+  
 @endsection
