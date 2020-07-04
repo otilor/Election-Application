@@ -120,7 +120,7 @@ body {
 }
 
 .text-skorange {
-	color: #ff654a;
+	color: #ff654a !important;
 }
 
 .border-2 {
