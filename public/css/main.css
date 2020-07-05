@@ -367,6 +367,7 @@ ul {
 
 .story-ended\? {
 	padding: 40px;
+	display: flex;
 }
 
 .bg-mpblue {

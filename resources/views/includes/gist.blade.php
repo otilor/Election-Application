@@ -33,10 +33,12 @@
 		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/voting.png') }}">
 	</div>
 	
-	
-		<div class="flex-grow story-ended p-5 story-ended-margin br-20px text-center bg-mpblue">
+	<div class="mx-auto my-5 col-md-6">
+		<div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 text-center bg-mpblue">
 			<h2 class="text-headline text-white">Enough of the story right?</h2>
 		</div>
+	</div>
+		
 	
 	
 	
