@@ -364,3 +364,18 @@ ul {
 .random-div-title-description {
 	max-width: 620px;
 }
+
+.story-ended\? {
+	padding: 40px;
+}
+
+.bg-mpblue {
+	background-color: #4f9cfb;
+}
+
+.story-ended-margin {
+	margin-top: 50px;
+	margin-left:  20%;
+	margin-right: 20%;
+	margin-bottom: 25px;
+}
