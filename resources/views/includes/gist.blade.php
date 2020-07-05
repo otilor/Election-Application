@@ -27,5 +27,9 @@
 	
 </div>
 <section class="random-div bg-not-too-white text-mpgray">
-	<h1 class="text-center text-23px text-semibold">I am a boring text</h1>
+	<h1 class="text-center py-15px text-23px text-semibold">Anonymously vote.</h1>
+	<div class="text-center">
+		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/voting.png') }}">
+	</div>
+	
 </section>
