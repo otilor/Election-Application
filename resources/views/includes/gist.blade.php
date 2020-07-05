@@ -34,8 +34,8 @@
 	</div>
 	
 	
-		<div class="flex-grow story-ended p-5 story-ended-margin text-center bg-mpblue">
-			
+		<div class="flex-grow story-ended p-5 story-ended-margin br-20px text-center bg-mpblue">
+			<h2 class="text-headline text-white">Enough of the story right?</h2>
 		</div>
 	
 	

@@ -379,3 +379,7 @@ ul {
 	margin-right: 20%;
 	margin-bottom: 25px;
 }
+
+.br-20px {
+	border-radius: 20px;
+}
