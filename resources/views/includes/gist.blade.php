@@ -38,7 +38,7 @@
 			<h2 class="text-headline text-white">Enough of the story right?</h2>
 			<h4 class="text-body text-mpblue-500">Let's jump right into it</h4>
 			<div class="end-of-story-button mt-20px">
-				<a href="#" class="py-3 br-10px px-4 bg-msblue-600  text-caps">start off</a>
+				<a href="/polls" class="py-3 br-10px px-4 bg-msblue-600  text-caps">start off</a>
 			</div>
 		</div>
 	</div>
