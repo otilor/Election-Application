@@ -388,3 +388,16 @@ ul {
 .text-mpblue-500 {
 	color: #c9e2fd;
 }
+
+
+.bg-msblue-600 {
+	background-color: #3d7bcc; 
+}
+
+.mt-20px {
+	margin-top: 20px;
+}
+
+.br-10px {
+	border-radius: 10px;
+}
