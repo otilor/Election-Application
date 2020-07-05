@@ -20,5 +20,7 @@
            </div>
 
            <script type="text/javascript" src="{{ secure_asset('js/app.js') }}"></script>
+           <footer class="p-1 text-white text-center"><a href = "https://github.com/GabielFemi" class="text-caps">This bug🐞was created by  Gabriel Akinyosoye</a></footer>
+
     </body>
 </html>
