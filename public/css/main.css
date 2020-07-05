@@ -334,3 +334,33 @@ ul {
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
+
+.text-mpgray {
+	color: #2b3543;
+}
+
+.text-semibold {
+	font-weight: 600;
+}
+
+.text-23px {
+	font-size: 23px;
+}
+
+.voting-icon {
+	width: 30vh;
+	height: 30vh;
+	cursor: pointer;
+	box-shadow: 10px 10px 5px #aaaaaa;
+	border-radius: 50%;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.text-random-light {
+	color: #7c8693;
+}
+.random-div-title-description {
+	max-width: 620px;
+}
