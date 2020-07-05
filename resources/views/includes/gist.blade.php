@@ -4,7 +4,7 @@
 	<h2 class="lg:mt-15px text-center text-white text-body md:max-w-620px md:mx-auto px-5">Play for free with friends and family. Or, run a step challenge for your organization on <a href = "https://github.com/GabielFemi" style="border-width: 1px; border-color: #fff;">MoveSpring</a></h2>
 	
 
-	 <div class="lg:flex lg:mx-auto lg:max-w-1024px">
+	 {{-- <div class="lg:flex lg:mx-auto lg:max-w-1024px">
 		<div class="mx-20px mt-25px lg:mt-50px pt-25px px-25px lg:pt-35 lg:px-35px bg-white">
 			<h2 class="text-sub text-dark mt-16px">Compete with family and friends</h2>
 			<h3 class="text-small text-light">Get stepping for free!</h3>
@@ -19,10 +19,13 @@
 				<a href = "#" class="lg:mx-35px py-15px text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Log in</a>
 			</div>
 		</div>
-	</div>
+	</div> --}}
+
 
 	
 
+	
 </div>
-
- 
+<section class="random-div bg-not-too-white text-mpgray">
+	<h1 class="text-center text-23px text-semibold">I am a boring text</h1>
+</section>
