@@ -357,3 +357,10 @@ ul {
 	-moz-border-radius: 12px;
 	border-radius: 12px;
 }
+
+.text-random-light {
+	color: #7c8693;
+}
+.random-div-title-description {
+	max-width: 620px;
+}

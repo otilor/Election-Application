@@ -27,7 +27,8 @@
 	
 </div>
 <section class="random-div bg-not-too-white text-mpgray">
-	<h1 class="text-center py-15px text-23px text-semibold">Anonymously vote.</h1>
+	<h1 class="text-center py-15px text-35px text-semibold">Anonymously vote.</h1>
+	<h3 class="text-23px mx-auto text-random-light random-div-title-description text-center">Your privacy is a big concern to you and us hence you can vote in your best candidate without anyone getting to know</h3>
 	<div class="text-center">
 		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/voting.png') }}">
 	</div>
