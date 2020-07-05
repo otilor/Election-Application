@@ -34,8 +34,9 @@
 	</div>
 	
 	<div class="mx-auto my-5 col-md-6">
-		<div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 text-center bg-mpblue">
+		<div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue">
 			<h2 class="text-headline text-white">Enough of the story right?</h2>
+			<h4 class="text-body">Let's jump right into it</h4>
 		</div>
 	</div>
 		
