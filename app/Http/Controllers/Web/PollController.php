@@ -49,7 +49,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        return view(poll.specific_poll);
+        return view('polls.specific_poll');
     }
 
     /**
