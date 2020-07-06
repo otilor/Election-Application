@@ -38,6 +38,7 @@ window.Vue = require('vue');
 Vue.component('navbar', require('./components/Navbar.vue').default);
 Vue.component('polls', require('./components/Polls.vue').default);
 Vue.component('welcome', require('./components/Welcome.vue').default);
+Vue.component('specific_poll', require('./components/Poll.vue').default);
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 //Vue.config.productionTip = false;
 /**
