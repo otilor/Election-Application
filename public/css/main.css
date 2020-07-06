@@ -427,3 +427,17 @@ footer {
 .vh-50 {
 	width: 50vh;
 }
+
+.login-form-btn {
+	border: 2px solid #2b3543;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.login-form-btn:hover {
+	color: #fff !important;
+	border: 2px solid #2b3543;
+	padding-left: 25px;
+	background-color: #2b3543;
+	padding-right: 25px;
+}
