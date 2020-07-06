@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card my-1 bg-white">
-                <div class="card-header text-body">{{ __('Login') }}</div>
+                <div class="card-header text-body text-caps">{{ __('Login') }}</div>
 
                 <div class="card-body text-semibold">
                     <form method="POST" action="{{ route('login') }}">
