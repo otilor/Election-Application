@@ -1979,20 +1979,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37670,80 +37656,45 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _vm._m(0),
-      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "col-md-8" },
-        [
-          _c("h3", { staticClass: "text-center" }, [_vm._v("New polls")]),
-          _vm._v(" "),
-          _vm._l(_vm.polls, function(poll) {
-            return _c("div", { key: poll.id, staticClass: "card" }, [
-              _c("div", { staticClass: "card-header text-black text-center" }, [
+        { staticClass: "mx-auto my-5 col-md-6" },
+        _vm._l(_vm.polls, function(poll) {
+          return _c(
+            "div",
+            {
+              key: poll.id,
+              staticClass:
+                "flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue"
+            },
+            [
+              _c("h2", { staticClass: "text-headline text-white" }, [
                 _vm._v(_vm._s(poll.title))
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("strong", [
-                  _c("p", { staticClass: "alert alert-info" }, [
-                    _vm._v(_vm._s(poll.description))
-                  ])
-                ]),
-                _vm._v(" "),
+              _c("h4", { staticClass: "text-body text-mpblue-500" }, [
+                _vm._v(_vm._s(poll.description))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "end-of-story-button mt-20px" }, [
                 _c(
                   "a",
                   {
-                    staticClass: "btn btn-success",
+                    staticClass: "py-3 br-10px px-4 bg-msblue-600  text-caps",
                     attrs: { href: poll.poll_link }
                   },
-                  [_vm._v("Continue")]
+                  [_vm._v("Elect!")]
                 )
               ])
-            ])
-          })
-        ],
-        2
+            ]
+          )
+        }),
+        0
       )
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mx-auto my-5 col-md-6" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue"
-        },
-        [
-          _c("h2", { staticClass: "text-headline text-white" }, [
-            _vm._v("Enough of the story right?")
-          ]),
-          _vm._v(" "),
-          _c("h4", { staticClass: "text-body text-mpblue-500" }, [
-            _vm._v("Let's jump right into it")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "end-of-story-button mt-20px" }, [
-            _c(
-              "a",
-              {
-                staticClass: "py-3 br-10px px-4 bg-msblue-600  text-caps",
-                attrs: { href: "/polls" }
-              },
-              [_vm._v("start off")]
-            )
-          ])
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
