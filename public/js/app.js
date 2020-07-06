@@ -1999,7 +1999,11 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    this.fetchArticles();
+    try {
+      this.fetchArticles();
+    } catch (error) {
+      console.log(error);
+    }
   },
   methods: {
     fetchArticles: function fetchArticles() {

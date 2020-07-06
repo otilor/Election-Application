@@ -37,14 +37,23 @@
 		},
 
 		created() {
-			this.fetchArticles();
+			try {
+				this.fetchArticles();	
+			} catch (error) {
+				console.log(error);
+			}
+			
 		},
 
 		methods: {
 			fetchArticles: function() {
+				
 				fetch('api/polls').then(res => res.json()).then(res => {
 					this.polls = res.data;
-				})
+				
+				});
+				
+				
 			},
 
 		}

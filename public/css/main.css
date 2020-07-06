@@ -299,6 +299,12 @@ ul {
 	margin-right: -25px;
 }
 
+a, a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
 .lg\:mx-35px- {
 	margin-left: -35px;
 	margin-right: -35px;
