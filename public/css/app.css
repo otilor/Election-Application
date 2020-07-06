@@ -170,13 +170,14 @@ sup {
 }
 
 a {
-  color: #fff;
-  background-color: transparent;
+  color: #3490dc;
   text-decoration: none;
+  background-color: transparent;
 }
 
 a:hover {
-  
+  color: #1d68a7;
+  text-decoration: underline;
 }
 
 a:not([href]) {
@@ -10767,6 +10768,9 @@ a.text-danger:focus {
   color: #ae1c17 !important;
 }
 
+.text-light {
+  color: #f8f9fa !important;
+}
 
 a.text-light:hover,
 a.text-light:focus {
@@ -10774,12 +10778,16 @@ a.text-light:focus {
 }
 
 .text-dark {
-  color: #2b3543 !important;
+  color: #343a40 !important;
 }
 
 a.text-dark:hover,
 a.text-dark:focus {
   color: #121416 !important;
+}
+
+.text-body {
+  color: #212529 !important;
 }
 
 .text-muted {
