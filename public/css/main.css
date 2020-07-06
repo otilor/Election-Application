@@ -415,3 +415,11 @@ footer {
 	width: 100%;
 	background-color: #2b3543;
 }
+
+.mp-input-fancy {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom:  2px solid #2b3543;
+	border-radius: 0;
+}
