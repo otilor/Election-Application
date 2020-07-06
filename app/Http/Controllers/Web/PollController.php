@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class PollController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,7 +49,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('polls.specific_poll');
     }
 
     /**
