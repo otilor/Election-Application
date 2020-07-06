@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,9 @@ Route::get('/', 'HomeController@index');
 
 Route::group(['prefix' => 'polls'], function () {
 	Route::get('/', 'Web\PollController@index');
+	Route::get('/{id}', function (Request $request) {
+		return "Hey, you searched for " . $request->id ;
+	});
 });
 Auth::routes();
 
