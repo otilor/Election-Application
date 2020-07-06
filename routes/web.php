@@ -19,3 +19,6 @@ Route::get('/', 'HomeController@index');
 Route::group(['prefix' => 'polls'], function () {
 	Route::get('/', 'Web\PollController@index');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
