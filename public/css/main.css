@@ -299,6 +299,12 @@ ul {
 	margin-right: -25px;
 }
 
+a, a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
 .lg\:mx-35px- {
 	margin-left: -35px;
 	margin-right: -35px;
@@ -408,4 +414,30 @@ footer {
 	bottom: 0;
 	width: 100%;
 	background-color: #2b3543;
+}
+
+.mp-input-fancy {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom:  2px solid #2b3543;
+	border-radius: 0;
+}
+
+.vh-50 {
+	width: 50vh;
+}
+
+.login-form-btn {
+	border: 2px solid #2b3543;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.login-form-btn:hover {
+	color: #fff !important;
+	border: 2px solid #2b3543;
+	padding-left: 25px;
+	background-color: #2b3543;
+	padding-right: 25px;
 }

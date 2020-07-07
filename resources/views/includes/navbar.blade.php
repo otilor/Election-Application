@@ -31,10 +31,20 @@
     </ul>
     
       {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
-      <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Log in</a>
+      @auth
+      <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Welcome, {{ Auth::user()->name }}</a>
+      <form action="/logout" method = "post">
+        @csrf
+          <button class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Logout</button>  
+      </form>
       
+      @endauth
 
-      <a href = "#" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
+
+      @guest
+      <a href = "/login" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>
       
+      <a href = "/register" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
+      @endguest
   </div>
 </nav>
