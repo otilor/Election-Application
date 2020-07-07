@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Route::get('/', 'HomeController@index');
 
+
 Route::group(['prefix' => 'polls'], function () {
 	Route::get('/', 'Web\PollController@index');
 	Route::get('{id}', 'Web\PollController@show');

@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::get('/profile', 'ProfileController@index');
+
 Route::get('/', function () {
     $data = ['message' => 'welcome', 'status' => '200'];
    return response()->json($data, 200);
