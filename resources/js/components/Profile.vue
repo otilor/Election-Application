@@ -28,8 +28,8 @@
 		methods: {
 			getAuthenticatedUser: function () {
 				fetch('/api/positions').then(res => res.json()).then(res => {
-					this.users = res.data;
-					console.log(users);
+					let users = res.data;
+					console.log(res.data);
 				});
 			}
 		}

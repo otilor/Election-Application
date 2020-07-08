@@ -14,7 +14,8 @@ class PositionController extends Controller
      */
     public function index()
     {
-        return response()->json(Position::all(), 200);
+        $all_positions = Position::paginate(5);
+        return response()->json($all_positions);
     }
 
     /**

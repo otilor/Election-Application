@@ -2102,13 +2102,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getAuthenticatedUser: function getAuthenticatedUser() {
-      var _this = this;
-
       fetch('/api/positions').then(function (res) {
         return res.json();
       }).then(function (res) {
-        _this.users = res.data;
-        console.log(users);
+        var users = res.data;
+        console.log(res.data);
       });
     }
   }
