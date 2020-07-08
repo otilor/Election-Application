@@ -12,9 +12,9 @@
 	<div class="text-center">
 		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/male.webp') }}">
 	</div>
-	<h3 class="text-23px p-5 text-mpgray mx-auto random-div-title-description text-center">{{ Auth::user()->name }}</h3>
+	<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ Auth::user()->name }}</h3>
 
-
+	<h4 class = "text-center">Your email address:  {{ Auth::user()->email }} </h4>
 	
 
 
