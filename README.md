@@ -1,5 +1,4 @@
 # election-app-mapoly-api
-<img src = "crispy-php-blue.svg">
 
 Mapoly Election  Application Programming Interface (API).
 ## How to install
