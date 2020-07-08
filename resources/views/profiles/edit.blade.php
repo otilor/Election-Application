@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="text-center">
-		<a href = "{{ action ('Web\ProfileController@edit_profile') }}" class="btn text-white text-caps btn-success edit">Save</a>	
+		<input class="btn text-white text-caps btn-success edit" type = "submit" value = "Save">	
 	</div>
 		
 

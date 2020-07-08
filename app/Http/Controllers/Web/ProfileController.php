@@ -59,6 +59,11 @@ class ProfileController extends Controller
         return view('profiles.edit');
     }
 
+    public function update_profile()
+    {
+        return "Saved!";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
