@@ -15,12 +15,14 @@
 	</div>
 	
 	
-	<div class = "py-3 text-center">
-		<input class = "p-1 text-semibold rounded-30px" type="text" value="{{ Auth::user()->name }}">	
-	</div>
 
-	<div class="text-center">
-		<input class="btn text-white text-caps btn-success edit" type = "submit" value = "Save">	
+	<div class="text-center py-3">
+		
+
+		<form action = "/profile/update" method = "post">
+			<input class = "p-1 text-semibold rounded-30px" type="text" value="{{ Auth::user()->name }}">
+			<input class="btn text-white text-caps btn-success edit" type = "submit" value = "Save">
+		</form>	
 	</div>
 		
 
