@@ -2097,14 +2097,18 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
+  created: function created() {
+    this.getAuthenticatedUser();
+  },
   methods: {
     getAuthenticatedUser: function getAuthenticatedUser() {
       var _this = this;
 
-      fetch('api/user').then(function (res) {
+      fetch('/api/positions').then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.users = res.data;
+        console.log(users);
       });
     }
   }

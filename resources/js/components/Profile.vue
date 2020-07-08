@@ -8,25 +8,29 @@
 	
 </template>
 
-<script>
+<script type = "text/javascript">
 	export default {
 		data() {
 			return {
 				users: [],
 				user: {
 					name: '',
-					email: '',
+					email: ''
 				},
 
 			}
 			
 		},
+		created() {
+			this.getAuthenticatedUser();
+		},
 
 		methods: {
 			getAuthenticatedUser: function () {
-				fetch('api/user').then(res => res.json()).then(res => {
+				fetch('/api/positions').then(res => res.json()).then(res => {
 					this.users = res.data;
-				})
+					console.log(users);
+				});
 			}
 		}
 	}
