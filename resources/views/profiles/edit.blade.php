@@ -16,7 +16,7 @@
 	
 	
 	<div class = "py-3 text-center">
-		<input class = "rounded-30px" type="text" value="{{ Auth::user()->name }}">	
+		<input class = "p-1 rounded-30px" type="text" value="{{ Auth::user()->name }}">	
 	</div>
 
 	<div class="text-center">
