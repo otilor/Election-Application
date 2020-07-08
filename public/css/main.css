@@ -441,3 +441,8 @@ footer {
 	background-color: #2b3543;
 	padding-right: 25px;
 }
+
+
+.rounded-30px {
+	border-radius: 30px;
+}
