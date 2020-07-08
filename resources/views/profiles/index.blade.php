@@ -19,7 +19,7 @@
 	<div class="text-center">
 		<a href = "/profile/edit" class="btn text-white text-caps btn-info edit">Edit</a>	
 	</div>
-	
+	<profile></profile>
 
 
 		
