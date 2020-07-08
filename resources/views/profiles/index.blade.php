@@ -17,10 +17,10 @@
 	<profile></profile>
 
 	<div class="text-center">
-		<a href = "/profile/edit" class="btn text-white text-caps btn-info edit">Edit</a>	
+		<a href = "{{ action ('Web\ProfileController@edit_profile') }}" class="btn text-white text-caps btn-info edit">Edit</a>	
 	</div>
 		
-	
+
 	
 	
 </section>

@@ -27,4 +27,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', 'Web\ProfileController@index');
-Route::get('/profile/edit', 'Web\ProfileController@edit_profile');
+Route::get('/profile/edit', 'Web\ProfileController@edit_profile')->name('edit_profile');
