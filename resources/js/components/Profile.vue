@@ -1,6 +1,11 @@
 <template>
-	<p>I am a profile component	</p>
+	<div>
+		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">John Doe</h3>
 
+	<h4 class = "text-center">Your email address:  jone.doe@gmail.com </h4>		
+	</div>
+	
+	
 </template>
 
 <script>
