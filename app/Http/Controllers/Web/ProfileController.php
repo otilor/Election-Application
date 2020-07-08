@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -55,9 +56,9 @@ class ProfileController extends Controller
 
     public function edit_profile()
     {
-        return "Friend!, You kinda got here!";
+        return "Friend!, You kinda got here!" . Auth::user();
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
