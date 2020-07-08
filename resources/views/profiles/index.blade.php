@@ -16,7 +16,10 @@
 
 	<h4 class = "text-center">Your email address:  {{ Auth::user()->email }} </h4>
 	
-
+	<div class="text-center">
+		<button class="btn text-white text-caps btn-info edit">Edit</button>	
+	</div>
+	
 
 
 		
