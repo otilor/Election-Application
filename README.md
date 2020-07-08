@@ -21,3 +21,7 @@ php artisan serve
 ## Issues
 If any issue is detected please feel free to raise it here on GitHub,
 I will kindly look through it.
+
+
+## Screenshots
+<img src = "public/img/profile_screenshot.png">
