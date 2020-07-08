@@ -26,4 +26,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile', 'Web\ProfileController@index')->name('profile');
+Route::resource('/profile', 'Web\ProfileController');
