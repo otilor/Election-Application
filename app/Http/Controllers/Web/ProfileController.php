@@ -53,6 +53,11 @@ class ProfileController extends Controller
         //
     }
 
+    public function edit_profile()
+    {
+        return "Friend!, You kinda got here!";
+    }
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -61,7 +66,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Friend~";
     }
 
     /**
