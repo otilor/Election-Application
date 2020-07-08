@@ -56,7 +56,7 @@ class ProfileController extends Controller
 
     public function edit_profile()
     {
-        return "Friend!, You kinda got here!" . Auth::user();
+        return view('profiles.edit');
     }
 
     /**
