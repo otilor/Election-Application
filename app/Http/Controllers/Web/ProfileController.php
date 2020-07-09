@@ -62,7 +62,11 @@ class ProfileController extends Controller
 
     public function update_profile()
     {
-        return User::find(Auth::id());
+        return User::find(Auth::id())->update(
+            [
+
+                'name' => 'Eggroll',
+            ]);
     }
 
     /**
