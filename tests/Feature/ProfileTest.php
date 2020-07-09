@@ -15,7 +15,7 @@ class ProfileTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/');
+        $response = $this->get('/profile');
 
         $response->assertStatus(200);
     }
