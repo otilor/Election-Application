@@ -3,10 +3,7 @@
 
 @section('content')
 <section class="random-div bg-not-too-white text-mpgray">
-<div class="mx-auto text-center text-semibold">
-	<div class="alert alert-danger">For now, you cannot edit your profile!</div>	
-</div>
-	
+
 	
 	<h1 class="text-center py-15px text-35px text-semibold">Your profile</h1>
 	

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -61,7 +62,11 @@ class ProfileController extends Controller
 
     public function update_profile()
     {
-        return "Saved!";
+        return User::find(Auth::id())->update(
+            [
+
+                'name' => 'Eggroll',
+            ]);
     }
 
     /**
