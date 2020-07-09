@@ -60,12 +60,12 @@ class ProfileController extends Controller
         return view('profiles.edit');
     }
 
-    public function update_profile()
+    public function update_profile(Request $request)
     {
         return User::find(Auth::id())->update(
             [
 
-                'name' => 'Eggroll',
+                'name' => $request->name,
             ]);
     }
 
