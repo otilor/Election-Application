@@ -4,7 +4,7 @@
   <div class="container">
         <div class="row justify-content-center">
 		     <div class="mx-auto my-5 col-md-6">
-		     	@forelse ($polls as $poll)
+ 	@forelse ($polls as $poll)
 				<div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue">
 					<h2 class="text-headline text-white">{{ $poll->title }}</h2>
 					<h4 class="text-body text-mpblue-500">{{ $poll->description }}</h4>
@@ -16,6 +16,6 @@
         </div>
     </div>
     @empty
-			<h1 class="text-center text-danger text-headline">No polls!</h1>
+		<h1 class="text-center text-danger text-headline">No polls!</h1>
   @endforelse
 @endsection
