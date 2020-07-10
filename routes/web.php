@@ -22,4 +22,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/polls', 'Web\PollController');
+Route::resource('/polls', 'Web\PollController')->middleware('auth');
