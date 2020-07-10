@@ -14,7 +14,11 @@
 	</div>
 	
 	
-	<profile></profile>
+	<div>
+		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ Auth::user()->name }}</h3>
+
+	<h4 class = "text-center">Your email address:  {{ Auth::user()->email }} </h4>		
+	</div>
 
 	<div class="text-center">
 		<a href = "{{ action ('Web\ProfileController@edit_profile') }}" class="btn text-white text-caps btn-info edit">Edit</a>	
