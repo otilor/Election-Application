@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Link;
+use Illuminate\Support\Str;
 
 class LinkSeeder extends Seeder
 {
@@ -12,14 +13,27 @@ class LinkSeeder extends Seeder
      */
     public function run()
     {
-        $faker = \Faker\Factory::create();
+    	
+    	
         for ($i = 0; $i < 10; $i++)
         {
+        	$positions = $this->randomizeArray();
         	Link::create([
-        		'url' => str_random(8),
-        		'positions' => [1, 1, 3, 2],
+        		'url' => Str::random(8),
+        		'positions' => json_encode($positions),
 
-        	])
+        	]);
         }
+    }
+
+    public function randomizeArray()
+    {
+    	$positions = [];
+    	for ( $i = 0; $i < 5; $i++ )
+    	{
+    		array_push($positions, random_int(1, 5));
+    	}
+
+    	return $positions;
     }
 }
