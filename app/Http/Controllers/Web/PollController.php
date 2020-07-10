@@ -51,8 +51,8 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        $poll = Poll::where('poll_link', 'LIKE',$id)->first();
-        dd($id);
+        $poll = Poll::where('link_id', 'LIKE',$id)->first();
+        $poll = 
         return view('polls.specific_poll', compact('poll'));
     }
 
@@ -89,4 +89,5 @@ class PollController extends Controller
     {
         //
     }
+
 }
