@@ -19,7 +19,7 @@ class PollController extends Controller
     public function index()
     {
         $polls = Poll::all();
-        return view('polls.index')->with('polls', $polls);
+        return view('polls.index', compact('polls'));
     }
 
     /**
