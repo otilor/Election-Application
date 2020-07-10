@@ -2,6 +2,6 @@
 
 
 @section('content')
-<specific_poll></specific_poll>
+
 
 @endsection
