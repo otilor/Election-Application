@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Poll;
 
 class PollController extends Controller
 {
@@ -17,7 +18,8 @@ class PollController extends Controller
      */
     public function index()
     {
-        return view('polls.index');
+        $polls = Poll::all();
+        return view('polls.index')->with('polls', $polls);
     }
 
     /**
