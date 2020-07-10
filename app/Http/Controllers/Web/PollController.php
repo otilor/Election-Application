@@ -53,8 +53,8 @@ class PollController extends Controller
     {
         $poll = Poll::where('id', $id)->first();
         $link = $poll->link_id;
-        $this->findAllPositionsWithLink($link);
-        return view('polls.specific_poll', compact('poll'));
+        $all_positions = $this->findAllPositionsWithLink($link);
+        return view('polls.specific_poll', compact('poll', 'all_positions'));
     }
 
     /**
@@ -89,6 +89,12 @@ class PollController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function findAllPositionsWithLink($link)
+    {
+        $selectedPositions = \App\Link::select('positions')->where('id', $link)->first();
+        return $selectedPositions;
     }
 
 }
