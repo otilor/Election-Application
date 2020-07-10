@@ -93,7 +93,7 @@ class PollController extends Controller
 
     public function findAllPositionsWithLink($link)
     {
-        $selectedPositions = \App\Link::select('positions')->where('id', $link)->first();
+        $selectedPositions = \App\Link::where('id', $link)->first()->positions;
         return $selectedPositions;
     }
 
