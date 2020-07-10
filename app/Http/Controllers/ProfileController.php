@@ -13,7 +13,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        $message = "Do you really want to see your profile? If yes, login";
+        return response()->json($message, 200);
     }
 
     /**

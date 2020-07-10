@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\api;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -15,9 +15,8 @@ class PollTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/polls');
+        $response = $this->get('/api/polls');
 
-        $response->dumpHeaders();
-
+        $response->assertStatus(200);
     }
 }
