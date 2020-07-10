@@ -51,8 +51,9 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        $poll = Poll::where('link_id', 'LIKE',$id)->first();
-        $poll = 
+        $poll = Poll::where('id', $id)->first();
+        $link = $poll->link_id;
+        $this->findAllPositionsWithLink($link);
         return view('polls.specific_poll', compact('poll'));
     }
 

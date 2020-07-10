@@ -11,8 +11,8 @@ class Poll extends Model
       'session_id',
     ];
 
-    public function positions()
+    public function link($id)
     {
-    	$this->hasMany('App\Position');
+    	$this->belongsTo('App\Link', $id);
     }
 }
