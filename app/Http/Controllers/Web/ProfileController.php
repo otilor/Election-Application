@@ -1,21 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Position;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
 
-class PositionController extends Controller
+class ProfileController extends Controller
 {
+    public function __construct() 
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $all_positions = Position::paginate(5);
-        return response()->json($all_positions);
+        return view('profiles.index');
     }
 
     /**
@@ -47,7 +52,21 @@ class PositionController extends Controller
      */
     public function show($id)
     {
-        return Position::findOrFail($id);
+        //
+    }
+
+    public function edit_profile()
+    {
+        return view('profiles.edit');
+    }
+
+    public function update_profile(Request $request)
+    {
+        return User::find(Auth::id())->update(
+            [
+
+                'name' => $request->name,
+            ]);
     }
 
     /**
@@ -58,7 +77,7 @@ class PositionController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Friend~";
     }
 
     /**

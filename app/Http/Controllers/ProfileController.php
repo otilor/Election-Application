@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Position;
 use Illuminate\Http\Request;
 
-class PositionController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $all_positions = Position::paginate(5);
-        return response()->json($all_positions);
+        $message = "Do you really want to see your profile? If yes, login";
+        return response()->json($message, 200);
     }
 
     /**
@@ -47,8 +46,9 @@ class PositionController extends Controller
      */
     public function show($id)
     {
-        return Position::findOrFail($id);
+        //
     }
+
 
     /**
      * Show the form for editing the specified resource.

@@ -7,10 +7,12 @@
        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/app.css') }}">
        <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/main.css') }}">
        @include('includes.navbar')
+
+       @guest
        <div>
          @include('includes.story')
        </div>
-       
+       @endguest
     </head>
     <body>
 
