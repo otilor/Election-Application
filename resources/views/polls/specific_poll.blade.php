@@ -2,6 +2,6 @@
 
 
 @section('content')
-<specific_poll></specific_poll>
-
+<p>{{ json_encode($poll) }}</p>
+<p>{{ $positions }}</p>
 @endsection
