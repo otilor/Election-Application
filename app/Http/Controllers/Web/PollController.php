@@ -53,8 +53,9 @@ class PollController extends Controller
         $link = $poll->link_id;
         $positions = $this->findAllPositionsWithLink($link);
 
-        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, true);
+        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, false);
         $positions = $distinct_position;
+        $this->loopThroughThePositionsAndFindTheLastElement($distinct_position);
         return view('polls.specific_poll', compact('poll', 'positions'));
     }
 
@@ -96,6 +97,12 @@ class PollController extends Controller
     {
         $selected_positions = \App\Link::where('id', $link)->first()->positions;
         return $selected_positions;
+    }
+
+    private function loopThroughThePositionsAndFindTheLastElement($positions)
+    {
+        
+        dd(\App\Position::find($positions[count($positions) - 1]));
     }
 
 }
