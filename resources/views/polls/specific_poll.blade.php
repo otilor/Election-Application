@@ -15,7 +15,7 @@
 					<h2 class="text-headline text-white">{{ $position->title }}</h2>
 
 					<div class="end-of-story-button mt-20px">
-						<a href = "/" class="py-3 br-10px text-dark px-4 bg-white  text-caps">Continue!</a>
+						<a href = "/positions/{{ $position->token }}" class="py-3 br-10px text-dark px-4 bg-white  text-caps">Continue!</a>
 					</div>
 				</div>
 			</div>
