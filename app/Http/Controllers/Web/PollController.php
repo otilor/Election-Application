@@ -8,7 +8,6 @@ use App\Poll;
 
 class PollController extends Controller
 {
-    private $positions;
     /**
      * Display a listing of the resource.
      *
@@ -54,9 +53,8 @@ class PollController extends Controller
         $link = $poll->link_id;
         $positions = $this->findAllPositionsWithLink($link);
 
-        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions);
-        $this->setPosition($distinct_position);
-        
+        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, true);
+        $positions = $distinct_position;
         return view('polls.specific_poll', compact('poll', 'positions'));
     }
 
@@ -98,11 +96,6 @@ class PollController extends Controller
     {
         $selected_positions = \App\Link::where('id', $link)->first()->positions;
         return $selected_positions;
-    }
-
-    private function setPosition($positions)
-    {
-        $this->positions = $positions;
     }
 
 }
