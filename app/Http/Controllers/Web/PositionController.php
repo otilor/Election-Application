@@ -46,7 +46,15 @@ class PositionController extends Controller
      */
     public function show($id)
     {
-        //
+        $all_details = [];
+        $current_poll = $_GET["poll"];
+        $poll_details = \App\Poll::find($current_poll);
+        $position_details = \App\Position::find($poll_details->position_id);
+
+        // Append to the all_details array
+        $all_details["polls"] = $poll_details;
+        $all_details["positions"] = $position_details;
+        return $all_details;
     }
 
     /**
