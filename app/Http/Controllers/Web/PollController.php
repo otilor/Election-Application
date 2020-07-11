@@ -50,10 +50,13 @@ class PollController extends Controller
     public function show($id)
     {
         $poll = Poll::where('id', $id)->first();
+
         $link = $poll->link_id;
         $positions = $this->findAllPositionsWithLink($link);
+
         $distinct_position = \App\Helpers\Position::getDistinctPositions($positions);
         $this->setPosition($distinct_position);
+        
         return view('polls.specific_poll', compact('poll', 'positions'));
     }
 
