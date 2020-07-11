@@ -8,6 +8,6 @@ class Position extends Model
 {
     public static function stripDuplicates($object) : array
     {
-    	return $object->toArray();
+    	return (array) $object;
     }
 }
