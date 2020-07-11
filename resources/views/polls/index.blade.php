@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section ('content')
-  <div class="container">
-        <div class="row justify-content-center">
-		     <div class="mx-auto my-5 col-md-6">
+  
  	@forelse ($polls as $poll)
+ 	<div class="container">
+        <div class="row justify-content-center">
+		     <div class="mx-auto my-3 col-md-6">
 				<div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue">
 					<h2 class="text-headline text-white">{{ $poll->title }}</h2>
 					<h4 class="text-body text-mpblue-500">{{ $poll->description }}</h4>
