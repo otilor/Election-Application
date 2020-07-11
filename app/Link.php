@@ -10,4 +10,8 @@ class Link extends Model
     	'url',
     	'positions'
     ];
+
+    protected $casts = [
+    	'positions' => 'array'
+    ];
 }

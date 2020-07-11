@@ -3,5 +3,5 @@
 
 @section('content')
 <p>{{ json_encode($poll) }}</p>
-<p>{{ $positions }}</p>
+<p>{{ json_encode($positions) }}</p>
 @endsection

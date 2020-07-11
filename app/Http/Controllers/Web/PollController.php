@@ -49,8 +49,12 @@ class PollController extends Controller
     public function show($id)
     {
         $poll = Poll::where('id', $id)->first();
+
         $link = $poll->link_id;
         $positions = $this->findAllPositionsWithLink($link);
+
+        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, true);
+        $positions = $distinct_position;
         return view('polls.specific_poll', compact('poll', 'positions'));
     }
 
@@ -92,12 +96,6 @@ class PollController extends Controller
     {
         $selected_positions = \App\Link::where('id', $link)->first()->positions;
         return $selected_positions;
-    }
-
-    public function getPositionDetails($postion_id)
-    {
-        $position_details = [];
-        return $position_details;
     }
 
 }
