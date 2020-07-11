@@ -16,18 +16,9 @@ class PollTest extends TestCase
      */
     public function testPolls()
     {
-        $this->disableMiddlewareForAllTests();
+        $this->withoutMiddleware(\App\Http\Middleware\Authenticate::class);
 
         $response = $this->get('/polls');
-
-        $response->assertStatus(200);
-    }
-
-    public function testPoll()
-    {
-        $this->disableMiddlewareForAllTests();
-        $response = $this->get('/polls/{id}');
-
 
         $response->assertStatus(200);
     }
