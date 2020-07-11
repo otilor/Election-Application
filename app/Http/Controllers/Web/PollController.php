@@ -101,8 +101,13 @@ class PollController extends Controller
 
     private function loopThroughThePositionsAndFindTheLastElement($positions)
     {
+        $position_details = [];
+        for($i = 0; $i < count($positions); $i++)
+        {
+            $position_details[$positions[$i]] = \App\Position::find($positions[$i]);
+        }
         
-        dd(\App\Position::find($positions[count($positions) - 1]));
+        return $position_details;
     }
 
 }
