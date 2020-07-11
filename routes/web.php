@@ -17,15 +17,11 @@ use Illuminate\Http\Request;
 Route::get('/', 'HomeController@index');
 
 
-Route::group(['prefix' => 'polls'], function () {
-	Route::get('/', 'Web\PollController@index');
-	Route::get('{id}', 'Web\PollController@show');
 
-});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile', 'Web\ProfileController@index');
-Route::get('/profile/edit', 'Web\ProfileController@edit_profile')->name('edit_profile');
-Route::post('profile/update', 'Web\ProfileController@update_profile');
+Route::resource('/polls', 'Web\PollController')->middleware('auth');
+
+Route::resource('/positions', 'Web\PositionController')->middleware('auth');

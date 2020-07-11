@@ -446,3 +446,7 @@ footer {
 .rounded-30px {
 	border-radius: 30px;
 }
+
+.bg-deepblue {
+	background-color: #2b3543;
+}

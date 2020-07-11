@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         }
         $this->call(PositionSeeder::class);
         $this->call(SessionSeeder::class);
+        $this->call(LinkSeeder::class);
     }
 }

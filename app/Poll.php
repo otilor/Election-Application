@@ -10,4 +10,9 @@ class Poll extends Model
       'position_id',
       'session_id',
     ];
+
+    public function link($id)
+    {
+    	$this->belongsTo('App\Link', $id);
+    }
 }

@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Poll;
 
-class PollController extends Controller
+class PositionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        $polls = Poll::all();
-        return view('polls.index', compact('polls'));
+        //
     }
 
     /**
@@ -48,15 +46,15 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        $poll = Poll::where('id', $id)->first();
+        $all_details = [];
+        $current_poll = $_GET["poll"];
+        $poll_details = \App\Poll::find($current_poll);
+        $position_details = \App\Position::find($poll_details->position_id);
 
-        $link = $poll->link_id;
-        $positions = $this->findAllPositionsWithLink($link);
-
-        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, false);
-        $positions = $distinct_position;
-        $positions = $this->findPositionDetails($positions);
-        return view('polls.specific_poll', compact('poll', 'positions'));
+        // Append to the all_details array
+        $all_details["polls"] = $poll_details;
+        $all_details["positions"] = $position_details;
+        return $all_details;
     }
 
     /**
@@ -92,22 +90,4 @@ class PollController extends Controller
     {
         //
     }
-
-    public function findAllPositionsWithLink($link)
-    {
-        $selected_positions = \App\Link::where('id', $link)->first()->positions;
-        return $selected_positions;
-    }
-
-    private function findPositionDetails($positions)
-    {
-        $position_details = [];
-        for($i = 0; $i < count($positions); $i++)
-        {
-            $position_details[$positions[$i]] = \App\Position::find($positions[$i]);
-        }
-        
-        return $position_details;
-    }
-
 }
