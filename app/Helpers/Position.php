@@ -10,6 +10,7 @@ class Position
 		{
 			return self::getDistinctPositionsAsJson($positions);
 		}
+		
 		return array_unique($positions);
 	}
 

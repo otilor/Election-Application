@@ -20,7 +20,7 @@ class LinkSeeder extends Seeder
         	$positions = $this->randomizeArray();
         	Link::create([
         		'url' => Str::random(8),
-        		'positions' => json_encode($positions),
+        		'positions' => $positions,
 
         	]);
         }
