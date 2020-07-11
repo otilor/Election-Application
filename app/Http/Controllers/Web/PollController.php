@@ -51,6 +51,7 @@ class PollController extends Controller
         $poll = Poll::where('id', $id)->first();
         $link = $poll->link_id;
         $positions = $this->findAllPositionsWithLink($link);
+        $this->getPositionDetails($positions);
         return view('polls.specific_poll', compact('poll', 'positions'));
     }
 
@@ -94,10 +95,16 @@ class PollController extends Controller
         return $selected_positions;
     }
 
-    public function getPositionDetails($postion_id)
+    public function getPositionDetails(object $positions)
     {
         $position_details = [];
-        return $position_details;
+        for ($i = 0; $i < count($positions); $i++)
+        {
+            echo $positions[$i];
+        }
+
+
+        return \App\Position::stripDuplicates($positions);
     }
 
 }
