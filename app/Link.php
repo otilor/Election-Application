@@ -12,6 +12,6 @@ class Link extends Model
     ];
 
     protected $casts = [
-    	'positions' => 'collection'
+    	'positions' => 'array'
     ];
 }
