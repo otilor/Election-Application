@@ -57,7 +57,7 @@ class PositionController extends Controller
             $current_session = \App\Session::find($poll_details->session_id);
 
             // Contestant details
-            $contestants = \App\Contestant::where('vying_for', $position_details->id)->first();
+            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
 
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
