@@ -46,22 +46,29 @@ class PositionController extends Controller
      */
     public function show($id)
     { 
-        $all_details = [];
-        $current_poll = $_GET["poll"];
-        $poll_details = \App\Poll::find($current_poll);
-        $position_details = \App\Position::where('token',$id)->first();
+        try {
+            $all_details = [];
+            $current_poll = $_GET["poll"];
+            $poll_details = \App\Poll::find($current_poll);
+            $position_details = \App\Position::where('token',$id)->first();
 
 
-        // Session details
-        $current_session = \App\Session::find($poll_details->session_id);
+            // Session details
+            $current_session = \App\Session::find($poll_details->session_id);
 
-        // Contestant details
-        $contestants = \App\Contestant::where('vying_for', $position_details->id);
+            // Contestant details
+            $contestants = \App\Contestant::where('vying_for', $position_details->id);
 
-        // Append to the all_details array
-        $all_details["polls"] = $poll_details;
-        $all_details["positions"] = $position_details;
-        $all_details["session"] = $current_session;
+            // Append to the all_details array
+            $all_details["polls"] = $poll_details;
+            $all_details["positions"] = $position_details;
+            $all_details["session"] = $current_session;    
+        }
+        catch (\Exception $e)
+        {
+            return back();
+        }
+        
         return $all_details;
     }
 
