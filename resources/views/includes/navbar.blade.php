@@ -50,7 +50,7 @@
 
       @guest
       
-          <a href = "/login" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>  
+          <a href = "/login" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>  
       
       
       
