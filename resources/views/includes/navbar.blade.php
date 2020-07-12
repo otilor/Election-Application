@@ -49,12 +49,14 @@
 
 
       @guest
+        <div class="row">
+          <a href = "/login" class="no-gutters text-white uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>  
       
-          <a href = "/login" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>  
       
       
-      
-      <a href = "/register" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
+      <a href = "/register" class="no-gutters text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
+        </div>
+          
       @endguest
   </div>
 </nav>
