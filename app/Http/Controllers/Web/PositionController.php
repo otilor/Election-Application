@@ -45,15 +45,33 @@ class PositionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        $all_details = [];
-        $current_poll = $_GET["poll"];
-        $poll_details = \App\Poll::find($current_poll);
-        $position_details = \App\Position::find($poll_details->position_id);
+    { 
+        try {
+            $all_details = [];
+            $current_poll = $_GET["poll"];
+            $poll_details = \App\Poll::find($current_poll);
+            $position_details = \App\Position::where('token',$id)->first();
 
-        // Append to the all_details array
-        $all_details["polls"] = $poll_details;
-        $all_details["positions"] = $position_details;
+
+            // Session details
+            $current_session = \App\Session::find($poll_details->session_id);
+
+            // Contestant details
+            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
+
+            // Append to the all_details array
+            $all_details["polls"] = $poll_details;
+            $all_details["positions"] = $position_details;
+            $all_details["session"] = $current_session;  
+            $all_details["contestants"] = $contestants;  
+        }
+        catch (\Exception $e)
+        {
+            return back();
+        }
+        
+        return \App\User::find(\Illuminate\Support\Facades\Auth::id());
+
         return $all_details;
     }
 
