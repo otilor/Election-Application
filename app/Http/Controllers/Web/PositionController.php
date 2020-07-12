@@ -51,9 +51,15 @@ class PositionController extends Controller
         $poll_details = \App\Poll::find($current_poll);
         $position_details = \App\Position::where('token',$id)->get();
 
+
+        // Session details
+        $current_session = \App\Session::find($poll_details->session_id);
+
+
         // Append to the all_details array
         $all_details["polls"] = $poll_details;
         $all_details["positions"] = $position_details;
+        $all_details["session"] = $current_session;
         return $all_details;
     }
 
