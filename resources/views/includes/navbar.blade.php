@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg text-right">
+<nav class="navbar navbar-expand-lg navbar-primary text-right">
   <a class="navbar-brand" href = "/">Election App</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse text-dark navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href = "/" >Home</a>
@@ -49,7 +49,10 @@
 
 
       @guest
-      <a href = "/login" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>
+      
+          <a href = "/login" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Login</a>  
+      
+      
       
       <a href = "/register" class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Sign up</a>
       @endguest

@@ -70,6 +70,8 @@ class PositionController extends Controller
             return back();
         }
         
+        return \App\User::find(\Illuminate\Support\Facades\Auth::id());
+
         return $all_details;
     }
 
