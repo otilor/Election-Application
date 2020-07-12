@@ -62,7 +62,8 @@ class PositionController extends Controller
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
             $all_details["positions"] = $position_details;
-            $all_details["session"] = $current_session;    
+            $all_details["session"] = $current_session;  
+            $all_details["contestants"] = $contestants;  
         }
         catch (\Exception $e)
         {
