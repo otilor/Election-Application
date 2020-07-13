@@ -57,6 +57,12 @@ class Handler extends ExceptionHandler
             ], 404);
         }
 
+        if ($this->isHttpException($exception)) {
+            if ($exception->getStatusCode() == 404) {
+                return response()->json('Oops! It looks like you lost your way!');
+            }
+        }
+
         return parent::render($request, $exception);
     }
 }
