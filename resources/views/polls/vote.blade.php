@@ -24,7 +24,8 @@
 	
 	<div>
 		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->name }}</h3>
-		 
+		<span class="text-caps badge badge-danger">{{ $contestant->noOfVotes }} votes</span>
+
 		<form action="post" class="text-center">
 			<input type="submit" name="vote_me" class="btn btn-primary" value="Vote me">
 		</form>
