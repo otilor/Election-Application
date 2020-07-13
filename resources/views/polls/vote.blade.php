@@ -24,7 +24,10 @@
 	
 	<div>
 		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->name }}</h3>
-
+		 
+		<form action="post" class="text-center">
+			<input type="submit" name="vote_me" class="btn btn-primary" value="Vote me">
+		</form>
 	{{-- <h4 class = "text-center">Email:  {{ $contestant->winner }} </h4>		 --}}
 	</div>
 	@empty 
