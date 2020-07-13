@@ -67,9 +67,10 @@ class PositionController extends Controller
             
             $position_id = $position_details["id"];
 
-            
+            $numberOfVotes = $this->numberOfVotes($contestants);
+            dd($numberOfVotes);
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
-
+            
             $contestants = $this->whoAreThese($contestants);
 
 
@@ -82,7 +83,7 @@ class PositionController extends Controller
         }
         catch (\Exception $e)
         {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
         if (!empty($all_details))
         {
@@ -117,6 +118,17 @@ class PositionController extends Controller
             array_push($theyAre, \App\User::find($people[$i]));
         }
         return $theyAre;
+    }
+
+    private function numberOfVotes($contestants)
+    {
+        $noOfVotes = [];
+
+        for ($i = 0; $i < count($contestants); $i++)
+        {
+            array_push($noOfVotes, $contestants[$i]["no_of_votes"]);
+        }
+        return $noOfVotes;
     }
 
     /**
