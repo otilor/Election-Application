@@ -68,7 +68,9 @@ class PositionController extends Controller
             $position_id = $position_details["id"];
 
             
-            $this->findAllTheContestantsIdentifiers($contestants);
+            $people = $this->findAllTheContestantsIdentifiers($contestants);
+
+            $this->whoAreThese($people);
         }
         catch (\Exception $e)
         {
@@ -90,6 +92,17 @@ class PositionController extends Controller
         }
 
         return $contestants_identifiers;
+    }
+
+    private function whoAreThese($people)
+    {
+        $theyAre = [];
+        
+        for ($i = 0; $i < count($people); $i++)
+        {
+            array_push($theyAre, \App\User::find($people[$i]));
+        }
+        return $theyAre;
     }
 
     /**
