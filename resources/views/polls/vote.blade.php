@@ -25,9 +25,9 @@
 	
 	
 	<div>
-		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->id }}</h3>
+		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->name }}</h3>
 
-	<h4 class = "text-center">Winner:  {{ $contestant->winner }} </h4>		
+	{{-- <h4 class = "text-center">Email:  {{ $contestant->winner }} </h4>		 --}}
 	</div>
 	@empty 
 	<p>Hey</p>
