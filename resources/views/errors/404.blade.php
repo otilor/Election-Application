@@ -2,6 +2,6 @@
 
 @section ('content')
 <div class="text-center">
-		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/404.png') }}">
+		<p class="p-5 text-headline text-danger">Page not found!</p>
 </div>
 @endsection
