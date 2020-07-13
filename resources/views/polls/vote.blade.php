@@ -28,7 +28,7 @@
 	{{-- <h4 class = "text-center">Email:  {{ $contestant->winner }} </h4>		 --}}
 	</div>
 	@empty 
-	<p class="text-center text-danger text-headline">No Positions!</p>
+	<p class="text-center text-danger text-headline">No contestants, yet!</p>
 	@endforelse
 </section>
 
