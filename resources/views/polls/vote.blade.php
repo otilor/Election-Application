@@ -14,7 +14,7 @@
 
 {{-- List all the section --}}
 <section class = "mx-3">
-	<p>{{ json_encode($all_details["contestants"]) }}</p>	
+	<p>{{ json_encode($all_details) }}</p>	
 </section>
 
 <section>
