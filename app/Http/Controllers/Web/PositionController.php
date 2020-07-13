@@ -79,7 +79,13 @@ class PositionController extends Controller
         {
             // return redirect('/polls');
         }
-        return view('polls.vote', compact('all_details'));
+        if (!empty($all_details))
+        {
+            return view('polls.vote', compact('all_details'));    
+        } else {
+            return redirect('/polls');
+        }
+        
     }
 
     private function findAllTheContestantsIdentifiers($contestants)
