@@ -59,24 +59,27 @@ class PositionController extends Controller
             // Contestant details
             $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
 
+            
+            
+            $position_id = $position_details["id"];
+
+            
+            $contestants = $this->findAllTheContestantsIdentifiers($contestants);
+
+            $contestants = $this->whoAreThese($contestants);
+
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
             $all_details["positions"] = $position_details;
             $all_details["session"] = $current_session;  
             $all_details["contestants"] = $contestants;  
 
-            $position_id = $position_details["id"];
-
-            
-            $contestants = $this->findAllTheContestantsIdentifiers($contestants);
-
-            $this->whoAreThese($contestants);
         }
         catch (\Exception $e)
         {
             // return redirect('/polls');
         }
-        // return view('polls.vote', compact('all_details'));
+        return view('polls.vote', compact('all_details'));
     }
 
     private function findAllTheContestantsIdentifiers($contestants)
