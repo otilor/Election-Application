@@ -17,4 +17,21 @@
 	<p>{{ json_encode($all_details["contestants"]) }}</p>	
 </section>
 
+<section>
+	@forelse ($all_details["contestants"] as $contestant)
+	<div class="text-center">
+		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/male.webp') }}">
+	</div>
+	
+	
+	<div>
+		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->id }}</h3>
+
+	<h4 class = "text-center">Winner:  {{ $contestant->winner }} </h4>		
+	</div>
+	@empty 
+	<p>Hey</p>
+	@endforelse
+</section>
+
 @endsection

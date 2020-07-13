@@ -67,12 +67,9 @@ class PositionController extends Controller
         }
         catch (\Exception $e)
         {
-            return back();
+            return redirect()->route('/polls');
         }
-        
-        return \App\User::find(\Illuminate\Support\Facades\Auth::id());
-
-        return $all_details;
+        return view('polls.vote', compact('all_details'));
     }
 
     /**
