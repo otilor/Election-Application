@@ -68,9 +68,9 @@ class PositionController extends Controller
             $position_id = $position_details["id"];
 
             
-            $people = $this->findAllTheContestantsIdentifiers($contestants);
+            $contestants = $this->findAllTheContestantsIdentifiers($contestants);
 
-            $this->whoAreThese($people);
+            $this->whoAreThese($contestants);
         }
         catch (\Exception $e)
         {
