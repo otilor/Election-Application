@@ -56,9 +56,13 @@ class PositionController extends Controller
             // Session details
             $current_session = \App\Session::find($poll_details->session_id);
 
-            // Contestant details
-            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
 
+            
+            
+            // Contestant details
+
+            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
+            
             
             
             $position_id = $position_details["id"];
@@ -67,6 +71,7 @@ class PositionController extends Controller
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
 
             $contestants = $this->whoAreThese($contestants);
+
 
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
@@ -77,7 +82,7 @@ class PositionController extends Controller
         }
         catch (\Exception $e)
         {
-            // return redirect('/polls');
+            return redirect('/polls');
         }
         if (!empty($all_details))
         {
@@ -97,7 +102,7 @@ class PositionController extends Controller
 
         for ($i = 0; $i < count($contestants); $i++)
         {
-            array_push($contestants_identifiers, $contestants[$i]["id"]);
+            array_push($contestants_identifiers, $contestants[$i]["contestant_id"]);
         }
 
         return $contestants_identifiers;
