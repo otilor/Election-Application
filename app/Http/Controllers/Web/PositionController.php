@@ -77,7 +77,7 @@ class PositionController extends Controller
         // return view('polls.vote', compact('all_details'));
     }
 
-    public function findAllTheContestantsIdentifiers($contestants)
+    private function findAllTheContestantsIdentifiers($contestants)
     {
         $contestants_identifiers = [];
         // Iterate through the array and print everything
