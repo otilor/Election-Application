@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class PositionController extends Controller
 {
-    use Helpers\FetchContestantDetails;
     /**
      * Display a listing of the resource.
      *
@@ -58,7 +57,7 @@ class PositionController extends Controller
             $current_session = \App\Session::find($poll_details->session_id);
 
             // Contestant details
-            $contestants = $this->fetch($position_details->id);
+            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
 
             
             
