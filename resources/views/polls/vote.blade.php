@@ -13,11 +13,9 @@
 
 
 {{-- List all the section --}}
-<section class = "mx-3">
-	<p>{{ json_encode($all_details) }}</p>	
-</section>
 
-<section>
+
+<section class="m-3">
 	@forelse ($all_details["contestants"] as $contestant)
 	<div class="text-center">
 		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/male.webp') }}">
