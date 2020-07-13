@@ -66,24 +66,30 @@ class PositionController extends Controller
             $all_details["contestants"] = $contestants;  
 
             $position_id = $position_details["id"];
+
             
-            $this->findAllTheContestants($contestants->toArray());
+            $this->findAllTheContestantsIdentifiers($contestants);
         }
         catch (\Exception $e)
         {
-            return redirect()->route('/polls');
+            // return redirect('/polls');
         }
         // return view('polls.vote', compact('all_details'));
     }
 
-    public function findAllTheContestants(array $contestants)
+    public function findAllTheContestantsIdentifiers($contestants)
     {
+        $contestants_identifiers = [];
         // Iterate through the array and print everything
-        if (is_array($contestants)) 
+
+
+
+        for ($i = 0; $i < count($contestants); $i++)
         {
-            echo $contestants;
+            array_push($contestants_identifiers, $contestants[$i]["id"]);
         }
-        
+
+        return $contestants_identifiers;
     }
 
     /**
