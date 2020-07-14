@@ -61,18 +61,26 @@ class PositionController extends Controller
             
             
             // Contestant details
-
             $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
-            
-            
+        
             
             $position_id = $position_details["id"];
 
+
+            /*
+            * Get all the votes for each contestants. 
+            *
+            * @param $contestants
+            * @var $numberOfVotes
+            */
             $numberOfVotes = $this->numberOfVotes($contestants);
 
+
+            // Get all the contestants id and get their details e.g. name, email
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
-            
             $contestants = $this->whoAreThese($contestants);
+
+            // Map the votes gotten from the database to each contestant
             self::mapVotesToContestants($numberOfVotes, $contestants);
 
             // Append to the all_details array
@@ -84,13 +92,13 @@ class PositionController extends Controller
         }
         catch (\Exception $e)
         {
-            // return redirect('/polls');
+            return redirect('/polls');
         }
         if (!empty($all_details))
         {
             return view('polls.vote', compact('all_details'));    
         } else {
-            // return redirect('/polls');
+            return redirect('/polls');
         }
         
     }
@@ -137,7 +145,7 @@ class PositionController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     
     public function edit($id)
     {
         //
