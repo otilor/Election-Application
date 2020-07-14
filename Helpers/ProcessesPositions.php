@@ -2,10 +2,12 @@
 
 namespace Helpers;
 
+use App\Position;
+
 trait ProcessesPositions {
 
-	public static function find($position_id)
+	public static function getPositionDetails($token)
 	{
-		return \App\Position::find($position_id);
+		return Position::where('token', $token)->first();
 	}
 }

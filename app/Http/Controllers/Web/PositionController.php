@@ -10,6 +10,7 @@ class PositionController extends Controller
 {
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
+    use \Helpers\ProcessesPositions;
     /**
      * Display a listing of the resource.
      *
@@ -59,7 +60,7 @@ class PositionController extends Controller
 
             $poll = self::whatIsTheCurrentPoll();
             $poll_details = self::find($poll);
-            $position_details = \App\Position::where('token',$id)->first();
+            $position_details = self::getPositionDetails($id);
 
 
             // Session details
