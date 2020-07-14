@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PositionController extends Controller
 {
+    use \Helpers\FetchesContestantsDetails;
     /**
      * Display a listing of the resource.
      *
@@ -68,12 +69,11 @@ class PositionController extends Controller
             $position_id = $position_details["id"];
 
             $numberOfVotes = $this->numberOfVotes($contestants);
-            dd($numberOfVotes);
+
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
             
             $contestants = $this->whoAreThese($contestants);
-
-
+            self::greet();
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
             $all_details["positions"] = $position_details;
