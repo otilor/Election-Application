@@ -21,7 +21,7 @@ trait FetchesContestantsDetails {
 		{
 			for ($i = 0; $i < count($contestants); $i++)
 			{
-				$contestants[$i]->no_of_votes = $votes[$i];
+				$contestants[$i]->noOfVotes = $votes[$i];
 			}
 		}
 		return $contestants;
