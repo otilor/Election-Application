@@ -4,7 +4,7 @@ namespace Helpers;
 
 trait FetchesContestantsDetails {
 
-	public function fetch($position_id)
+	public function getContestantsDetailsViaPosition($position_id)
 	{
 		return \App\Contestant::where('vying_for', $position_id)->get();
 	}

@@ -67,10 +67,8 @@ class PositionController extends Controller
             // Session details
             $current_session = self::getSessionDetails($poll_details->session_id);
 
-
-
             // Contestant details
-            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
+            $contestants = self::getContestantsDetailsViaPosition($position_details->id);
         
             
             $position_id = $position_details["id"];
