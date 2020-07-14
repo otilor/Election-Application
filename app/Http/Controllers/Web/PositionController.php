@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \Helpers\Poll;
 
 class PositionController extends Controller
 {
+    use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
     /**
      * Display a listing of the resource.
@@ -48,9 +50,15 @@ class PositionController extends Controller
     public function show($id)
     { 
         try {
+            /* Full data structure for the application's use.
+            * It contains the session, contestants and positions details
+            * 
+            */
             $all_details = [];
-            $current_poll = $_GET["poll"];
-            $poll_details = \App\Poll::find($current_poll);
+
+
+            $poll = self::whatIsTheCurrentPoll();
+            $poll_details = \App\Poll::find($poll);
             $position_details = \App\Position::where('token',$id)->first();
 
 
@@ -58,8 +66,6 @@ class PositionController extends Controller
             $current_session = \App\Session::find($poll_details->session_id);
 
 
-            
-            
             // Contestant details
             $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
         
@@ -92,13 +98,13 @@ class PositionController extends Controller
         }
         catch (\Exception $e)
         {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
         if (!empty($all_details))
         {
             return view('polls.vote', compact('all_details'));    
         } else {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
         
     }

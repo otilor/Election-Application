@@ -1,9 +1,8 @@
 <?php
+
 namespace Helpers;
-declare(strict_type = 1);
 
 trait FetchesContestantsDetails {
-	
 
 	public function fetch($position_id)
 	{
