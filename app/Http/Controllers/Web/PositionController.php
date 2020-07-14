@@ -60,13 +60,13 @@ class PositionController extends Controller
 
 
             $poll = self::whatIsTheCurrentPoll();
-            $poll_details = self::find($poll);
+            $poll_details = self::getPollDetails($poll);
             $position_details = self::getPositionDetails($id);
 
 
             // Session details
             $current_session = self::getSessionDetails($poll_details->session_id);
-            
+
 
 
             // Contestant details
