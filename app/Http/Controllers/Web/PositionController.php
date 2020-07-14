@@ -11,6 +11,7 @@ class PositionController extends Controller
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
     use \Helpers\ProcessesPositions;
+    use \Helpers\ProcessesSessions;
     /**
      * Display a listing of the resource.
      *
@@ -64,7 +65,8 @@ class PositionController extends Controller
 
 
             // Session details
-            $current_session = \App\Session::find($poll_details->session_id);
+            $current_session = self::getSessionDetails($poll_details->session_id);
+            
 
 
             // Contestant details
