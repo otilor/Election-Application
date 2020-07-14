@@ -25,4 +25,17 @@ trait FetchesContestantsDetails {
 		}
 		return $contestants;
 	}
+
+	protected function findAllTheContestantsIdentifiers($contestants)
+    {
+        $contestants_identifiers = [];
+        // Iterate through the array and print everything
+
+        for ($i = 0; $i < count($contestants); $i++)
+        {
+            array_push($contestants_identifiers, $contestants[$i]["contestant_id"]);
+        }
+
+        return $contestants_identifiers;
+    }
 }
