@@ -8,4 +8,9 @@ trait ProcessesPoll
 	{
 		return $_GET["poll"];
 	}
+
+	public static function find($poll_id)
+	{
+		return \App\Poll::find($poll_id);
+	}
 }

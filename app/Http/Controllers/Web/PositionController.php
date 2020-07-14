@@ -58,7 +58,7 @@ class PositionController extends Controller
 
 
             $poll = self::whatIsTheCurrentPoll();
-            $poll_details = \App\Poll::find($poll);
+            $poll_details = self::find($poll);
             $position_details = \App\Position::where('token',$id)->first();
 
 
