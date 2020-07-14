@@ -73,7 +73,8 @@ class PositionController extends Controller
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
             
             $contestants = $this->whoAreThese($contestants);
-            self::greet();
+            self::mapVotesToContestants($numberOfVotes, $contestants);
+
             // Append to the all_details array
             $all_details["polls"] = $poll_details;
             $all_details["positions"] = $position_details;
@@ -89,7 +90,7 @@ class PositionController extends Controller
         {
             return view('polls.vote', compact('all_details'));    
         } else {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
         
     }
