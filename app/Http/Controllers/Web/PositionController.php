@@ -52,12 +52,10 @@ class PositionController extends Controller
     public function show($id)
     { 
         try {
-            /* Full data structure for the application's use.
-            * It contains the session, contestants and positions details
-            * 
-            */
+            // Full data structure for the application's use.
+            // It contains the session, contestants and positions details
+            
             $all_details = [];
-
 
             $poll = self::whatIsTheCurrentPoll();
             $poll_details = self::getPollDetails($poll);
@@ -70,18 +68,9 @@ class PositionController extends Controller
             // Contestant details
             $contestants = self::getContestantsDetailsViaPosition($position_details->id);
         
-            
             $position_id = $position_details["id"];
 
-
-            /*
-            * Get all the votes for each contestants. 
-            *
-            * @param $contestants
-            * @var $numberOfVotes
-            */
             $numberOfVotes = $this->numberOfVotes($contestants);
-
 
             // Get all the contestants id and get their details e.g. name, email
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
@@ -95,17 +84,20 @@ class PositionController extends Controller
             $all_details["positions"] = $position_details;
             $all_details["session"] = $current_session;  
             $all_details["contestants"] = $contestants;  
-
         }
+
         catch (\Exception $e)
         {
-            // return redirect('/polls');
+            return redirect('/polls');
         }
+
         if (!empty($all_details))
         {
             return view('polls.vote', compact('all_details'));    
-        } else {
-            // return redirect('/polls');
+        } 
+
+        else {
+            return redirect('/polls');
         }
         
     }
