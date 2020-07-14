@@ -23,6 +23,7 @@ trait FetchesContestantsDetails {
 				$contestants[$i]->noOfVotes = $votes[$i];
 			}
 		}
+		
 		return $contestants;
 	}
 
