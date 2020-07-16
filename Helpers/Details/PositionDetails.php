@@ -40,4 +40,9 @@ class  PositionDetails implements DetailsInterface
             $all_details["session"] = $current_session;  
             $all_details["contestants"] = $contestants;  
 	}
+
+	public function detailsFromId($id)
+	{
+		//
+	}
 }

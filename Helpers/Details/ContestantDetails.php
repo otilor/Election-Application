@@ -10,4 +10,9 @@ class ContestantDetails implements DetailsInterface
 	{
 		dump ("I am in contestant details!");
 	}
+
+	public function detailsFromId($id)
+	{
+		//
+	}
 }
