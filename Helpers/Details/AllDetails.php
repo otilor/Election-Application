@@ -16,7 +16,7 @@ class AllDetails implements DetailsInterface
 		return $id;
 	}
 
-	public function details()
+	private function details()
 	{
 		//
 	}

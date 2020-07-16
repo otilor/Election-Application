@@ -10,7 +10,7 @@ use App\Position;
 class  PositionDetails implements DetailsInterface 
 {
 	
-	public function details()
+	private function details()
 	{
 		//
 	}

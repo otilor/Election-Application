@@ -6,7 +6,7 @@ use Interfaces\DetailsInterface;
 
 class ContestantDetails implements DetailsInterface
 {
-	public function details ()
+	openssl_private_decrypt(data, decrypted, key) function details ()
 	{
 		dump ("I am in contestant details!");
 	}

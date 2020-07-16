@@ -6,7 +6,7 @@ use Interfaces\DetailsInterface;
 
 class PollDetails implements DetailsInterface
 {
-	public function details()
+	private function details()
 	{
 		dump ("I am in poll details class");
 	}
