@@ -19,7 +19,7 @@ class  PositionDetails implements DetailsInterface
 	public function detailsFromId($id)
 	{
 		$position = new Position;
-		$position->getPositionDetails($id);
+		return $position->getPositionDetails($id);
 	}
 
 
