@@ -7,15 +7,23 @@
 
 namespace Helpers\Details;
 
+use App\Contestant;
 use App\Position;
+
 use Distillers\PositionDistiller;
 use Interfaces\DetailsInterface;
 
 class AllDetails implements DetailsInterface
 {
-	public function getAllDetailsFromPosition()
+	public function getAllDetailsFromPosition($id)
 	{
-		//
+		$positionDetails = $this->fetchDetailsUsingPosition($id);
+		$contestantDetails = $this->getContestantDetailsFromPosition($positionDetails->id);
+	}
+
+	private function getContestantDetailsFromPosition($positionIdentifier)
+	{
+		return Contestant::getContestantsVyingFor($positionIdentifier);
 	}
 
 	private function fetchDetailsUsingPosition($id)

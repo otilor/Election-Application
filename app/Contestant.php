@@ -12,6 +12,11 @@ class Contestant extends Model
         return $this->belongsTo('App\User');
     }
 
+    public static function getContestantsVyingFor($position_id)
+    {
+        return \App\Contestant::where('vying_for', $position_id)->get();
+    }
+
     public static function whoAreThese($contestants)
     {
         $theyAre = [];
