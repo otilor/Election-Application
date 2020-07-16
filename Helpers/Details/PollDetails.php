@@ -10,4 +10,9 @@ class PollDetails implements DetailsInterface
 	{
 		dump ("I am in poll details class");
 	}
+
+	public function detailsFromId($id)
+	{
+		//
+	}
 }
