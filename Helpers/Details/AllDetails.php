@@ -13,6 +13,11 @@ use Interfaces\DetailsInterface;
 
 class AllDetails implements DetailsInterface
 {
+	public function getAllDetailsFromPosition()
+	{
+		//
+	}
+
 	public function fetchDetailsUsingPosition($id)
 	{
 		$position = new Position;
