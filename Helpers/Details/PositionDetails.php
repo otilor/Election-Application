@@ -6,6 +6,6 @@ class  PositionDetails implements \Interfaces\DetailsInterface
 {
 	public function details()
 	{
-		dd("Hey!");
+		dump("Work is about to start!");
 	}
 }
