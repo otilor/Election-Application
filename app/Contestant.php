@@ -23,4 +23,16 @@ class Contestant extends Model
 
         return $theyAre;
     }
+
+    public static function findAllTheContestantsIdentifiers($contestants)
+    {
+        $contestants_identifiers = [];
+
+        for ($i = 0; $i < count($contestants); $i++)
+        {
+            array_push($contestants_identifiers, $contestants[$i]["contestant_id"]);
+        }
+
+        return $contestants_identifiers;
+    }
 }
