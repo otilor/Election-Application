@@ -13,7 +13,7 @@ class AllDetails implements DetailsInterface
 {
 	public function fetchDetailsUsingPosition($id)
 	{
-		// 
+		return $id;
 	}
 
 	public function details()
@@ -23,6 +23,6 @@ class AllDetails implements DetailsInterface
 
 	public function detailsFromId($id)
 	{
-		return $id;
+		//
 	}
 }
