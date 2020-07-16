@@ -16,8 +16,13 @@ class Poll extends Model
     	$this->belongsTo('App\Link', $id);
     }
 
-    public function getCurrentPoll()
+    public static function getCurrentPoll()
     {
     	return $_GET["poll"];
+    }
+
+    public function getPollDetails($poll_id)
+    {
+        return $this->find($poll_id);
     }
 }

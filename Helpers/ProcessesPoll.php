@@ -10,9 +10,4 @@ trait ProcessesPoll
 	{
 		return $_GET["poll"];
 	}
-
-	public static function getPollDetails($poll_id)
-	{
-		return Poll::find($poll_id);
-	}
 }

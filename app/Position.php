@@ -6,15 +6,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Position extends Model
 {
-   public static function getPositionDetails($token)
+   public function getPositionDetails($token)
 	{
-		return Position::where('token', $token)->first();
-	}
-
-	public function getAllDetails()
-	{
-		
+		return  $this->where('token', $token)->first();
 	}
 }

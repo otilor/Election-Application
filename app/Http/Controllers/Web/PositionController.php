@@ -59,7 +59,7 @@ class PositionController extends Controller
             $all_details = [];
 
             $positionDetails = new \Helpers\Details\PositionDetails;
-            $positionDetails->details($id);
+            $positionDetails->detailsFromId($id);
         }
 
         catch (\Exception $e)
