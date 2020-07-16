@@ -58,12 +58,13 @@ class PositionController extends Controller
             
             $all_details = [];
 
-            $getAllDetails = PositionDetails::get($id);
+            $positionDetails = new \Helpers\Details\PositionDetails;
+            $positionDetails->details($id);
         }
 
         catch (\Exception $e)
         {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
 
         if (!empty($all_details))
@@ -72,7 +73,7 @@ class PositionController extends Controller
         } 
 
         else {
-            return redirect('/polls');
+            // return redirect('/polls');
         }
         
     }

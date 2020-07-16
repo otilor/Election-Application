@@ -37,7 +37,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Helpers\\": "Helpers/"
+            "Helpers\\": "Helpers/",
+            "Interfaces\\": "Interfaces"
         },
         "classmap": [
             "database/seeds",

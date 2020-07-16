@@ -2,9 +2,9 @@
 
 namespace Helpers\Details;
 
-class PositionDetails implements \Interfaces\DetailsInterface 
+class  PositionDetails implements \Interfaces\DetailsInterface 
 {
-	public function output()
+	public function details()
 	{
 		dd("Hey!");
 	}
