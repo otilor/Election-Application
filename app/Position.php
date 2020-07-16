@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Position extends Model
 {
-   public function getPositionDetails($token)
+   public static function getPositionDetails($token)
 	{
-		return  $this->where('token', $token)->first();
+		return  self::where('token', $token)->first();
 	}
 }

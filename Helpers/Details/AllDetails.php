@@ -17,7 +17,7 @@ class AllDetails implements DetailsInterface
 {
 	public function getAllDetailsFromPosition($id)
 	{
-		$positionDetails = $this->fetchDetailsUsingPosition($id);
+		$positionDetails = $this->fetchDetailsUsingPositionIdentifier($id);
 		$contestantDetails = $this->getContestantDetailsFromPosition($positionDetails->id);
 	}
 
@@ -26,10 +26,9 @@ class AllDetails implements DetailsInterface
 		return Contestant::getContestantsVyingFor($positionIdentifier);
 	}
 
-	private function fetchDetailsUsingPosition($id)
+	private function fetchDetailsUsingPositionIdentifier($id)
 	{
-		$position = new Position;
-		return $position->getPositionDetails($id);
+		return Position::getPositionDetails($id);
 	}
 
 	private function details()
