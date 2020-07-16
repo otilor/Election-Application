@@ -5,7 +5,11 @@
 * @see PositionDetials
 */
 
-class AllDetails implements Interfaces\DetailsInterface
+namespace Helpers\Details;
+
+use Interfaces\DetailsInterface;
+
+class AllDetails implements DetailsInterface
 {
 	public function fetchDetailsUsingPosition($id)
 	{
