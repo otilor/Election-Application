@@ -23,14 +23,16 @@ trait ProcessesContestants
         return $noOfVotes;
     }
 
-	public static function resolveContestants($contestants)
+	public static function mapVotesToContestants($votes, $contestants) : object
 	{
-		// First off, get the contestants' identifiers;
-		$contestantIdentififers = Contestant::findAllTheContestantsIdentifiers($contestants);
-
-		// Resolve their user details
-		$resolvedContestantsDetails = Contestant::whoAreThese($contestantIdentififers);
-
-		return $resolvedContestantsDetails;
+		if (count ($votes) === count ($contestants))
+		{
+			for ($i = 0; $i < count($contestants); $i++)
+			{
+				$contestants[$i]->noOfVotes = $votes[$i];
+			}
+		}
+		
+		return $contestants;
 	}
 }

@@ -37,7 +37,9 @@ class AllDetails implements DetailsInterface
 	private function getContestantDetailsFromPositionIdentifier($positionIdentifier)
 	{
 		$contestants = $this->getHalfBakedContestantDetailsFromPosition($positionIdentifier);
-		dump ($this->getContestantsVote($contestants));
+		$votes = $this->getContestantsVote($contestants);
+		
+		return ProcessesContestants::mapVotesToContestants($votes, $contestants);
 	}
 
 	private function fetchPositionDetailsUsingPositionIdentifier($id)
