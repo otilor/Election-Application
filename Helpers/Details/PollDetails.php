@@ -8,6 +8,6 @@ class PollDetails implements DetailsInterface
 {
 	public function details()
 	{
-		
+		dump ("I am in poll details class");
 	}
 }

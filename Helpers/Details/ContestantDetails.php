@@ -8,6 +8,6 @@ class ContestantDetails implements DetailsInterface
 {
 	public function output ()
 	{
-		dd ("I am in contestant details!");
+		dump ("I am in contestant details!");
 	}
 }
