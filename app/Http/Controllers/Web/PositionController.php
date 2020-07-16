@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \Helpers\Poll;
+use App\Position;
 
 class PositionController extends Controller
 {
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
-    use \Helpers\ProcessesPositions;
     use \Helpers\ProcessesSessions;
     /**
      * Display a listing of the resource.
@@ -59,8 +59,7 @@ class PositionController extends Controller
 
             $poll = self::whatIsTheCurrentPoll();
             $poll_details = self::getPollDetails($poll);
-            $position_details = self::getPositionDetails($id);
-
+            $position_details = Position::getPositionDetails($id);
 
             // Session details
             $current_session = self::getSessionDetails($poll_details->session_id);
