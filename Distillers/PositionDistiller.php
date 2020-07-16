@@ -1,6 +1,7 @@
 <?php
 
 namespace Distillers;
+
 use App\Position;
 
 class PositionDistiller

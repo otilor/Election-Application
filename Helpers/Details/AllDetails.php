@@ -16,9 +16,9 @@ class AllDetails implements DetailsInterface
 	public function fetchDetailsUsingPosition($id)
 	{
 		$position = new Position;
+		$positionToBeDistilled = $position->getPositionDetails($id);
 		$distilledPosition = new PositionDistiller;
-		$distilledPosition->compressAndDistil($position);
-		return $position->getPositionDetails($id);
+		return $distilledPosition->compressAndDistil($positionToBeDistilled);
 	}
 
 	private function details()
