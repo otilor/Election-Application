@@ -12,4 +12,9 @@ class Position extends Model
 	{
 		return Position::where('token', $token)->first();
 	}
+
+	public function getAllDetails()
+	{
+		
+	}
 }
