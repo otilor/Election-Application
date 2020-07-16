@@ -73,7 +73,7 @@ class PositionController extends Controller
             $numberOfVotes = $this->numberOfVotes($contestants);
 
             // Get all the contestants id and get their details e.g. name, email
-            $contestants = $this->findAllTheContestantsIdentifiers($contestants);
+            $contestants = Contestant::findAllTheContestantsIdentifiers($contestants);
             $contestants = Contestant::whoAreThese($contestants);
 
             // Map the votes gotten from the database to each contestant
