@@ -11,6 +11,18 @@ trait ProcessesContestants
 		$this->contestants = $contestants;
 	}
 
+	public static function numberOfVotes($contestants)
+    {
+        $noOfVotes = [];
+
+        for ($i = 0; $i < count($contestants); $i++)
+        {
+            array_push($noOfVotes, $contestants[$i]["no_of_votes"]);
+        }
+
+        return $noOfVotes;
+    }
+
 	public static function resolveContestants($contestants)
 	{
 		// First off, get the contestants' identifiers;
