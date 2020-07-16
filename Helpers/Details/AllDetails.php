@@ -8,6 +8,7 @@
 namespace Helpers\Details;
 
 use App\Contestant;
+use App\Poll;
 use App\Position;
 
 use Distillers\PositionDistiller;
@@ -38,8 +39,18 @@ class AllDetails implements DetailsInterface
 	{
 		$contestants = $this->getHalfBakedContestantDetailsFromPosition($positionIdentifier);
 		$votes = $this->getContestantsVote($contestants);
-		
+
 		return ProcessesContestants::mapVotesToContestants($votes, $contestants);
+	}
+
+	private function getPollDetails()
+	{
+		Poll::getDetails();
+	}
+
+	private function getSessionDetailsFromPollIdentifier($pollIdentifier)
+	{
+		//
 	}
 
 	private function fetchPositionDetailsUsingPositionIdentifier($id)
