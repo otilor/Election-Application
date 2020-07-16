@@ -2,7 +2,9 @@
 
 namespace Helpers\Details;
 
-class  PositionDetails implements \Interfaces\DetailsInterface 
+use Interfaces\DetailsInterface;
+
+class  PositionDetails implements DetailsInterface 
 {
 	public function details()
 	{
