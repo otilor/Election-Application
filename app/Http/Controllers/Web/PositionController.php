@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \Helpers\Poll;
+use App\Contestant;
 use App\Position;
 
 class PositionController extends Controller
@@ -73,7 +74,7 @@ class PositionController extends Controller
 
             // Get all the contestants id and get their details e.g. name, email
             $contestants = $this->findAllTheContestantsIdentifiers($contestants);
-            $contestants = $this->whoAreThese($contestants);
+            $contestants = Contestant::whoAreThese($contestants);
 
             // Map the votes gotten from the database to each contestant
             self::mapVotesToContestants($numberOfVotes, $contestants);
@@ -99,17 +100,6 @@ class PositionController extends Controller
             return redirect('/polls');
         }
         
-    }
-
-    private function whoAreThese($people)
-    {
-        $theyAre = [];
-        
-        for ($i = 0; $i < count($people); $i++)
-        {
-            array_push($theyAre, \App\User::find($people[$i]));
-        }
-        return $theyAre;
     }
 
     private function numberOfVotes($contestants)

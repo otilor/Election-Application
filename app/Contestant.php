@@ -11,4 +11,16 @@ class Contestant extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public static function whoAreThese($contestants)
+    {
+        $theyAre = [];
+        
+        for ($i = 0; $i < count($contestants); $i++)
+        {
+            array_push($theyAre, \App\User::find($contestants[$i]));
+        }
+
+        return $theyAre;
+    }
 }
