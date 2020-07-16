@@ -18,7 +18,7 @@ class AllDetails implements DetailsInterface
 		//
 	}
 
-	public function fetchDetailsUsingPosition($id)
+	private function fetchDetailsUsingPosition($id)
 	{
 		$position = new Position;
 		return $position->getPositionDetails($id);
