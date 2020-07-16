@@ -6,7 +6,7 @@ use Interfaces\DetailsInterface;
 
 class ContestantDetails implements DetailsInterface
 {
-	public function output ()
+	public function details ()
 	{
 		dump ("I am in contestant details!");
 	}
