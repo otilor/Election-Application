@@ -11,4 +11,14 @@ class AllDetails implements Interfaces\DetailsInterface
 	{
 		// 
 	}
+
+	public function details()
+	{
+		//
+	}
+
+	public function detailsFromId($id)
+	{
+		return $id;
+	}
 }
