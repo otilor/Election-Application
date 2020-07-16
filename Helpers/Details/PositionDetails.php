@@ -12,8 +12,7 @@ class  PositionDetails implements DetailsInterface
 	
 	public function details()
 	{
-		dump ("Work is about to start!");
-		return ProcessesDetails::processPosition();
+		//
 	}
 
 	public function detailsFromId($id)
