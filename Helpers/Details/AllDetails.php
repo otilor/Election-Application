@@ -20,7 +20,7 @@ class AllDetails implements DetailsInterface
 	public function getAllDetailsFromPosition($id)
 	{
 		$positionDetails = $this->fetchPositionDetailsUsingPositionIdentifier($id);
-		$contestantDetails = $this->getContestantDetailsFromPosition($positionDetails->id);
+		$contestantDetails = $this->getContestantDetailsFromPositionIdentifier($positionDetails->id);
 		return $contestantDetails;
 	}
 
@@ -31,10 +31,10 @@ class AllDetails implements DetailsInterface
 
 	private function getContestantsVote($contestants)
 	{
-		dd ( ProcessesContestants::numberOfVotes($contestants) );
+		return ProcessesContestants::numberOfVotes($contestants);
 	}
 
-	private function getContestantDetailsFromPosition($positionIdentifier)
+	private function getContestantDetailsFromPositionIdentifier($positionIdentifier)
 	{
 		$contestants = $this->getHalfBakedContestantDetailsFromPosition($positionIdentifier);
 		dump ($this->getContestantsVote($contestants));
