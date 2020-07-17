@@ -4,9 +4,15 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \Helpers\Poll;
+use App\Contestant;
+use App\Position;
 
 class PositionController extends Controller
 {
+    use \Helpers\ProcessesPoll;
+    use \Helpers\FetchesContestantsDetails;
+    use \Helpers\ProcessesSessions;
     /**
      * Display a listing of the resource.
      *
@@ -47,65 +53,40 @@ class PositionController extends Controller
     public function show($id)
     { 
         try {
+            // Full data structure for the application's use.
+            // It contains the session, contestants and positions details
+            
             $all_details = [];
-            $current_poll = $_GET["poll"];
-            $poll_details = \App\Poll::find($current_poll);
-            $position_details = \App\Position::where('token',$id)->first();
 
-
-            // Session details
-            $current_session = \App\Session::find($poll_details->session_id);
-
-            // Contestant details
-            $contestants = \App\Contestant::where('vying_for', $position_details->id)->get();
-
-            
-            
-            $position_id = $position_details["id"];
-
-            
-            $contestants = $this->findAllTheContestantsIdentifiers($contestants);
-
-            $contestants = $this->whoAreThese($contestants);
-
-            // Append to the all_details array
-            $all_details["polls"] = $poll_details;
-            $all_details["positions"] = $position_details;
-            $all_details["session"] = $current_session;  
-            $all_details["contestants"] = $contestants;  
-
+            $allDetails = new \Helpers\Details\AllDetails;
+            $all_details = $allDetails->getAllDetailsFromPosition($id);
         }
+
         catch (\Exception $e)
         {
             // return redirect('/polls');
         }
-        return view('polls.vote', compact('all_details'));
+
+        if (!empty($all_details))
+        {
+            return view('polls.vote', compact('all_details'));    
+        } 
+
+        else {
+            // return redirect('/polls');
+        }
+        
     }
 
-    private function findAllTheContestantsIdentifiers($contestants)
+    private function numberOfVotes($contestants)
     {
-        $contestants_identifiers = [];
-        // Iterate through the array and print everything
-
-
+        $noOfVotes = [];
 
         for ($i = 0; $i < count($contestants); $i++)
         {
-            array_push($contestants_identifiers, $contestants[$i]["id"]);
+            array_push($noOfVotes, $contestants[$i]["no_of_votes"]);
         }
-
-        return $contestants_identifiers;
-    }
-
-    private function whoAreThese($people)
-    {
-        $theyAre = [];
-        
-        for ($i = 0; $i < count($people); $i++)
-        {
-            array_push($theyAre, \App\User::find($people[$i]));
-        }
-        return $theyAre;
+        return $noOfVotes;
     }
 
     /**
@@ -113,7 +94,7 @@ class PositionController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     
     public function edit($id)
     {
         //

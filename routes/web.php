@@ -25,3 +25,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/polls', 'Web\PollController')->middleware('auth');
 
 Route::resource('/positions', 'Web\PositionController')->middleware('auth');
+
+Route::post('vote', function () {
+	return response()->json([
+		"voted"=> true,
+	], 201);
+});

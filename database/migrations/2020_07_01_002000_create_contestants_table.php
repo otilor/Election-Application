@@ -17,7 +17,7 @@ class CreateContestantsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('contestant_id', false);
             $table->unsignedBigInteger('vying_for', false);
-            $table->string('winner')->default('no');
+            $table->unsignedBigInteger('no_of_votes');
             $table->timestamps();
 
             $table->foreign('vying_for')->references('id')->on('positions');
