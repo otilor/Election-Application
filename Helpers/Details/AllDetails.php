@@ -25,10 +25,15 @@ class AllDetails implements DetailsInterface
 
 	public function getAllDetailsFromPosition($id)
 	{
+		$allDetails = [];
 		$positionDetails = $this->fetchPositionDetailsUsingPositionIdentifier($id);
 		$contestantDetails = $this->getContestantDetailsFromPositionIdentifier($positionDetails->id);
 		$pollDetails = $this->getPollDetails();
-		dump ($pollDetails);
+		
+		$allDetails["positions"] = $positionDetails;
+		$allDetails["contestants"] = $contestantDetails;
+
+		return $allDetails;
 	}
 
 	private function getHalfBakedContestantDetailsFromPosition($positionIdentifier)
