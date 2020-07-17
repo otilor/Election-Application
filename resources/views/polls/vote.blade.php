@@ -27,7 +27,9 @@
 		
 
 		<form action="post" class="text-center">
+			@csrf			
 			<input type="submit" name="vote_me" class="btn btn-primary" value="Vote me">
+			<input type = "hidden" value = {{ json_encode($contestant) }} name = "application_id">
 		</form>
 	{{-- <h4 class = "text-center">Email:  {{ $contestant->winner }} </h4>		 --}}
 	</div>

@@ -49,10 +49,9 @@ class AllDetails implements DetailsInterface
 	private function getContestantIdentifiers($contestants)
 	{
 		$contestantIdentifiers = [];
-
 		foreach ($contestants as $contestant)
 		{
-			array_push($contestantIdentifiers, $contestant->id);
+			array_push($contestantIdentifiers, $contestant->contestant_id);
 		}
 
 		return $contestantIdentifiers;
