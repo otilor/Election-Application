@@ -38,8 +38,12 @@ class VoteController extends Controller
     public function store(Request $request)
     {
         $newVote = new Vote;
-        $newVote->incrementVoteFor($request->contestant_id);
-        return $request->contestant_id;
+        if ( $newVote->incrementVoteFor($request->contestant_id) )
+        {
+            return back();
+        } 
+        
+        return redirect('/polls');
     }
 
     /**

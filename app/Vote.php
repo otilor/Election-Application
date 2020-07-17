@@ -7,9 +7,15 @@ use App\Contestant;
 
 class Vote extends Model
 {
-    public function incrementVoteFor($contestant_id)
+    public function incrementVoteFor($contestant_id) : bool
     {
     	$contestant = new Contestant;
-    	$contestant->findAndUpdateVoteFor($contestant_id);
+    	if ( $contestant->findAndUpdateVoteFor($contestant_id) )
+    	{
+    		return true;
+    	}
+
+    	return false;
+    	
     }
 }
