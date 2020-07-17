@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contestant extends Model
 {
+    public function findAndUpdateVoteFor($contestant_id)
+    {
+        $contestant = $this->find($contestant_id);
+        return $contestant;
+    }
+
     // contestant is extending a class of user -> it belongs to a user
     public function user()
     {
