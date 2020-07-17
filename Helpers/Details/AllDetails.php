@@ -18,11 +18,17 @@ use Helpers\ProcessesContestants;
 
 class AllDetails implements DetailsInterface
 {
+	private function getAllDetails()
+	{
+		dump("getting...");
+	}
+
 	public function getAllDetailsFromPosition($id)
 	{
 		$positionDetails = $this->fetchPositionDetailsUsingPositionIdentifier($id);
 		$contestantDetails = $this->getContestantDetailsFromPositionIdentifier($positionDetails->id);
-		return $contestantDetails;
+		$pollDetails = $this->getPollDetails();
+		dump ($pollDetails);
 	}
 
 	private function getHalfBakedContestantDetailsFromPosition($positionIdentifier)
@@ -45,7 +51,8 @@ class AllDetails implements DetailsInterface
 
 	private function getPollDetails()
 	{
-		Poll::getDetails();
+		$poll = new Poll;
+		return $poll->getDetails();
 	}
 
 	private function getSessionDetailsFromPollIdentifier($pollIdentifier)

@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Poll extends Model
 {
-    private static $pollIdentifer = $_GET["poll"];
-
+    
+    private function getPollIdentifier()
+    {
+        return $_GET["poll"];
+    }
     protected $fillable = [
       'position_id',
       'session_id',
@@ -18,20 +21,15 @@ class Poll extends Model
     	$this->belongsTo('App\Link', $id);
     }
 
-    public static function getCurrentPoll()
-    {
-    	return $_GET["poll"];
-    }
-
-    public function getPollDetails($poll_id)
+    public function getDetails()
     {
         return $this->whatIsTheCurrentPoll();
     }
 
     private function whatIsTheCurrentPoll()
     {
-        $pollIdentifer = self::$pollIdentifer;
-        
+        $pollIdentifer = $this->getPollIdentifier();
+
         return $this->find($pollIdentifer);
     }
 }
