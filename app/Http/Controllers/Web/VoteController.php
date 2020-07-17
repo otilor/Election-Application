@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Vote;
+
 class VoteController extends Controller
 {
     /**
@@ -35,6 +37,8 @@ class VoteController extends Controller
      */
     public function store(Request $request)
     {
+        $newVote = new Vote;
+        $newVote->incrementVoteFor($request->contestant_id);
         return $request->contestant_id;
     }
 

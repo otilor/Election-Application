@@ -3,13 +3,29 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Contestant extends Model
 {
-    public function findAndUpdateVoteFor($contestant_id)
+    public function findAndUpdateVoteFor($contestant_id) : bool
     {
-        $contestant = $this->find($contestant_id);
-        return $contestant;
+        if ( $this->updateVotesForContestant($contestant_id) ) 
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function updateVotesForContestant($contestant_id) : bool
+    {
+        $user = new User;
+        $contestantDetails = $user->find($contestant_id)->contestant;
+        $contestantDetails->no_of_votes += 1;
+        $contestantDetails->save();
+
+
+        return true;
     }
 
     // contestant is extending a class of user -> it belongs to a user
