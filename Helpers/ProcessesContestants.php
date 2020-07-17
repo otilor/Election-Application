@@ -23,7 +23,7 @@ trait ProcessesContestants
         return $noOfVotes;
     }
 
-	public static function mapVotesToContestants($votes, $contestants) : object
+	public static function mapVotesToContestants($votes, $contestants)
 	{
 		if (count ($votes) === count ($contestants))
 		{

@@ -46,13 +46,41 @@ class AllDetails implements DetailsInterface
 		return ProcessesContestants::numberOfVotes($contestants);
 	}
 
+	private function getContestantIdentifiers($contestants)
+	{
+		$contestantIdentifiers = [];
+
+		foreach ($contestants as $contestant)
+		{
+			array_push($contestantIdentifiers, $contestant->id);
+		}
+
+		return $contestantIdentifiers;
+	}
+
 	private function getContestantDetailsFromPositionIdentifier($positionIdentifier)
 	{
 		$contestants = $this->getHalfBakedContestantDetailsFromPosition($positionIdentifier);
 		$votes = $this->getContestantsVote($contestants);
 
-		return ProcessesContestants::mapVotesToContestants($votes, $contestants);
+		$contestantIdentifiers = $this->getContestantIdentifiers($contestants);
+
+		$fullContestantDetails = $this->whoAreThese($contestantIdentifiers);
+		
+		return ProcessesContestants::mapVotesToContestants($votes, $fullContestantDetails);
 	}
+
+	private function whoAreThese($contestantIdentifiers)
+    {
+    	//dump ($people);
+        $theyAre = [];
+        
+        foreach ($contestantIdentifiers as $contestantIdentifier) {
+        	array_push($theyAre, \App\User::find($contestantIdentifier));
+        }
+
+        return $theyAre;
+    }
 
 	private function getPollDetails()
 	{

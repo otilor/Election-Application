@@ -23,7 +23,7 @@
 	
 	
 	<div class = "text-center  py-2">
-		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center">{{ $contestant->name }} ( <code class="mb-1 mt-0 text-dark text-caps">{{ $contestant->noOfVotes }} votes</code>)</h3>
+		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center" >{{ $contestant->name }} ( <code class="mb-1 mt-0 text-dark text-caps">{{ $contestant->noOfVotes }} votes</code>)</h3>
 		
 
 		<form action="post" class="text-center">
