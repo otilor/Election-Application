@@ -26,8 +26,4 @@ Route::resource('/polls', 'Web\PollController')->middleware('auth');
 
 Route::resource('/positions', 'Web\PositionController')->middleware('auth');
 
-Route::post('vote', function () {
-	return response()->json([
-		"voted"=> true,
-	], 201);
-});
+Route::post('vote', 'Web\VoteController@store');
