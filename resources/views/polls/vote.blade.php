@@ -29,7 +29,7 @@
 		<form action="/vote" method = "post" class="text-center" name = "voteACandidate">
 			@csrf			
 			<input type="submit" name="vote_me" class="btn btn-primary" value="Vote me">
-			<input type = "hidden" value = {{ $contestant->id }} name = "application_id">
+			<input type = "hidden" value = {{ $contestant->id }} name = "contestant_id">
 		</form>
 	{{-- <h4 class = "text-center">Email:  {{ $contestant->winner }} </h4>		 --}}
 	</div>

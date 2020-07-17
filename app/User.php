@@ -40,6 +40,6 @@ class User extends Authenticatable
 
     public function contestant()
     {
-        $this->hasMany(Contestant::class);
+        return $this->hasOne(Contestant::class, 'contestant_id');
     }
 }
