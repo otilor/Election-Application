@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class PermissionAddStudentRole extends Migration
 {
@@ -13,7 +15,9 @@ class PermissionAddStudentRole extends Migration
      */
     public function up()
     {
-        //
+        $role = Role::create(['name' => 'student']);
+        $permission = Permission::create(['name' => 'view contestants']);
+        $role->givePermissionTo($permission);
     }
 
     /**
