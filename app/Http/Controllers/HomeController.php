@@ -9,11 +9,19 @@ class HomeController extends Controller
 	// Only guests can view this.
 	public function __construct()
 	{
-		$this->middleware('guest');
+		// $this->middleware('auth');
 	}
 
     //
     public function index() {
-    	return view('welcome');
+    	if ( auth()->check() )
+    	{
+    		return view('home');
+    	} 
+    	else 
+    	{
+    		return view('welcome');
+    	}
+    	
     }
 }

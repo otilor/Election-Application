@@ -14,7 +14,7 @@
 
 {{-- List all the section --}}
 
-
+@can ('edit post')
 <section class="m-3">
 	@forelse ($all_details["contestants"] as $contestant)
 	<div class="text-center">
@@ -37,5 +37,5 @@
 	<p class="text-center text-danger text-headline">No contestants, yet!</p>
 	@endforelse
 </section>
-
+@endcan
 @endsection

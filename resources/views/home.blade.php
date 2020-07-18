@@ -1,23 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+@guest
+@include('includes.gist')
+  {{-- <welcome></welcome> --}}
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+ @endguest
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+ @auth
+ <div class="text-center py-5">
+        
+        <img class = "py-3" style = "width: 50vh;" src="{{ asset('img/caution.png') }}">
+        <h1>Work is currently in progress!</h1>
+        <h3 class="text-caps">The craftsmen are toiling day and night to make this happen. Trust me!</h3>
 </div>
+ @endauth
 @endsection
