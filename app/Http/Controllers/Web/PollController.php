@@ -96,7 +96,8 @@ class PollController extends Controller
     public function findAllUniquePositionsWithLink($link)
     {
         $selected_positions = \App\Link::where('id', $link)->first()->positions;
-        $uniquePositions = (array_values(array_unique($selected_positions)));
+        $uniquePositions = array_values(array_unique($selected_positions));
+        
         return $uniquePositions;
     }
 
