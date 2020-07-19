@@ -15,11 +15,6 @@ class Student
      */
     public function handle($request, Closure $next)
     {
-        if (! auth()->check() )
-        {
-            return redirect()->route('login');
-        }
-        $request->user;
-        return $next($request);
+        dd("I am a fancy middleware");
     }
 }
