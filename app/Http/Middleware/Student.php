@@ -15,16 +15,15 @@ class Student
      */
     public function handle($request, Closure $next)
     {
-        if ( ! auth()->check() )       
+       
+        if ( auth()->check() )
         {
-            redirect()->route('login');
-        }
-        else {
-            if (! auth()->user()->hasRole('student') )
-            {   
-                return back();
+            if ( auth()->user()->hasRole('student') )
+            {
+                return $next($request);
             }
         }
+
         return $next($request);
     }
 }
