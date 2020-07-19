@@ -15,7 +15,6 @@ class Student
      */
     public function handle($request, Closure $next)
     {
-       
         if ( auth()->check() )
         {
             if ( auth()->user()->hasRole('student') )
@@ -23,7 +22,7 @@ class Student
                 return $next($request);
             }
         }
-
+        
         return $next($request);
     }
 }
