@@ -51,7 +51,7 @@ class PollController extends Controller
         $poll = Poll::where('id', $id)->first();
 
         $link = $poll->link_id;
-        $positions = $this->findAllPositionsWithLink($link);
+        $positions = $this->findAllUniquePositionsWithLink($link);
 
         $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, false);
         $positions = $distinct_position;
@@ -93,10 +93,11 @@ class PollController extends Controller
         //
     }
 
-    public function findAllPositionsWithLink($link)
+    public function findAllUniquePositionsWithLink($link)
     {
         $selected_positions = \App\Link::where('id', $link)->first()->positions;
-        return $selected_positions;
+        $uniquePositions = (array_values(array_unique($selected_positions)));
+        return $uniquePositions;
     }
 
     private function findPositionDetails($positions)
@@ -104,7 +105,7 @@ class PollController extends Controller
         $position_details = [];
         for($i = 0; $i < count($positions); $i++)
         {
-            $position_details[$positions[$i]] = \App\Position::find($positions[$i]);
+            $position_details[$i] = \App\Position::find($positions[$i]);
         }
         
         return $position_details;
