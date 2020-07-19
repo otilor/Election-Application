@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use \Helpers\Poll;
 use App\Contestant;
 use App\Position;
+use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
+use RuntimeException;
 
 class PositionController extends Controller
 {
@@ -57,6 +59,7 @@ class PositionController extends Controller
     public function show($id)
     { 
         try {
+            Bugsnag::notifyException(new RuntimeException('Test error'));
             // Full data structure for the application's use.
             // It contains the session, contestants and positions details
             
