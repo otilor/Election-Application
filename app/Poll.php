@@ -9,7 +9,7 @@ class Poll extends Model
     
     private function getPollIdentifier()
     {
-        return $_GET["poll"];
+        return request('poll');
     }
     protected $fillable = [
       'position_id',
