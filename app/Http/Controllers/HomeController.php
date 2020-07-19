@@ -17,7 +17,6 @@ class HomeController extends Controller
     public function index() {
     	if ( auth()->check() )
     	{
-    		dump ( auth()->user()->permissions );
     		return view('home');
     	} 
     	else 
