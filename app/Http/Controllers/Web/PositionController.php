@@ -17,7 +17,7 @@ class PositionController extends Controller
     use \Helpers\ProcessesSessions;
     function __construct()
     {
-        $this->middleware('student');
+        $this->middleware('gateman');
     }
     /**
      * Display a listing of the resource.
