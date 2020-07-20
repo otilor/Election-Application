@@ -11,7 +11,7 @@
       </li>
       @can ('view contestants')
       <li class="nav-item">
-          <a class="nav-link" href = "/polls">Polls</a>
+          <a class="nav-link" href = "/student/polls">Polls</a>
       </li>
       @endcan
 
