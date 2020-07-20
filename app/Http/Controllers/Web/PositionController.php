@@ -15,10 +15,6 @@ class PositionController extends Controller
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
     use \Helpers\ProcessesSessions;
-    function __construct()
-    {
-        $this->middleware('gateman');
-    }
     /**
      * Display a listing of the resource.
      *

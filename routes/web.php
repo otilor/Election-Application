@@ -26,7 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Student routes
 Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
-	Route::resource('/polls', 'Web\PollController');
-	Route::resource('/positions', 'Web\PositionController');
+	Route::get('/', function () {
+		return "Hey";
+	});
+	Route::resource('/polls', 'Web\PollController')->withoutMiddleware('gateman');
+	Route::resource('/positions', 'Web\PositionController')->withoutMiddleware('gateman');
 	Route::post('vote', 'Web\VoteController@store');
 });
