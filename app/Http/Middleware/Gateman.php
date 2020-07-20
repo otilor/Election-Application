@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class Student
+class Gateman
 {
     /**
      * Handle an incoming request.
@@ -17,14 +17,22 @@ class Student
     {
         if ( auth()->check() )
         {
-            if (! auth()->user()->hasRole('student'))
+            if ( auth()->user()->hasRole('student') )
             {
-                return redirect('/polls');
+                // return redirect('/student');
             }
-            else 
+
+            if ( auth()->user()->hasRole('admin'))
             {
-                return redirect('/student');
+                return redirect('/student'. RouteServiceProvider::HOME);
             }
+
+            if ( auth()->user()->hasRole('super_admin') )
+            {
+                return redirect('/super_admin');
+            }
+
+            return redirect('student/polls');
         }
         else  
         {
