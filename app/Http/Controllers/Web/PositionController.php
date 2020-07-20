@@ -7,16 +7,14 @@ use Illuminate\Http\Request;
 use \Helpers\Poll;
 use App\Contestant;
 use App\Position;
+// use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
+// use RuntimeException;
 
 class PositionController extends Controller
 {
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
     use \Helpers\ProcessesSessions;
-    function __construct()
-    {
-        $this->middleware('student');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -57,6 +55,7 @@ class PositionController extends Controller
     public function show($id)
     { 
         try {
+            // Bugsnag::notifyException(new RuntimeException('Test error'));
             // Full data structure for the application's use.
             // It contains the session, contestants and positions details
             

@@ -22,8 +22,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/polls', 'Web\PollController')->middleware('auth');
 
-Route::resource('/positions', 'Web\PositionController')->middleware('auth');
 
-Route::post('vote', 'Web\VoteController@store');
+// Student routes
+Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
+	Route::get('/', function () {
+		return "Hey";
+	});
+	Route::resource('/polls', 'Web\PollController')->withoutMiddleware('gateman')->middleware('auth');
+	Route::resource('/positions', 'Web\PositionController')->withoutMiddleware('gateman')->middleware('auth');
+	Route::post('vote', 'Web\VoteController@store');
+});
