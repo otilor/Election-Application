@@ -22,8 +22,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/polls', 'Web\PollController');
+
 
 Route::resource('/positions', 'Web\PositionController');
 
 Route::post('vote', 'Web\VoteController@store');
+
+// Student routes
+Route::group(['prefix' => 'student'], function () {
+	Route::resource('/polls', 'Web\PollController');
+});
