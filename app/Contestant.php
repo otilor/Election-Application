@@ -23,7 +23,7 @@ class Contestant extends Model
         $contestantDetails = $user->find($contestant_id)->contestant;
         $contestantDetails->no_of_votes += 1;
         $contestantDetails->save();
-
+        session(['voted' => true]);
 
         return true;
     }
