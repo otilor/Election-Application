@@ -21,6 +21,10 @@ class Student
             {
                 return redirect('/polls');
             }
+            else 
+            {
+                return redirect('/student');
+            }
         }
         else  
         {
