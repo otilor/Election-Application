@@ -25,7 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // Student routes
-Route::group(['prefix' => 'student'], function () {
+Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::resource('/polls', 'Web\PollController');
 	Route::resource('/positions', 'Web\PositionController');
 	Route::post('vote', 'Web\VoteController@store');
