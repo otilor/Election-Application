@@ -8,6 +8,10 @@ use App\Poll;
 
 class PollController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('gateman');
+    }
     /**
      * Display a listing of the resource.
      *
