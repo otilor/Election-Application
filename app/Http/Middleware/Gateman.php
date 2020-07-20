@@ -17,14 +17,9 @@ class Gateman
     {
         if ( auth()->check() )
         {
-            if ( auth()->user()->hasRole('student') )
-            {
-                // return redirect('/student');
-            }
-
             if ( auth()->user()->hasRole('admin'))
             {
-                return redirect('/student'. RouteServiceProvider::HOME);
+                // return redirect('/student'. RouteServiceProvider::HOME);
             }
 
             if ( auth()->user()->hasRole('super_admin') )
