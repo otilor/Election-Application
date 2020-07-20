@@ -29,7 +29,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::get('/', function () {
 		return "Hey";
 	});
-	Route::resource('/polls', 'Web\PollController')->withoutMiddleware('gateman');
-	Route::resource('/positions', 'Web\PositionController')->withoutMiddleware('gateman');
+	Route::resource('/polls', 'Web\PollController')->withoutMiddleware('gateman')->middleware('auth');
+	Route::resource('/positions', 'Web\PositionController')->withoutMiddleware('gateman')->middleware('auth');
 	Route::post('vote', 'Web\VoteController@store');
 });
