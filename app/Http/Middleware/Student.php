@@ -17,11 +17,6 @@ class Student
     {
         if ( auth()->check() )
         {
-            if ( auth()->user()->hasRole('admin') )
-            {
-                return redirect('/admin');
-            }
-
             if ( auth()->user()->hasRole('student') )
             {
                 return redirect('/student');
