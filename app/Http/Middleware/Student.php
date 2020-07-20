@@ -22,6 +22,10 @@ class Student
                 return redirect('/polls');
             }
         }
-        return $next($request);         
+        else  
+        {
+            return redirect()->route('login');
+        }
     }
 }
+ 
