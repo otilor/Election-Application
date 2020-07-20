@@ -9,10 +9,11 @@
       <li class="nav-item">
         <a class="nav-link" href = "/" >Home</a>
       </li>
+      @can ('view contestants')
       <li class="nav-item">
           <a class="nav-link" href = "/polls">Polls</a>
-
       </li>
+      @endcan
 
       @auth
       <li class="nav-item">
