@@ -24,6 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/polls', 'Web\PollController')->middleware('auth');
 
-Route::resource('/positions', 'Web\PositionController')->middleware('auth');
+Route::resource('/positions', 'Web\PositionController');
 
 Route::post('vote', 'Web\VoteController@store');

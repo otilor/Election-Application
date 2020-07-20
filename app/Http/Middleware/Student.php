@@ -17,12 +17,11 @@ class Student
     {
         if ( auth()->check() )
         {
-            if ( auth()->user()->hasRole('student') )
+            if (! auth()->user()->hasRole('student'))
             {
-                return $next($request);
+                return redirect('/polls');
             }
         }
-        
-        return $next($request);
+        return $next($request);         
     }
 }
