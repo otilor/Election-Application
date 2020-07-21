@@ -16,13 +16,9 @@ use Illuminate\Http\Request;
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Route::get('/', 'HomeController@index');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
 
 // Student routes
 Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
