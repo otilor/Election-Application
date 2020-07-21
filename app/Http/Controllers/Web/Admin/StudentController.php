@@ -14,7 +14,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return "Welcome to the student dashboard";
+        $users = \App\User::allUsersForAdministrators();
+        return view('admin.student.index', compact('users'));
     }
 
     /**
