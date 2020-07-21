@@ -20,9 +20,9 @@ class Gateman
             return redirect('/login');
         }
 
-        if (! auth()->user()->hasRole('student') )
+        if ( auth()->user()->hasRole('admin') )
         {
-            return redirect('/');
+            return redirect('/admin');
         }
 
         return $next($request);
