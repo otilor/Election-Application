@@ -27,7 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Student routes
 Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::get('/', function () {
-		return "Hey";
+		return view('student.index');
 	});
 	Route::resource('/polls', 'Web\PollController');
 	Route::resource('/positions', 'Web\PositionController');
