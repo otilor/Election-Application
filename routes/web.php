@@ -33,3 +33,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::resource('/positions', 'Web\PositionController');
 	Route::post('vote', 'Web\VoteController@store');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+	Route::get('/', 'Web\Admin\AdminController@index');
+});

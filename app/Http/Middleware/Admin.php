@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class Gateman
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -19,13 +19,12 @@ class Gateman
         {
             return redirect('/login');
         }
-
-        if ( auth()->user()->hasRole('admin') )
+        
+        if ( auth()->user()->hasRole('student') )
         {
-            return redirect('/admin');
+            return redirect('/student');
         }
 
         return $next($request);
     }
 }
- 
