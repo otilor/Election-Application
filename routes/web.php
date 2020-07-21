@@ -35,7 +35,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 });
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', function () {
 		return "You are an administrator!";
 	});
