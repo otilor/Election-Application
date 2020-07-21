@@ -34,9 +34,6 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::post('vote', 'Web\VoteController@store');
 });
 
-
-Route::group(['prefix' => 'admin'], function () {
-	Route::get('/', function () {
-		return "You are an administrator!";
-	});
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+	Route::get('/', 'Web\Admin\AdminController@index');
 });
