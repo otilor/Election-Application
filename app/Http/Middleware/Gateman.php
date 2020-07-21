@@ -15,29 +15,17 @@ class Gateman
      */
     public function handle($request, Closure $next)
     {
-        if ( auth()->check() )
+        if (! auth()->check() )
         {
-            if ( auth()->user()->hasRole('student') )
-            {
-                // return redirect('/student');
-            }
-
-            if ( auth()->user()->hasRole('admin'))
-            {
-                return redirect('/student'. RouteServiceProvider::HOME);
-            }
-
-            if ( auth()->user()->hasRole('super_admin') )
-            {
-                return redirect('/super_admin');
-            }
-
-            return redirect('student/polls');
+            return redirect('/login');
         }
-        else  
+
+        if (! auth()->user()->hasRole('student') )
         {
-            return redirect()->route('login');
+            return redirect('/');
         }
+
+        return $next($request);
     }
 }
  
