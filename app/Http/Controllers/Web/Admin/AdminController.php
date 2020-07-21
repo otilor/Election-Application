@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $users = return \App\User::allUsersForAdministrators();
+        $users = \App\User::allUsersForAdministrators();
         return view ('admin.index', compact('users'));
     }
 
