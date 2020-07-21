@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index() {
     	if ( auth()->check() )
     	{
-    		return view('home');
+    		return view(auth()->user()->roles->pluck('name')[0] . '.index');
     	} 
     	else 
     	{
