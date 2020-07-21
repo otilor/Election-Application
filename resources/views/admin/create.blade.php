@@ -2,7 +2,7 @@
 @section ('content')
 <h3 class="text-center pt-4">Create an account</h3>
 <div class="container">
-	<form>
+	<form action = "/admin/store" method="post">
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Email address</label>
 		    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
