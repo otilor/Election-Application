@@ -11,7 +11,7 @@
       </li>
       @role ('admin')
       <li class="nav-item">
-          <a class="nav-link" href = "{{ route('admin.create') }}">Create an account</a>
+          <a class="nav-link" href = "#">Student details</a>
       </li>
       @endrole
       @can ('view contestants')
