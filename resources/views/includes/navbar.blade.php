@@ -9,18 +9,23 @@
       <li class="nav-item">
         <a class="nav-link" href = "/" >Home</a>
       </li>
+      @role ('admin')
+      <li class="nav-item">
+          <a class="nav-link" href = "/admin/create">Create an account</a>
+      </li>
+      @endrole
       @can ('view contestants')
       <li class="nav-item">
           <a class="nav-link" href = "/student/polls">Polls</a>
       </li>
       @endcan
 
-      @auth
+      <!-- @auth
       <li class="nav-item">
           <a class="nav-link" href = "/profile">Profile</a>
 
       </li>
-      @endauth
+      @endauth -->
       {{-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
