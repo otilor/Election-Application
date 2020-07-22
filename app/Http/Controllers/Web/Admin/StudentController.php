@@ -18,6 +18,12 @@ class StudentController extends Controller
         return view('admin.student.index', compact('users'));
     }
 
+    // All the students accounts -> for admins only, tho'
+    public function accounts()
+    {
+        return view('admin.student.accounts');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
