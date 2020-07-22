@@ -49,7 +49,9 @@ class StudentController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-        return $request->validated();
+        // return $request->validated();
+        return $this->user->create($request->validated());
+        // return back();
     }
 
     /**
