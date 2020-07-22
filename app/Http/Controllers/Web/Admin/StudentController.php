@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers\Web\Admin;
 
+use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 
 class StudentController extends Controller
 {
+    function __construct(User $user)
+    {
+        $this->user = $user;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -43,19 +48,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required',
-        ]);
-
-        if ( $validator->fails() )
-        {
-            return response()->json(['error' => $validator->errors()], 400);
-        }
         
-        \App\User::create($request->all());
-
-        return redirect('/admin');
     }
 
     /**
