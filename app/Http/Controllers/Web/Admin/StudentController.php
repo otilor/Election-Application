@@ -61,8 +61,8 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        $studentDetails = $this->user->find($id);
-        return view ('admin.student.details');
+        $user = $this->user->find($id);
+        return view ('admin.student.details', compact('user'));
     }
 
     /**
