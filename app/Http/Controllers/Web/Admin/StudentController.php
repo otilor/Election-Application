@@ -62,6 +62,10 @@ class StudentController extends Controller
     public function show($id)
     {
         $user = $this->user->find($id);
+        if ( empty($user) )
+        {
+            return "No user found with that id! " . "<a href = '/'> Go home</a>";
+        }
         return view ('admin.student.details', compact('user'));
     }
 
