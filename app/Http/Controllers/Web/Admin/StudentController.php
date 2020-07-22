@@ -49,7 +49,7 @@ class StudentController extends Controller
      */
     public function store(UserStoreRequest $request)
     {
-         $this->user->create($request->validated());
+        $this->user->create($request->validated());
         return back()->with('success', 'Account created!');
     }
 
