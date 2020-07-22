@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Contestant;
 use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -47,5 +48,15 @@ class User extends Authenticatable
     public static function allUsersForAdministrators()
     {
         return static::all();
+    }
+
+    public function setPasswordAttribute($password)
+    {
+        if ( trim($password) === '' )
+        {
+            return;
+        }
+
+        $this->attributes['password'] = Hash::make($password);
     }
 }

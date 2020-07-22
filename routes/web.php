@@ -34,4 +34,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', 'Web\Admin\AdminController@index');
 	Route::get('/students', 'Web\Admin\StudentController@index');	
 	Route::get('students/accounts', 'Web\Admin\StudentController@accounts');
+	Route::get('students/create', 'Web\Admin\StudentController@create');
+	Route::post('students/store', 'Web\Admin\StudentController@store')->name('admin.students.store');
+	Route::get('students/{id}', 'Web\Admin\StudentController@show');
 });

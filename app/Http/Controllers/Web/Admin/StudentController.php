@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers\Web\Admin;
 
+use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserStoreRequest;
+use Validator;
 
 class StudentController extends Controller
 {
+    function __construct(User $user)
+    {
+        $this->user = $user;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +38,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.student.create');
     }
 
     /**
@@ -40,9 +47,10 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        //
+        $this->user->create($request->validated())->assignRole('student');
+        return back()->with('success', 'Account created!');
     }
 
     /**
@@ -53,7 +61,12 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = $this->user->find($id);
+        if ( empty($user) )
+        {
+            return "No user found with that id! " . "<a href = '/'> Go home</a>";
+        }
+        return view ('admin.student.details', compact('user'));
     }
 
     /**
