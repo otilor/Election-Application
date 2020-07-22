@@ -14,13 +14,13 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $users = \App\User::allUsersForAdministrators();
-        return view('admin.student.index', compact('users'));
+        return view('admin.student.index');
     }
 
     // All the students accounts -> for admins only, tho'
     public function accounts()
     {
+        $users = \App\User::allUsersForAdministrators();
         return view('admin.student.accounts');
     }
 
