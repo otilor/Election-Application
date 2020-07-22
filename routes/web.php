@@ -16,18 +16,14 @@ use Illuminate\Http\Request;
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Route::get('/', 'HomeController@index');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-
 // Student routes
 Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::get('/', function () {
-		return "Hey";
+		return view('student.index');
 	});
 	Route::resource('/polls', 'Web\PollController');
 	Route::resource('/positions', 'Web\PositionController');
@@ -36,4 +32,6 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', 'Web\Admin\AdminController@index');
+	Route::get('/students', 'Web\Admin\StudentController@index');	
+	Route::get('students/accounts', 'Web\Admin\StudentController@accounts');
 });

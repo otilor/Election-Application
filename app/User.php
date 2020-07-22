@@ -43,4 +43,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Contestant::class, 'contestant_id');
     }
+
+    public static function allUsersForAdministrators()
+    {
+        return static::all();
+    }
 }

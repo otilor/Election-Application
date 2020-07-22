@@ -17,7 +17,9 @@ class HomeController extends Controller
     public function index() {
     	if ( auth()->check() )
     	{
-    		return view('home');
+            // Goes to the roles table and find the role of the current user (returns an array)
+            // Then use the first index of the array
+    		return view(auth()->user()->roles->pluck('name')[0] . '.index');
     	} 
     	else 
     	{

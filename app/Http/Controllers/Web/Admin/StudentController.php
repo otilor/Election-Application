@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        // $users = \App\User::allUsersForAdministrators();
-        return view ('admin.index');
+        return view('admin.student.index');
+    }
+
+    // All the students accounts -> for admins only, tho'
+    public function accounts()
+    {
+        $users = \App\User::allUsersForAdministrators();
+        return view('admin.student.accounts', compact('users'));
     }
 
     /**
@@ -25,7 +31,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        //
     }
 
     /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Web\Admin;
+namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        // $users = \App\User::allUsersForAdministrators();
-        return view ('admin.index');
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        //
     }
 
     /**
