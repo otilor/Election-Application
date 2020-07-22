@@ -4,12 +4,18 @@
 <div class="container">
 	<form action = "#" method="post">
 		  <div class="form-group">
+		    <label for="exampleFormControlInput1">Name</label>
+		    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+		  </div>
+
+		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Email address</label>
 		    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 		  </div>
+
 		  <div class="form-group">
 		    <label for="exampleFormControlSelect1">Choose account type</label>
-		    <select class="form-control" id="exampleFormControlSelect1">
+		    <select disabled class="form-control" id="exampleFormControlSelect1">
 		      <option>Student</option>
 		    </select>
 		  </div>
