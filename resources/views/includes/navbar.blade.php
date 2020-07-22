@@ -11,7 +11,7 @@
       </li>
       @role ('admin')
       <li class="nav-item">
-          <a class="nav-link" href = "#">Student details</a>
+          <a class="nav-link" href = "/admin/students">Student details</a>
       </li>
       @endrole
       @can ('view contestants')
