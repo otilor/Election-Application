@@ -13,6 +13,11 @@ class UserStoreRequest extends FormRequest
      */
     public function authorize()
     {
+        if ( auth()->user()->hasRole('admin') )
+        {
+            return true;    
+        }
+
         return false;
     }
 

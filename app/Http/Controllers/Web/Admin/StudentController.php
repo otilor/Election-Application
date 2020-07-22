@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web\Admin;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserStoreRequest;
 use Validator;
 
 class StudentController extends Controller
@@ -46,9 +47,9 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        
+        return $request->validated();
     }
 
     /**
