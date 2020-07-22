@@ -2,6 +2,7 @@
 @section ('content')
 <h3 class="text-center pt-4">Create an account</h3>
 <div class="container">
+	@include ('includes.messages')
 	<form action = "{{ route('admin.students.store') }}" method="post">
 		@csrf
 		  <div class="form-group">
