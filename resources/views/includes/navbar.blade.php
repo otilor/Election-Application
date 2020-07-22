@@ -21,40 +21,20 @@
             <a class="nav-link" href = "/student/polls">Polls</a>
         </li>
       @endcan
-
-      <!-- @auth
-      <li class="nav-item">
-          <a class="nav-link" href = "/profile">Profile</a>
-
-      </li>
-      @endauth -->
-      {{-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li> --}}
     </ul>
     
       @auth
       <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">
           Welcome, {{ Auth::user()->name }}
       </a>
-      
+
       <form action="/logout" method = "post">
         @csrf
-          <button class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Logout</button>  
+            <button class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">
+            Logout
+          </button>  
+
       </form>
-      
       @endauth
 
 
