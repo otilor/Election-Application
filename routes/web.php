@@ -32,5 +32,5 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', 'Web\Admin\AdminController@index');
-	Route::resource('/student', 'Web\Admin\StudentController');
+	Route::resource('/students', 'Web\Admin\StudentController');
 });
