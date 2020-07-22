@@ -42,7 +42,15 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required',
+        ]);
+
+        if ( $validator->fails() )
+        {
+            return response()->json(['error' => $validator->errors()->toJson()], 400);
+        }
     }
 
     /**
