@@ -52,6 +52,7 @@ class StudentController extends Controller
         {
             return response()->json(['error' => $validator->errors()], 400);
         }
+        
         \App\User::create($request->all());
 
         return redirect('/admin');
