@@ -21,7 +21,7 @@ class StudentController extends Controller
     public function accounts()
     {
         $users = \App\User::allUsersForAdministrators();
-        return view('admin.student.accounts');
+        return view('admin.student.accounts', compact('users'));
     }
 
     /**

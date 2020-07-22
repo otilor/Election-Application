@@ -13,10 +13,13 @@
     </tr>
   </thead>
   <tbody>
+  	@for ($i = 1; $i <= count($users); $i++)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
+      <th scope="row">{{ $i  }}</th>
+      <td>{{ $users[$i-1]->name }}</td>
+      <td>{{ $users[$i-1]->email }}</td>
+  	</tr>
+  	@endfor
   </tbody>
 </table>
 </div>
