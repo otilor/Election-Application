@@ -25,7 +25,8 @@
     
       @auth
       <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">
-          Welcome, {{ Auth::user()->name }}
+          Welcome, {{ auth()->user()->roles[0]->name ===  'admin' ? 'admin' : auth()->user()->name  }}
+
       </a>
 
       <form action="/logout" method = "post">
