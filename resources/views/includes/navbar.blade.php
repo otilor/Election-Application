@@ -9,15 +9,17 @@
       <li class="nav-item">
         <a class="nav-link" href = "/" >Home</a>
       </li>
+      
       @role ('admin')
-      <li class="nav-item">
-          <a class="nav-link" href = "/admin/students">Student details</a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href = "/admin/students">Student details</a>
+        </li>
       @endrole
+
       @can ('view contestants')
-      <li class="nav-item">
-          <a class="nav-link" href = "/student/polls">Polls</a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href = "/student/polls">Polls</a>
+        </li>
       @endcan
 
       <!-- @auth
