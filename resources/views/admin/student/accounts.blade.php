@@ -23,4 +23,5 @@
   </tbody>
 </table>
 </div>
+
 @endsection
