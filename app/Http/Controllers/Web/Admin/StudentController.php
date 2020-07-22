@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Validator;
 
 class StudentController extends Controller
 {
@@ -49,8 +50,11 @@ class StudentController extends Controller
 
         if ( $validator->fails() )
         {
-            return response()->json(['error' => $validator->errors()->toJson()], 400);
+            return response()->json(['error' => $validator->errors()], 400);
         }
+        \App\User::create($request->all());
+
+        return redirect('/admin');
     }
 
     /**
