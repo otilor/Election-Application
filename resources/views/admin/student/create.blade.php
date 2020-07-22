@@ -2,7 +2,7 @@
 @section ('content')
 <h3 class="text-center pt-4">Create an account</h3>
 <div class="container">
-	<form action = "#" method="post">
+	<form action = "{{ action('admin.students.store') }}" method="post">
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Name</label>
 		    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
