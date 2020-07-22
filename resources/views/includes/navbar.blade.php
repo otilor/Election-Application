@@ -46,7 +46,10 @@
     </ul>
     
       @auth
-      <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">Welcome, {{ Auth::user()->name }}</a>
+      <a href = "#" class="text-skorange uppercase tracking-2px border-2 border-skorange py-top-10px login rounded-10px text-20px mr-sm-2" type="submit">
+          Welcome, {{ Auth::user()->name }}
+      </a>
+      
       <form action="/logout" method = "post">
         @csrf
           <button class="text-white uppercase tracking-2px border-2 border-skorange py-top-10px signup rounded-10px text-20px mr-sm-2" type="submit">Logout</button>  
