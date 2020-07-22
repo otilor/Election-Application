@@ -6,7 +6,7 @@
         <div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-mpblue">
           <h2 class="text-headline text-white">View all accounts</h2>
           <div class="end-of-story-button mt-20px">
-            <a href = "/admin/student/accounts" class="py-3 br-10px px-4 bg-msblue-600  text-caps">View -></a>
+            <a href = "/admin/students/accounts" class="py-3 br-10px px-4 bg-msblue-600  text-caps">View -></a>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         <div class="flex-grow story-ended p-5 br-20px m-1 col-md-12 bg-success">
           <h2 class="text-headline text-white">Create an account</h2>
           <div class="end-of-story-button mt-20px">
-            <a href = "/admin/student/create" class="py-3 br-10px px-4 bg-light text-success text-caps">Create</a>
+            <a href = "/admin/students/create" class="py-3 br-10px px-4 bg-light text-success text-caps">Create</a>
           </div>
         </div>
       </div>
