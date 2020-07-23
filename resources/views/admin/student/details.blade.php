@@ -22,11 +22,12 @@
 		<a href = "#" class="btn text-white text-caps btn-danger edit">Delete</a>	
 			@if ( count ($user->roles) > 0 )
 				@if ($user->roles[0]->name !== "admin")
-				<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
-				@else
-				<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
+					<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
 				@endif
+			@else
+			<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
 			@endif
+
 	</div>	
 </section>
 @endsection
