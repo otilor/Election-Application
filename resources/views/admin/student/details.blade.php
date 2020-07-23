@@ -3,7 +3,7 @@
 @section('content')
 <section class="random-div bg-not-too-white text-mpgray">
 	<h1 class="text-center py-15px text-35px text-semibold">User profile</h1>
-	
+	@include ('includes.messages')
 	<div class="text-center">
 		<img class = "rounded-img img-responsive voting-icon" src="{{ asset('img/male.webp') }}">
 	</div>
