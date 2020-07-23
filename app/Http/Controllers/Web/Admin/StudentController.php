@@ -90,10 +90,9 @@ class StudentController extends Controller
      */
     public function update(UpdatePrivilegeRequest $request, $id)
     {
-        $this->user
-            ->find( 
-                $request->id 
-            )->assignRole('admin');
+        $this->user->find( 
+            $request->id
+        )->assignRole('admin');
 
         return back();
     }
