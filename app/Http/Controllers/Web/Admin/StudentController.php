@@ -94,6 +94,8 @@ class StudentController extends Controller
             ->find( 
                 $request->id 
             )->assignRole('admin');
+
+        return back();
     }
 
     /**
