@@ -14,7 +14,7 @@
   </thead>
   <tbody>
   	@for ($i = 1; $i <= count($users); $i++)
-    <tr>
+    <tr onclick="window.location = '{{ $i }}'">
       <th scope="row">{{ $i  }}</th>
       <td>{{ $users[$i-1]->name }}</td>
       <td>{{ $users[$i-1]->email }}</td>
