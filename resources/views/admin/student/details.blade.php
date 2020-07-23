@@ -20,6 +20,7 @@
 
 	<div class="text-center">
 		<a href = "#" class="btn text-white text-caps btn-danger edit">Delete</a>	
+		<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
 	</div>	
 </section>
 @endsection
