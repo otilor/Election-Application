@@ -20,7 +20,13 @@
 
 	<div class="text-center">
 		<a href = "#" class="btn text-white text-caps btn-danger edit">Delete</a>	
-		<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
+			@if ( count ($user->roles) > 0 )
+				@if ($user->roles[0]->name !== "admin")
+				<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
+				@else
+				<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
+				@endif
+			@endif
 	</div>	
 </section>
 @endsection
