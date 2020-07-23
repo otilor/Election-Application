@@ -94,7 +94,7 @@ class StudentController extends Controller
             $request->id
         )->assignRole('admin');
 
-        return back();
+        return back()->with('success', 'Role has been updated successfully!');
     }
 
     /**
