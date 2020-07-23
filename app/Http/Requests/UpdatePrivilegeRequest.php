@@ -29,7 +29,7 @@ class UpdatePrivilegeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'role' => 'required',
         ];
     }
 }
