@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
 class AdminTest extends TestCase
@@ -15,7 +16,9 @@ class AdminTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/');
+        $this->withoutMiddleware(\App\Http\Middleware\Admin::class);
+        // $this->withoutMiddleware(\App\Http\Middleware\Authenticate::class);
+        $response = $this->get('/admin');
 
         $response->assertStatus(200);
     }
@@ -27,6 +30,6 @@ class AdminTest extends TestCase
     {
         $response = $this->get('/admin');
 
-        $repsonse->assertStatus(200);
+        $response->assertStatus(200);
     }
 }
