@@ -4,7 +4,7 @@
 <div class="container pt-3">
 	<h4 class="text-center">Accounts</h4>
 
-	<table class="table">
+	<table class="table profile-table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
