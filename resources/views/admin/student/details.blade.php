@@ -25,7 +25,11 @@
 					<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
 				@endif
 			@else
-			<a href = "#" class="btn text-white text-caps btn-success edit">Make admin</a>	
+			<form action = "/admin/students/{{ $user->id }}" method = "post">
+				@csrf
+				@method("patch")
+				<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
+			</form>
 			@endif
 
 	</div>	

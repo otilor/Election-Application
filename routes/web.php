@@ -37,4 +37,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('students/create', 'Web\Admin\StudentController@create');
 	Route::post('students/store', 'Web\Admin\StudentController@store')->name('admin.students.store');
 	Route::get('students/{id}', 'Web\Admin\StudentController@show');
+	Route::patch('students/{id}', function ()
+	{
+		return "I am a patch request";
+	});
 });
