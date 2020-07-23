@@ -26,6 +26,7 @@
 				@csrf
 				@method("patch")
 				<input type = "hidden" value = "admin" name = "role">
+				<input type = "hidden" value = "{{ $user->id }}" name = "user_id">
 				<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
 			</form>
 			
@@ -35,6 +36,7 @@
 				@csrf
 				@method("patch")
 				<input type = "hidden" value = "admin" name = "role">
+				<input type = "hidden" value = "{{ $user->id }}" name = "user_id">
 				<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
 			</form>
 			@endif
