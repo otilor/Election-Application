@@ -20,25 +20,16 @@
 
 	<div class="text-center">
 		<a href = "#" class="btn text-white text-caps btn-danger edit">Delete</a>	
-			@if ( count ($user->roles) > 0 )
-				@if ($user->roles[0]->name !== "admin")
-				<form action = "/admin/students/{{ $user->id }}" method = "post">
-				@csrf
-				@method("patch")
-				<input type = "hidden" value = "admin" name = "role">
-				<input type = "hidden" value = "{{ $user->id }}" name = "user_id">
-				<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
-			</form>
 			
-				@endif
-			@else
-			<form action = "/admin/students/{{ $user->id }}" method = "post">
-				@csrf
-				@method("patch")
-				<input type = "hidden" value = "admin" name = "role">
-				<input type = "hidden" value = "{{ $user->id }}" name = "user_id">
-				<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
-			</form>
+				@if (! $user->hasRole('admin') )
+					<form action = "/admin/students/{{ $user->id }}" method = "post">
+						@csrf
+						@method("patch")
+						<input type = "hidden" value = "admin" name = "role">
+						<input type = "hidden" value = "{{ $user->id }}" name = "user_id">
+						<input value="Make admin" type = "submit" class="btn text-white text-caps btn-success edit">
+					</form>
+				
 			@endif
 
 	</div>	
