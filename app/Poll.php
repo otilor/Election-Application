@@ -12,6 +12,9 @@ class Poll extends Model
         return request('poll');
     }
     protected $fillable = [
+        'title',
+        'description',
+        'link_id',
       'position_id',
       'session_id',
     ];
