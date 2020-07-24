@@ -18,7 +18,7 @@
 
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Link id</label>
-		    <input class  = "form-control" type="text" disabled="true" value = "{{ Str::random(8) }}">
+		    <input name = "link_id" class  = "form-control" type="text" readonly="true" value = "{{ Str::random(8) }}">
 		  </div>
 		  
 		  <div class="form-group text-center">
