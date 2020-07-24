@@ -8,12 +8,12 @@
 		@method ("post")
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
-		    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+		    <input type="text" name = "title" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
 		  </div>
 
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Description</label>
-		    <textarea name = "description "class="form-control"></textarea>
+		    <textarea name = "description" class="form-control"></textarea>
 		  </div>
 
 		  <div class="form-group">

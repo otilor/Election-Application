@@ -29,7 +29,7 @@ class CreatePollRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'title' => 'required',
             'description' => 'required',
             'link_id' => 'required',
         ];
