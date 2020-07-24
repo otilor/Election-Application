@@ -32,7 +32,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/', 'Web\Admin\AdminController@index');
-	Route::get('/election', 'Web\Admin\PollController@index');
+	Route::get('/polls', 'Web\Admin\PollController@index');
 	Route::get('/students', 'Web\Admin\StudentController@index');	
 	Route::get('students/accounts', 'Web\Admin\StudentController@accounts');
 	Route::get('students/create', 'Web\Admin\StudentController@create');
