@@ -4,15 +4,9 @@ namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\CreatePollRequest;
-use App\Poll;
 
-class PollController extends Controller
+class PollSessionLinkController extends Controller
 {
-    function __construct(Poll $poll)
-    {
-        $this->poll = $poll;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +14,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        return view('admin.polls.index');
+        return view('admin.polls-sessions-links.index');
     }
 
     /**
@@ -30,7 +24,7 @@ class PollController extends Controller
      */
     public function create()
     {
-        return view ('admin.polls.create');
+        //
     }
 
     /**
@@ -39,9 +33,9 @@ class PollController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreatePollRequest $request)
+    public function store(Request $request)
     {
-        $this->poll->create($request->all());
+        //
     }
 
     /**

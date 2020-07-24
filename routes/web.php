@@ -35,6 +35,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::post('polls/store', 'Web\Admin\PollController@store');
 	Route::resource('/polls', 'Web\Admin\PollController');
 	
+	Route::get('/polls-sessions-links', 'Web\Admin\PollSessionLinkController@index');
+
+	Route::get('/polls-sessions-links/polls', 'Web\Admin\PollSessionLink\PollController@index');
+
 	Route::get('/students', 'Web\Admin\StudentController@index');	
 	Route::get('students/accounts', 'Web\Admin\StudentController@accounts');
 	Route::get('students/create', 'Web\Admin\StudentController@create');
