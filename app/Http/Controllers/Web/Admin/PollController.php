@@ -5,9 +5,14 @@ namespace App\Http\Controllers\Web\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreatePollRequest;
+use App\Poll;
 
 class PollController extends Controller
 {
+    function __construct(Poll $poll)
+    {
+        $this->poll = $poll;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +41,7 @@ class PollController extends Controller
      */
     public function store(CreatePollRequest $request)
     {
-        dd ($request->all());
+        $this->poll->create($request->all());
     }
 
     /**
