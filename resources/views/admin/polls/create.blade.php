@@ -3,8 +3,9 @@
 <h3 class="text-center pt-4">Create a poll</h3>
 <div class="container">
 	@include ('includes.messages')
-	<form action = "{{ route('admin.students.store') }}" method="post">
+	<form action = "/admin/polls/store" method="post">
 		@csrf
+		@method ("put")
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
 		    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
