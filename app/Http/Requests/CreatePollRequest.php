@@ -17,7 +17,7 @@ class CreatePollRequest extends FormRequest
         {
             return true;
         }
-        
+
         return false;
     }
 
@@ -29,7 +29,9 @@ class CreatePollRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'description' => 'required',
+            'link_id' => 'required',
         ];
     }
 }
