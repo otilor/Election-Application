@@ -14,7 +14,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        //
+        return view ('admin.polls-sessions-links.polls.index');
     }
 
     /**
