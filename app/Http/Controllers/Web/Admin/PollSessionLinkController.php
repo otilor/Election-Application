@@ -14,7 +14,7 @@ class PollSessionLinkController extends Controller
      */
     public function index()
     {
-        return "afdsf";
+        return view('admin.polls-sessions-links.index');
     }
 
     /**
