@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreatePollRequest;
 
 class PollController extends Controller
 {
@@ -33,7 +34,7 @@ class PollController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePollRequest $request)
     {
         dd ($request->all());
     }
