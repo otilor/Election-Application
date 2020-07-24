@@ -35,7 +35,8 @@ class PollController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd ("asfads");
+        dd ($request->all());
     }
 
     /**

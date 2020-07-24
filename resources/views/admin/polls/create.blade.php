@@ -5,7 +5,7 @@
 	@include ('includes.messages')
 	<form action = "/admin/polls/store" method="post">
 		@csrf
-		@method ("put")
+		@method ("post")
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
 		    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
