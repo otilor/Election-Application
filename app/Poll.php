@@ -35,4 +35,9 @@ class Poll extends Model
 
         return $this->find($pollIdentifer);
     }
+
+    public function positions()
+    {
+        return $this->hasMany('\App\Position');
+    }
 }
