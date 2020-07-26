@@ -7,12 +7,12 @@
 		@csrf
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
-		    <input type="text" name = "name" class="form-control" id="exampleFormControlInput1" placeholder="Executive poll">
+		    <input type="text" name = "title" class="form-control" id="exampleFormControlInput1" placeholder="Executive poll">
 		  </div>
 
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Description</label>
-		    <textarea class="form-control"></textarea>
+		    <textarea name = "description" class="form-control"></textarea>
 		  </div>
 
 		  <div class="form-group text-center">
