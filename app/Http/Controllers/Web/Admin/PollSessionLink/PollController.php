@@ -35,7 +35,8 @@ class PollController extends Controller
      */
     public function store(Request $request)
     {
-        return \App\Poll::create($request->all());
+        \App\Poll::create($request->all());
+        return back()->with('success', 'Poll created!');
     }
 
     /**
