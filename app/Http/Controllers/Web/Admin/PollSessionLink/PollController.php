@@ -59,7 +59,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        //
+        return $this->poll->find($id);
     }
 
     /**
