@@ -18,7 +18,6 @@
 			Title: {{ $poll->title }}
 		</h3>
 		@empty
-		<p>No positions, bruv</p>
+		<p class="text-center"><code class="text-dark text-23px">No positions, bruv</code></p>
 		@endforelse
-	<h4 class = "text-center">Your email address:  {{ $poll->description }} </h4>	
 	@endsection
