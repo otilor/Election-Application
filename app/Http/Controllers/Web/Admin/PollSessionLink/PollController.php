@@ -4,12 +4,18 @@ namespace App\Http\Controllers\Web\Admin\PollSessionLink;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Poll;
 
 class PollController extends Controller
 {
+    function __construct(Poll $poll)
+    {
+        $this->poll = $poll;
+    }
+
     public function all()
     {
-        $polls =  \App\Poll::all();
+        $polls =  $this->poll->all();
         return view ('admin.polls-sessions-links.polls.all', compact('polls'));
     }
 
@@ -41,7 +47,7 @@ class PollController extends Controller
      */
     public function store(Request $request)
     {
-        \App\Poll::create($request->all());
+        $this->poll->create($request->all());
         return back()->with('success', 'Poll created!');
     }
 
