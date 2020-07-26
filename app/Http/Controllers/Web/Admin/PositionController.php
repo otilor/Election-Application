@@ -1,24 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Web\Admin\PollSessionLink;
+namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Poll;
+use App\Position;
 
-class PollController extends Controller
+
+class PositionController extends Controller
 {
-    function __construct(Poll $poll)
-    {
-        $this->poll = $poll;
+    function __construct(Position $position)
+    {       
+        $this->position = $position;
     }
-
-    public function all()
-    {
-        $polls =  $this->poll->all();
-        return view ('admin.polls-sessions-links.polls.all', compact('polls'));
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +20,7 @@ class PollController extends Controller
      */
     public function index()
     {
-        return view ('admin.polls-sessions-links.polls.index');
+        //
     }
 
     /**
@@ -34,9 +28,9 @@ class PollController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($pollId)
     {
-        return view ('admin.polls-sessions-links.polls.create');
+        return view ('admin.positions.create', ['pollId' => $poll]);
     }
 
     /**
@@ -47,8 +41,7 @@ class PollController extends Controller
      */
     public function store(Request $request)
     {
-        $this->poll->create($request->all());
-        return back()->with('success', 'Poll created!');
+        //
     }
 
     /**
@@ -59,8 +52,7 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        $poll = $this->poll->find($id); 
-        return view ('admin.polls-sessions-links.polls.show', compact('poll'));
+        //
     }
 
     /**
