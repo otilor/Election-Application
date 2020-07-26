@@ -39,8 +39,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
 	Route::get('/polls-sessions-links/polls', 'Web\Admin\PollSessionLink\PollController@index');
 	Route::get('/polls-sessions-links/polls/all', 'Web\Admin\PollSessionLink\PollController@all');
-	Route::get('/polls-sessions-links/polls/{id}', 'Web\Admin\PollSessionLink\PollController@show');
 	Route::get('/polls-sessions-links/polls/create', 'Web\Admin\PollSessionLink\PollController@create');
+	Route::get('/polls-sessions-links/polls/{id}', 'Web\Admin\PollSessionLink\PollController@show');
+	
 
 	Route::post('/polls-sessions-links/polls/store', 
 		'Web\Admin\PollSessionLink\PollController@store'
