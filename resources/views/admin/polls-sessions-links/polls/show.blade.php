@@ -18,6 +18,10 @@
 			Title: {{ $poll->title }}
 		</h3>
 		@empty
-		<p class="text-center"><code class="text-dark text-23px">No positions, bruv</code></p>
+		<div class="text-center">
+			<p class="text-center"><code class="text-dark text-23px">No positions, bruv</code></p>
+			<a  href = "positions/create" class="btn btn-dark text-white">Add one</a>	
+		</div>
+		
 		@endforelse
 	@endsection
