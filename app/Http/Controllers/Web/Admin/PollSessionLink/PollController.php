@@ -59,7 +59,8 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        return $this->poll->find($id);
+        $poll = $this->poll->find($id); 
+        return view ('admin.polls-sessions-links.polls.show', compact('poll'));
     }
 
     /**
