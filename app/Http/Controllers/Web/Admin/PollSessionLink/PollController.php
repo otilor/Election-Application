@@ -16,8 +16,6 @@ class PollController extends Controller
     public function all()
     {
         $polls =  $this->poll->all();
-        $positions = $this->poll->find(1)->positions;
-        dd ($positions);
         return view ('admin.polls-sessions-links.polls.all', compact('polls'));
     }
 
