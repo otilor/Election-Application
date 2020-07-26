@@ -9,7 +9,8 @@ class PollController extends Controller
 {
     public function all()
     {
-        return \App\Poll::all();
+        $polls =  \App\Poll::all();
+        return view ('admin.polls-sessions-links.polls.all', compact('polls'));
     }
 
     /**
