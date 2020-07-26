@@ -30,7 +30,7 @@ class PositionController extends Controller
      */
     public function create($pollId)
     {
-        //
+        return view ('admin.positions.create', ['pollId' => $poll]);
     }
 
     /**
