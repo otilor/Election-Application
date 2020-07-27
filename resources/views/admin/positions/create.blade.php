@@ -5,7 +5,6 @@
 	@include ('includes.messages')
 	<form action = "/admin/polls-sessions-links/polls/{{ $pollId }}/positions/store" method = "post">
 		@csrf
-		@method ("put")
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
 		    <input type="text" name = "title" class="form-control" id="exampleFormControlInput1" placeholder="President">
@@ -18,7 +17,7 @@
 
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Poll id</label>
-		    <input name = "link_id" class  = "form-control" type="text" readonly="true" value = "{{ $pollId }}">
+		    <input name = "poll_id" class  = "form-control" type="text" readonly="true" value = "{{ $pollId }}">
 		  </div>
 		  
 		  <div class="form-group text-center">
