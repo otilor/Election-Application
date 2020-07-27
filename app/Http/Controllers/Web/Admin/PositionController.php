@@ -23,7 +23,8 @@ class PositionController extends Controller
      */
     public function index($pollId)
     {
-        return $this->poll->find($pollId)->positions;
+        $positions = $this->poll->find($pollId)->positions;
+        return view ('admin.positions.index', compact('positions'));
     }
 
     /**
