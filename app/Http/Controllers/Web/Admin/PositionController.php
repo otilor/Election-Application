@@ -55,9 +55,9 @@ class PositionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($pollId, $positionId)
     {
-        //
+        return $this->poll->find($pollId)->positions->find($positionId);
     }
 
     /**
