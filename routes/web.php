@@ -65,9 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 	Route::get('/polls-sessions-links/polls/{id}/positions/{positionId}', 
 		'Web\Admin\PositionController@show'
 	);
-
 	
-
 	Route::post('/polls-sessions-links/polls/{id}/positions/store', 
 		'Web\Admin\PositionController@store'
 	);
