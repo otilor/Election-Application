@@ -53,6 +53,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 		'Web\Admin\PollSessionLink\PollController@store'
 	)->name('admin.polls_sessions_links.store');
 
+	Route::get('/polls-sessions-links/polls/1/positions', 
+		'Web\Admin\PositionController@index'
+	);
+	
 	Route::get('/polls-sessions-links/polls/{id}/positions/create', 
 		'Web\Admin\PositionController@create'
 	);
