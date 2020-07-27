@@ -5,23 +5,25 @@ namespace App\Http\Controllers\Web\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreatePositionRequest;
+use App\Poll;
 use App\Position;
 
 
 class PositionController extends Controller
 {
-    function __construct(Position $position)
+    function __construct(Position $position, Poll $poll)
     {       
         $this->position = $position;
+        $this->poll = $poll;
     }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pollId)
     {
-        //
+        return $this->poll->find($pollId)->positions;
     }
 
     /**
