@@ -24,7 +24,7 @@ class ContestantController extends Controller
      */
     public function create()
     {
-        dd ("asfsada");
+        return view('admin.contestants.create');
     }
 
     /**
