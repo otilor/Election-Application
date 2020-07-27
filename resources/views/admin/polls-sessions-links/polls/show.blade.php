@@ -15,7 +15,12 @@
 	<div>
 		@forelse ($poll->positions as $position)
 		<h3 class="text-23px pb-1 text-mpgray mx-auto random-div-title-description text-center">
-			Title: {{ $poll->title }}
+			Title: {{ $position->title }}
+			<br>
+			Description: {{ $position->description }}
+			<a class = "btn btn-dark" href="/admin/polls-sessions-links/polls/{{ $poll->id }}/positions/create">
+			Add position
+			</a>
 		</h3>
 		@empty
 		<div class="text-center">
