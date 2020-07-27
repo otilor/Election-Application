@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Position extends Model
 {
-	public function polls()
+	public function poll()
 	{
 		return $this->belongsTo('\App\Poll');
 	}
