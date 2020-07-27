@@ -57,7 +57,8 @@ class PositionController extends Controller
      */
     public function show($pollId, $positionId)
     {
-        return $this->poll->find($pollId)->positions->find($positionId)->contestants;
+        $pollId = $this->poll->find($pollId)->positions->find($positionId) ?? abort(404);
+        return view('admin.positions.show');
     }
 
     /**
