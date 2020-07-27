@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreatePositionRequest;
 use App\Position;
 
 
@@ -39,7 +40,7 @@ class PositionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePositionRequest $request)
     {
         return $this->position->create($request->all());
     }
