@@ -59,9 +59,8 @@ class PositionController extends Controller
     {
         $pollId = $this->poll
         ->find($pollId)
-            ->positions
-            ->find($positionId) ?? abort(404);
-            
+            ?? abort(404);
+
         return view('admin.positions.show');
     }
 
