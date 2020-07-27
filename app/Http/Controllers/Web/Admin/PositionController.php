@@ -62,7 +62,7 @@ class PositionController extends Controller
             ->positions
             ->find($positionId) ?? abort(404);
         
-        return view('admin.positions.show');
+        return view('admin.positions.show', compact('position'));
     }
 
     /**
