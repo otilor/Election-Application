@@ -4,9 +4,14 @@ namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
 
 class ContestantController extends Controller
 {
+    function __construct(User $user)
+    {
+        $this->user = $user;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +29,8 @@ class ContestantController extends Controller
      */
     public function create()
     {
-        return view('admin.contestants.create');
+        $users = $this->user->all();
+        return view('admin.contestants.create', compact('users'));
     }
 
     /**
