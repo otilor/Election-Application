@@ -14,5 +14,6 @@
 			Title: {{ $poll->title }}
 		</h3>
 		
-	<h4 class = "text-center">Your email address:  {{ $poll->description }} </h4>
+	<h4 class = "text-center">Description:  {{ $poll->description }} </h4>
+	@endunless
 	@endsection
