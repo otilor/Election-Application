@@ -25,7 +25,9 @@
 	</div>
 	@empty
 	<h4>No contestants</h4>
-	<a href="/admin/polls-sessions-links/polls/{{ $position->poll->id }}/positions/{{ $position->id }}/contestants/create" class="btn btn-lg btn-dark">Add contestant</a>
+	<a href="/admin/polls-sessions-links/polls/{{ $position->poll->id }}/positions/{{ $position->id }}/contestants/create" class="btn btn-lg btn-dark">
+		Add contestant
+	</a>
 	@endforelse
 	{{-- 
 	<p class="text-center text-danger text-headline">No contestants, yet!</p> --}}
