@@ -15,7 +15,9 @@
 	<div>
 		@forelse ($poll->positions as $position)
 		<h3 class="text-23px pb-1 text-mpgray mx-auto random-div-title-description text-center">
-			Title: {{ $poll->title }}
+			Title: {{ $position->title }}
+			<br>
+			Description: {{ $position->description }}
 		</h3>
 		@empty
 		<div class="text-center">
