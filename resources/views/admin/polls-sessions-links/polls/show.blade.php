@@ -15,5 +15,9 @@
 		</h3>
 		
 	<h4 class = "text-center">Description:  {{ $poll->description }} </h4>
+
+	<div class = "text-center">
+		<a class="btn btn-lg btn-success" href="/admin/polls-sessions-links/polls/{{ $poll->id }}/positions">View Positions</a>
+	</div>
 	@endunless
 	@endsection
