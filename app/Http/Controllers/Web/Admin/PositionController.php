@@ -42,7 +42,8 @@ class PositionController extends Controller
      */
     public function store(CreatePositionRequest $request)
     {
-        return $this->position->create($request->validated());
+        $this->position->create($request->validated());
+        return back()->with('success', 'Position has been created!');
     }
 
     /**
