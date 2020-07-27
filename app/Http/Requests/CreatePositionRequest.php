@@ -31,6 +31,7 @@ class CreatePositionRequest extends FormRequest
         return [
             'title' => 'required',
             'description' => 'required',
+            'poll_id' => 'required',
         ];
     }
 }

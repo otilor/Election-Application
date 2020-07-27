@@ -18,4 +18,10 @@ class Position extends Model
 	{
 		return  self::where('token', $token)->first();
 	}
+
+	protected $fillable = [
+		'title',
+		'description',
+		'poll_id',
+	];
 }
