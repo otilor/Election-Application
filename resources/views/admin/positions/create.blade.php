@@ -17,7 +17,7 @@
 		  </div>
 
 		  <div class="form-group">
-		    <label for="exampleFormControlInput1">Position id</label>
+		    <label for="exampleFormControlInput1">Poll id</label>
 		    <input name = "link_id" class  = "form-control" type="text" readonly="true" value = "{{ $pollId }}">
 		  </div>
 		  
