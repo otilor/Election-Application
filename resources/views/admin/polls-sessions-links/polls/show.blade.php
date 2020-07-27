@@ -18,9 +18,6 @@
 			Title: {{ $position->title }}
 			<br>
 			Description: {{ $position->description }}
-			<a class = "btn btn-dark" href="/admin/polls-sessions-links/polls/{{ $poll->id }}/positions/create">
-			Add position
-			</a>
 		</h3>
 		@empty
 		<div class="text-center">
@@ -29,4 +26,10 @@
 		</div>
 		
 		@endforelse
+		@if ( count($poll->positions) > 0 )
+		<div class="text-center">
+			<a href = "/admin/polls-sessions-links/polls/{{ $poll->id }}/positions/create" class="btn btn-dark text-white">Add another</a>		
+		</div>
+		
+		@endif
 	@endsection
