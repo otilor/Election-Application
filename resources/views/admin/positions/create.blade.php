@@ -3,9 +3,9 @@
 <h3 class="text-center pt-4">Add position</h3>
 <div class="container">
 	@include ('includes.messages')
-	<form action = "/admin/polls/store" method="post">
+	<form action = "/admin/polls-sessions-links/polls/{{ $pollId }}/positions/store" method = "post">
 		@csrf
-		@method ("post")
+		@method ("put")
 		  <div class="form-group">
 		    <label for="exampleFormControlInput1">Title</label>
 		    <input type="text" name = "title" class="form-control" id="exampleFormControlInput1" placeholder="President">

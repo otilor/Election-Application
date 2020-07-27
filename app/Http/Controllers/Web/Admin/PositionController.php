@@ -41,7 +41,7 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->position->create($request->all());
     }
 
     /**
