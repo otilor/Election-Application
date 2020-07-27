@@ -13,6 +13,10 @@ class Position extends Model
 	{
 		return $this->belongsTo('\App\Poll');
 	}
+	public function contestants()	
+	{
+		return $this->hasMany('\App\Contestant');
+	}
 	
    public static function getPositionDetails($token)
 	{
