@@ -18,5 +18,8 @@
     </div>
     @empty
 		<h1 class="text-center text-danger text-headline">No positions!</h1>
+		<div class="text-center">
+			<a href="/admin/polls-sessions-links/polls/{id}/positions/create" class="text-center btn btn-lg btn-success text-semibold">Create!</a>
+		</div>
   @endforelse
 @endsection
