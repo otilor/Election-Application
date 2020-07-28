@@ -15,13 +15,13 @@ class CreateContestantsTable extends Migration
     {
         Schema::create('contestants', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('contestant_id', false);
+            $table->unsignedBigInteger('user_id', false);
             $table->unsignedBigInteger('position_id', false);
             $table->unsignedBigInteger('no_of_votes');
             $table->timestamps();
 
             $table->foreign('position_id')->references('id')->on('positions');
-            $table->foreign('contestant_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

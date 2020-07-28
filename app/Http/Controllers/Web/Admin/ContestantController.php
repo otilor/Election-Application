@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Web\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Contestant;
 
 class ContestantController extends Controller
 {
-    function __construct(User $user)
+    function __construct(User $user, Contestant $contestant)
     {
         $this->user = $user;
+        $this->contestant = $contestant;
     }
     /**
      * Display a listing of the resource.
@@ -27,10 +29,9 @@ class ContestantController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($slugs)
     {
-        $users = $this->user->all();
-        return view('admin.contestants.create', compact('users'));
+        //
     }
 
     /**
@@ -41,7 +42,14 @@ class ContestantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->contestant->create([
+            'position_id' => $request->positionId,
+            'user_id' => $request->contestant[0],
+            'no_of_votes' => 0,
+        ]
+            
+        );
+        return back()->with('success', 'Successful!');
     }
 
     /**

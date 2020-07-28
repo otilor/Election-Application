@@ -7,6 +7,11 @@ use App\User;
 
 class Contestant extends Model
 {
+    protected $fillable = [
+        'position_id',
+        'user_id',
+        'no_of_votes'
+    ];
     public function findAndUpdateVoteFor($contestant_id) : bool
     {
         if ( $this->updateVotesForContestant($contestant_id) ) 

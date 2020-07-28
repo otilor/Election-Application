@@ -66,8 +66,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 		'Web\Admin\PositionController@show'
 	);
 
+
 	Route::get('/polls-sessions-links/polls/{id}/positions/{positionId}/contestants/create', 
-		'Web\Admin\ContestantController@create'
+		function ($id, $positionId) {
+			$users = \App\User::all();
+			return view('admin.contestants.create', compact('users', 'id', 'positionId'));
+		}
+	);
+
+	Route::post('/polls-sessions-links/polls/{id}/positions/{positionId}/contestants/store', 
+		'Web\Admin\ContestantController@store'
 	);
 
 	Route::post('/polls-sessions-links/polls/{id}/positions/store', 
