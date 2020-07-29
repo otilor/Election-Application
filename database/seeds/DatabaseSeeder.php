@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('password'),
             ]);
         }
-        $this->call(PositionSeeder::class);
-        $this->call(SessionSeeder::class);
-        $this->call(LinkSeeder::class);
+        // $this->call(PositionSeeder::class);
+        // $this->call(SessionSeeder::class);
+        // $this->call(LinkSeeder::class);
     }
 }
