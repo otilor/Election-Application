@@ -26,7 +26,8 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 		return view('student.index');
 	});
 	Route::resource('/polls', 'Web\PollController');
-	Route::resource('/positions', 'Web\PositionController');
+	Route::get('/polls/{id}/positions', 'Web\PositionController@index');
+	Route::get('/polls/{id}/positions/{positionId}', 'Web\PositionController@show');
 	Route::post('vote', 'Web\VoteController@store');
 });
 

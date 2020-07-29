@@ -4,14 +4,20 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \Helpers\Poll;
+use App\Poll;
 use App\Contestant;
 use App\Position;
+use App\User;
 // use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 // use RuntimeException;
 
 class PositionController extends Controller
 {
+    function __construct(Poll $poll, User $user)
+    {
+        $this->poll = $poll;
+        $this->user = $user;
+    }
     use \Helpers\ProcessesPoll;
     use \Helpers\FetchesContestantsDetails;
     use \Helpers\ProcessesSessions;
@@ -20,9 +26,10 @@ class PositionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pollId)
     {
-        //
+        $positions = $this->poll->find($pollId)->positions;
+        return view('student.positions.index', compact('positions'));
     }
 
     /**
@@ -52,45 +59,21 @@ class PositionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($pollId, $positionId)
     { 
-        try {
-            // Bugsnag::notifyException(new RuntimeException('Test error'));
-            // Full data structure for the application's use.
-            // It contains the session, contestants and positions details
-            
-            $all_details = [];
-
-            $allDetails = new \Helpers\Details\AllDetails;
-            $all_details = $allDetails->getAllDetailsFromPosition($id);
-        }
-
-        catch (\Exception $e)
-        {
-            // return redirect('/polls');
-        }
-
-        if (!empty($all_details))
-        {
-            return view('polls.vote', compact('all_details'));    
-        } 
-
-        else {
-            // return redirect('/polls');
+        $position = $this->poll
+        ->find($pollId)
+            ->positions
+            ->find($positionId) ?? abort(404);
+        
+        $users = [];
+        foreach ($position->contestants as $contestant) {
+            $users[$contestant->id] = $this->user->find($contestant->user_id);
         }
         
+        return view('student.positions.show', compact('position', 'users'));
     }
 
-    private function numberOfVotes($contestants)
-    {
-        $noOfVotes = [];
-
-        for ($i = 0; $i < count($contestants); $i++)
-        {
-            array_push($noOfVotes, $contestants[$i]["no_of_votes"]);
-        }
-        return $noOfVotes;
-    }
 
     /**
      * Show the form for editing the specified resource.
