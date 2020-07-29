@@ -15,10 +15,12 @@ class CreatePositionsTable extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('poll_id');
             $table->string('title');
-            $table->mediumText('token');
             $table->mediumText('description');
             $table->timestamps();
+
+            $table->foreign('poll_id')->references('id')->on('polls');
         });
     }
 

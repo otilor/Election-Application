@@ -465,3 +465,11 @@ footer {
   	border-color: #fff;
 } 
 
+.profile-table {
+	cursor: pointer;
+}
+
+tr:hover {
+	background-color: #ff654a;
+	color: #fff;
+}

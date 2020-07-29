@@ -1,35 +1,27 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Poll;
-use App\Contestant;
-use App\Position;
 use App\User;
-// use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
-// use RuntimeException;
+use App\Contestant;
 
-class PositionController extends Controller
+class ContestantController extends Controller
 {
-    function __construct(Poll $poll, User $user)
+    function __construct(User $user, Contestant $contestant)
     {
-        $this->poll = $poll;
         $this->user = $user;
+        $this->contestant = $contestant;
     }
-    use \Helpers\ProcessesPoll;
-    use \Helpers\FetchesContestantsDetails;
-    use \Helpers\ProcessesSessions;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($pollId)
+    public function index()
     {
-        $positions = $this->poll->find($pollId)->positions;
-        return view('student.positions.index', compact('positions'));
+        //
     }
 
     /**
@@ -37,7 +29,7 @@ class PositionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($slugs)
     {
         //
     }
@@ -50,12 +42,14 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        $contestant = new Contestant;
-        $contestant = $contestant->find($request->contestant_id);
-        $contestant->no_of_votes += 1;
-        $contestant->save();
-        
-        return back();
+        $this->contestant->create([
+            'position_id' => $request->positionId,
+            'user_id' => $request->contestant[0],
+            'no_of_votes' => 0,
+        ]
+            
+        );
+        return back()->with('success', 'Successful!');
     }
 
     /**
@@ -64,28 +58,17 @@ class PositionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($pollId, $positionId)
-    { 
-        $position = $this->poll
-        ->find($pollId)
-            ->positions
-            ->find($positionId) ?? abort(404);
-        
-        $users = [];
-        foreach ($position->contestants as $contestant) {
-            $users[$contestant->id] = $this->user->find($contestant->user_id);
-        }
-        
-        return view('student.positions.show', compact('position', 'users'));
+    public function show($id)
+    {
+        //
     }
-
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     
+     */
     public function edit($id)
     {
         //

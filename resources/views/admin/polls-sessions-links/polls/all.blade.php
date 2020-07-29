@@ -2,22 +2,22 @@
 
 @section ('content')
 <div class="container pt-3">
-	<h4 class="text-center">Accounts</h4>
+	<h4 class="text-center">All polls</h4>
 
-	<table class="table">
+	<table class="table profile-table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Email address</th>
+      <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
-  	@for ($i = 1; $i <= count($users); $i++)
-    <tr>
+  	@for ($i = 1; $i <= count($polls); $i++)
+    <tr onclick="window.location = '{{ $i }}'">
       <th scope="row">{{ $i  }}</th>
-      <td>{{ $users[$i-1]->name }}</td>
-      <td>{{ $users[$i-1]->email }}</td>
+      <td>{{ $polls[$i-1]->title }}</td>
+      <td>{{ $polls[$i-1]->description }}</td>
   	</tr>
   	@endfor
   </tbody>

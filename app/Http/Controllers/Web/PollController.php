@@ -8,8 +8,9 @@ use App\Poll;
 
 class PollController extends Controller
 {
-    function __construct()
+    function __construct(Poll $poll)
     {
+        $this->poll = $poll;
         $this->middleware('gateman');
     }
     /**
@@ -52,15 +53,8 @@ class PollController extends Controller
      */
     public function show($id)
     {
-        $poll = Poll::where('id', $id)->first();
-
-        $link = $poll->link_id;
-        $positions = $this->findAllUniquePositionsWithLink($link);
-
-        $distinct_position = \App\Helpers\Position::getDistinctPositions($positions, false);
-        $positions = $distinct_position;
-        $positions = $this->findPositionDetails($positions);
-        return view('polls.specific_poll', compact('poll', 'positions'));
+        $poll = $this->poll->find($id); 
+        return view('student.polls.index', compact('poll'));
     }
 
     /**

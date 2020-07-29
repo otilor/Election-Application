@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UpdatePrivilegeRequest;
 use Validator;
 
 class StudentController extends Controller
@@ -87,9 +88,13 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePrivilegeRequest $request, $id)
     {
-        //
+        $this->user->find( 
+            $request->id
+        )->assignRole('admin');
+
+        return back()->with('success', 'Role has been updated successfully!');
     }
 
     /**
