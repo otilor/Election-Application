@@ -20,7 +20,9 @@
 	
 	<div class = "text-center  py-2">
 		<h3 class="text-23px pt-5 pb-1 text-mpgray mx-auto random-div-title-description text-center" >{{ $users[$contestant->id]->name }} ( <code class=" mt-0 text-dark text-caps"> {{ $contestant->no_of_votes }} votes</code>)</h3>
-		<form>
+		<form action = "/student/polls/{{ $position->poll_id }}/positions/{{ $position->id }}" method = "post">
+			@csrf
+			<input type = "hidden" value = "{{ $contestant->id }}" name = "contestant_id">
 			<input type="submit" class="btn btn-info text-white" value = "Vote me">
 		</form>
 		

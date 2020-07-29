@@ -28,6 +28,7 @@ Route::group(['prefix' => 'student', 'middleware' => 'gateman'], function () {
 	Route::resource('/polls', 'Web\PollController');
 	Route::get('/polls/{id}/positions', 'Web\PositionController@index');
 	Route::get('/polls/{id}/positions/{positionId}', 'Web\PositionController@show');
+	Route::post('/polls/{id}/positions/{positionId}', 'Web\PositionController@store')->name('vote');
 	Route::post('vote', 'Web\VoteController@store');
 });
 

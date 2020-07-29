@@ -50,7 +50,12 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contestant = new Contestant;
+        $contestant = $contestant->find($request->contestant_id);
+        $contestant->no_of_votes += 1;
+        $contestant->save();
+        
+        return back();
     }
 
     /**
