@@ -19,7 +19,7 @@
     @empty
 		<h1 class="text-center text-danger text-headline">No positions!</h1>
 		<div class="text-center">
-			<a href="positions/create" class="text-center btn btn-lg btn-success text-semibold">Create!</a>
+			{{-- <a href="positions/create" class="text-center btn btn-lg btn-success text-semibold">Go home!</a> --}}
 		</div>
   @endforelse
 @endsection
