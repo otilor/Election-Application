@@ -22,7 +22,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('admin.student.index');
+        return view('admin.students.index');
     }
 
     // All the students accounts -> for admins only, tho'
