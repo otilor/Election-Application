@@ -12,9 +12,15 @@ class Contestant extends Model
         'user_id',
         'no_of_votes'
     ];
+
+    public function positions()
+    {
+        return $this->hasMany(Position::class);
+    }
+
     public function findAndUpdateVoteFor($contestant_id) : bool
     {
-        if ( $this->updateVotesForContestant($contestant_id) ) 
+        if ( $this->updateVotesForContestant($contestant_id) )
         {
             return true;
         }
@@ -47,7 +53,7 @@ class Contestant extends Model
     public static function whoAreThese($contestants)
     {
         $theyAre = [];
-        
+
         for ($i = 0; $i < count($contestants); $i++)
         {
             array_push($theyAre, \App\User::find($contestants[$i]));

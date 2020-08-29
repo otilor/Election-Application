@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreContestantRequest;
 use Illuminate\Http\Request;
 use App\User;
 use App\Contestant;
@@ -40,14 +41,14 @@ class ContestantController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreContestantRequest $request)
     {
         $this->contestant->create([
             'position_id' => $request->positionId,
             'user_id' => $request->contestant[0],
             'no_of_votes' => 0,
         ]
-            
+
         );
         return back()->with('success', 'Successful!');
     }
