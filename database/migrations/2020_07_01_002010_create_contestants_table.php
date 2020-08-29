@@ -20,8 +20,8 @@ class CreateContestantsTable extends Migration
             $table->unsignedBigInteger('no_of_votes');
             $table->timestamps();
 
-            $table->foreign('position_id')->references('id')->on('positions');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('position_id')->references('id')->on('positions')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 
